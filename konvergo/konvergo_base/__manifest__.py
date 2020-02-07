@@ -28,5 +28,8 @@
         # theme
         'muk_web_theme',
     ],
+    'excludes': [
+        'web_enterprise',
+    ],
     'installable': True,
 }
