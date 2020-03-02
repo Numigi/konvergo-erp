@@ -13,9 +13,6 @@
         # Numigi/odoo-base
         'numipack',
         'numitech',
-        # commented for now. It is not compatible with konvergo_login_page
-        # see TA#17781
-        # 'odoo-debrand',  # TA#16526
         'konvergo_bot',  # TA#16528
         'konvergo_favicon_title',  # TA#16527
         'konvergo_login_page',  # TA#18145

@@ -9,10 +9,6 @@ Additional Features
 
 * Disable the ir_cron Publisher: Update Notification.
 
-Added Modules
--------------
-* `Mail Debrand <https://github.com/OCA/social/tree/12.0/mail_debrand>`_
-
 Contributors
 ------------
 * Numigi (tm) and all its contributors (https://bit.ly/numigiens)
