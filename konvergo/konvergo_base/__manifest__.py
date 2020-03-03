@@ -21,6 +21,8 @@
         # OCA/social
         'mail_debrand',  # TA#16549
 
+        # OCA/bank-statement-import
+        'account_bank_statement_import_txt_xlsx',  # TA#20564
 
         # theme
         'muk_web_theme',
