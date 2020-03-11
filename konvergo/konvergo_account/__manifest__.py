@@ -36,6 +36,9 @@
         'mis_builder_cash_flow',  # TA#16549
         'partner_statement',  # TA#16549
 
+        # OCA/bank-statement-import
+        'account_bank_statement_import_txt_xlsx',  # TA#20564
+
         # akretion
         'account_viewer',  # TA#16549
         'account_report_viewer',  # TA#16549
