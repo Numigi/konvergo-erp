@@ -16,6 +16,7 @@
 
         # Numigi/odoo-account-addons
         'account_show_full_features',  # TA#16549
+        'canada_account_types',  # TA#22360
 
         # OCA/mis-builder
         'mis_builder',  # TA#16549
