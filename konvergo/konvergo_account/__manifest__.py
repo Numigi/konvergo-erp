@@ -15,7 +15,9 @@
         'numipack_account',
 
         # Numigi/odoo-account-addons
+        'account_closing_journal',  # TA#22629
         'account_show_full_features',  # TA#16549
+        'account_unaffected_earnings_disabled',  # TA#22357
         'canada_account_types',  # TA#22360
 
         # OCA/mis-builder
