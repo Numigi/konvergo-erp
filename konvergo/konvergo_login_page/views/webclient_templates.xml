@@ -8,7 +8,7 @@
                         <t t-raw="0"/>
                     </div>
                     <div class="col-lg-9 d-none d-lg-block d-lg-none h-100">
-                        <div class="img-responsive h-100 mr-neg15"/>
+                        <div class="konvergo-login-page-background img-responsive h-100 mr-neg15"/>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 <div t-attf-class="text-center pb-3 border-bottom {{'mb-3' if form_small else 'mb-4'}}">
                     <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>
                 </div>
-                <form role="form"
+                <form role="form" class="konvergo-login-form"
                       t-attf-action="/web/login{{ '?debug' if debug else '' }}" method="post"
                       onsubmit="this.action = this.action + location.hash">
                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>

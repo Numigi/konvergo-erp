@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="website.login_layout" model="ir.ui.view">
+        <field name="active" eval="0"/>
+    </record>
+
+</odoo>
