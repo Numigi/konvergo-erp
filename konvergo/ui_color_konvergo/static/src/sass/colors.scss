@@ -1,5 +1,13 @@
 $o-brand-odoo: #242930;
 $o-brand-primary: #ec0B43;
+$o-main-text-color: #3a414e;
+$o-main-color-muted: #485260;
 
 $mk-appbar-color: $o-brand-odoo;
 $mk-appbar-background: $o-brand-odoo;
+
+.mk_apps_sidebar_menu {
+    > li:hover > a {
+        background: #485260 !important;
+    }
+}
