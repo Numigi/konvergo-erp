@@ -7,7 +7,4 @@
         </xpath>
     </template>
 
-    <record id="base.main_company" model="res.company">
-        <field name="background_image" type="base64" file="ui_color_konvergo/static/src/img/background.jpg" />
-    </record>
 </odoo>
