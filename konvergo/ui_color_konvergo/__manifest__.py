@@ -10,7 +10,7 @@
     'license': 'LGPL-3',
     'category': 'Project',
     'summary': 'Render the Odoo Community interface for Konvergo',
-    'depends': ['muk_res_config_settings_hidden'],
+    'depends': ['muk_web_theme'],
     'data': ['views/ui_color.xml'],
     'installable': True,
 }
