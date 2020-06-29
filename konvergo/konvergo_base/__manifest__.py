@@ -12,7 +12,6 @@
     'depends': [
         # Numigi/odoo-base
         'numipack',
-        'numitech',
         'konvergo_bot',  # TA#16528
         'konvergo_favicon_title',  # TA#16527
         'konvergo_login_page',  # TA#18145
