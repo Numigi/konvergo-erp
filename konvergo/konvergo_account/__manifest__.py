@@ -13,6 +13,7 @@
         # Numigi/odoo-base
         'konvergo_base',
         'numipack_account',
+        'canada_mis_report',
 
         # Numigi/odoo-account-addons
         'account_closing_journal',  # TA#22629
