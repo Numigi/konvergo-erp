@@ -10,6 +10,9 @@
     'category': 'Other',
     'summary': 'Accounting Dependencies for Konvergo',
     'depends': [
+        # odoo/odoo
+        'l10n_ca',
+
         # Numigi/odoo-base
         'konvergo_base',
         'numipack_account',
