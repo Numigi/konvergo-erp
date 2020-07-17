@@ -6,12 +6,42 @@
 }
 
 .konvergo-login-form {
-  .btn, .form-control {
+  .btn {
     border-radius: 0;
   }
 
   .btn {
-    text-transform: uppercase;
+    border-radius: 100px;
+    padding: 10px;
+    font-weight: 600;
+
+    &:hover {
+      filter: brightness(110%) !important;
+      background-color: $o-enterprise-primary-color !important;
+    }
+  }
+
+  .form-control {
+    border: 1px solid #dedede !important;
+    border-radius: 10px !important;
+    padding: 20px 11px 20px 18px !important;
+    transition: 300ms;
+
+    &:hover {
+      border-color: #C4C4C4 !important;
+      transition: 300ms;
+    }
+
+    &:focus, &:active {
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      border-color: #c4c4c4 !important;
+      transition: 300ms;
+    }
+  }
+
+  label {
+    line-height: 23px;
+    color: #5d6a7f !important;
   }
 }
 
