@@ -13,9 +13,10 @@
         # Numigi/odoo-base
         'numipack',
         'konvergo_bot',  # TA#16528
-        'konvergo_favicon_title',  # TA#16527
-        'konvergo_login_page',  # TA#18145
         'konvergo_cron_publisher',  # TA#16530
+        'konvergo_favicon_title',  # TA#16527
+        'konvergo_icons',
+        'konvergo_login_page',  # TA#18145
 
         # OCA/social
         'mail_debrand',  # TA#16549
