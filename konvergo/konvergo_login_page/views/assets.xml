@@ -14,6 +14,9 @@
             <link href="/konvergo_login_page/static/src/scss/components.scss"
                   rel="stylesheet"
                   type="text/scss"/>
+            <link href="/konvergo_login_page/static/src/scss/database-powered.scss"
+                  rel="stylesheet"
+                  type="text/scss"/>
         </xpath>
     </template>
 </odoo>

@@ -1,0 +1,43 @@
+.konvergo-logo {
+  background: url("/konvergo_login_page/static/src/img/logo-horizontal-noir.svg") no-repeat;
+  opacity: 0.2;
+  transition: 300ms;
+  display: block;
+  width: 120px;
+  height: 25px;
+  margin-left: 11px;
+  margin-top: 2px;
+
+  &:hover {
+    background: url("/konvergo_login_page/static/src/img/logo-horizontal.svg") no-repeat;
+    opacity: 1;
+    transition: 300ms;
+  }
+}
+
+.powered-by-group {
+  position: fixed;
+  bottom: 5px;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  align-items: end;
+  left: -23%;
+  right: 50%;
+
+  p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    opacity: 0.2;
+    color: #000;
+  }
+}
+
+.bottom-group {
+  margin-top: 22px;
+
+  .manage-database {
+    font-weight: 600;
+    color: $o-brand-primary;
+  }
+}

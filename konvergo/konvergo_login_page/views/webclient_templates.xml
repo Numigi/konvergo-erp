@@ -76,13 +76,16 @@
 
                     <input type="hidden" name="redirect" t-att-value="redirect"/>
                 </form>
-                <div class="text-center small mt-4 pt-3 border-top" t-if="not disable_footer">
+                <div class="text-center small bottom-group" t-if="not disable_footer">
                     <t t-if="not disable_database_manager">
-                        <a class="border-right pr-2 mr-1" href="/web/database/manager">Manage Databases</a>
+                        <a class="pr-2 mr-1 manage-database" href="/web/database/manager">Manage Databases</a>
                     </t>
-                    Powered by <a href="#" target="_blank">
-                    <img src="/konvergo_login_page/static/src/img/logo_horizontal.png" width="74" height="24" alt="Konvergo"/>
-                </a>
+                    <div class="powered-by-group">
+                        <p>Powered by</p>
+                         <a href="https://konvergo.com" target="_blank">
+                        <span class="konvergo-logo"> </span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
