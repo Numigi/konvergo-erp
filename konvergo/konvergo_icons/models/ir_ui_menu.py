@@ -15,15 +15,13 @@ class MenuItem(models.Model):
             self.update_konvergo_icons()
         return True
 
-    @api.model_create_multi
-    def create(self, vals):
-        menus = super().create(vals)
-        if self._should_update_konvergo_icons(vals):
-            self.update_konvergo_icons()
-        return menus
-
     def _should_update_konvergo_icons(self, vals):
         return not self._context.get("is_updating_konvergo_icon") and "web_icon" in vals
+
+    def _load_records(self, *args, **kwargs):
+        res = super()._load_records(*args, **kwargs)
+        self.update_konvergo_icons()
+        return res
 
     @api.model
     def update_konvergo_icons(self):
