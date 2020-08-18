@@ -11,6 +11,6 @@
     'category': 'Project',
     'summary': 'Render the Odoo Community interface for Konvergo',
     'depends': ['muk_web_theme'],
-    'data': ['views/ui_color.xml'],
+    'data': ['views/assets.xml'],
     'installable': True,
 }

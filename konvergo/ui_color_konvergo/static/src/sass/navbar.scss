@@ -1,0 +1,11 @@
+.o_main_navbar > ul > li > a {
+	&:hover {
+		background-color: darken($o-brand-odoo, 16%);
+		transition: $global-transition;
+	}
+
+	&:active, &:focus {
+		background-color: darken($o-brand-odoo, 8%);
+		transition: $global-transition;
+	}
+}
