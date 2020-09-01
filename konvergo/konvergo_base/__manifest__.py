@@ -21,6 +21,9 @@
         # OCA/social
         'mail_debrand',  # TA#16549
 
+        # OCA/server-brand
+        'remove_odoo_enterprise',  # TA#22257
+
         # theme
         'muk_web_theme',
     ],
