@@ -10,7 +10,7 @@
 
     <template id="title" inherit_id="web.layout" name="Konvergo Title" priority="1000">
         <xpath expr="//title" position="replace">
-            <title t-esc="title and title.replace('Odoo', 'Konvergo') or 'Konvergo'" />
+            <title t-esc="title == 'Odoo' and 'Konvergo' or title" />
         </xpath>
     </template>
 </odoo>
