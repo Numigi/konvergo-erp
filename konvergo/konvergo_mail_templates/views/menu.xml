@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_konvergo_mail_templates" model="ir.actions.act_window">
+        <field name="name">Konvergo Templates</field>
+        <field name="res_model">mail.template</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('is_konvergo_template', '=', True)]</field>
+    </record>
+
+    <menuitem
+        id="menu_konvergo_mail_templates"
+        parent="base.menu_email"
+        action="action_konvergo_mail_templates"
+        sequence="21"
+        />
+
+</odoo>

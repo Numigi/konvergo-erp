@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <record id="sale_order_template" model="mail.template">
+    <field name="name">Sales Order: Send by email</field>
+    <field name="is_konvergo_template" eval="True"/>
+    <field name="odoo_template_ref">sale.email_template_edi_sale</field>
+    <field name="email_from">${object.user_id.email_formatted |safe}</field>
+    <field name="partner_to">${object.partner_id.id}</field>
+    <field name="lang">${object.partner_id.lang}</field>
+    <field name="report_template" ref="sale.action_report_saleorder"/>
+    <field name="report_name">${(object.name or '').replace('/','_')}</field>
+    <field name="user_signature" eval="False"/>
+    <field name="auto_delete" eval="True"/>
+    <field name="subject">Your Order ${object.name}</field>
+    <field name="body_html" type="html">
+<table
+  border="0" cellpadding="0" cellspacing="0"
+  style="padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;"
+  >
+  % set is_quotation = object.state in ('draft', 'sent')
+  <tbody>
+    <tr>
+      <td align="center">
+        <table
+          border="0" cellpadding="0" cellspacing="0" width="590"
+          style="padding: 16px; background-color: white; color: #454748; border-collapse:separate;"
+          >
+          <tbody>
+            <!-- HEADER -->
+            <tr>
+              <td align="center" style="min-width: 590px;">
+                <table
+                  border="0" cellpadding="0" cellspacing="0" width="590"
+                  style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;"
+                  >
+                  <tbody>
+                    <tr>
+                      <td valign="middle">
+                        <div style="font-size: 10px;">
+                        % if is_quotation:
+                            <span>Your Quotation</span>
+                        % else:
+                            <span>Your Order</span>
+                        % endif
+                        </div>
+                        <div style="font-size: 20px; font-weight: bold;">${object.name}</div>
+                      </td>
+                      <td valign="middle" align="right">
+                        <img src="/logo.png?company=${object.company_id.id}"
+                          style="padding: 0px; margin: 0px; height: auto; width: 80px;"
+                          alt="${object.company_id.name}"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" style="text-align:center;">
+                        <hr width="100%"
+                          style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;"/>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <!-- CONTENT -->
+            <tr>
+              <td align="center" style="min-width: 590px;">
+                <table
+                  border="0" cellpadding="0" cellspacing="0" width="590"
+                  style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;"
+                  >
+                  <tbody>
+                    <tr>
+                      <td valign="top" style="font-size: 13px;">
+                          Hello ${object.name},
+                          <br/>
+                          <br/>
+                          Here is your ${'quotation' if is_quotation else 'order'}
+                          <strong>${object.name}</strong>
+                          in the amount of
+                          <strong>${format_amount(object.amount_total, object.pricelist_id.currency_id)}</strong>
+                          from ${object.company_id.name}.
+                          <br/>
+                          <br/>
+                          Do not hesitate to contact us if you have any question.
+                          <br/>
+                          <br/>
+                          Best regards,
+                          <br/>
+                          <br/>
+                          ${user.signature | safe}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center;">
+                        <hr width="100%" style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;"/>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <!-- FOOTER -->
+            <tr>
+              <td align="center" style="min-width: 590px;">
+                <table
+                  border="0" cellpadding="0" cellspacing="0" width="590"
+                  style="min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;"
+                  >
+                  <tbody>
+                    <tr>
+                      <td valign="middle" align="left">
+                        ${object.company_id.name}
+                        <br/>
+                        <br/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td valign="middle" align="left" style="opacity: 0.7;">
+                        ${object.company_id.phone}
+                        % if object.company_id.email
+                          |
+                          <a href="'mailto:%s' % ${object.company_id.email}" style="color: #454748;">
+                            ${object.company_id.email}
+                          </a>
+                        % endif
+                        % if object.company_id.website
+                          |
+                          <a href="'%s' % ${object.company_id.website}" style="color: #454748;">
+                            ${object.company_id.website}
+                          </a>
+                        % endif
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <!-- POWERED BY -->
+    <tr>
+      <td align="center" style="min-width: 590px;">
+        <table
+          border="0" cellpadding="0" cellspacing="0" width="590"
+          style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;"
+          >
+          <tbody>
+            <tr>
+              <td style="text-align: center; font-size: 13px;">
+                Powered by
+                <a
+                  target="_blank"
+                  href="https://www.konvergo.com?utm_source=db&amp;utm_medium=auth"
+                  style="color: #1A62C6;"
+                  >
+                  Konvergo
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </field>
+  </record>
+
+</odoo>

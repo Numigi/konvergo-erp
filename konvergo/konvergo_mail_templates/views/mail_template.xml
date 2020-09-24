@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="mail_template_form" model="ir.ui.view">
+        <field name="name">Mail Template: add field is_konvergo_template</field>
+        <field name="model">mail.template</field>
+        <field name="inherit_id" ref="mail.email_template_form"/>
+        <field name="arch" type="xml">
+            <sheet position="before">
+                <div class="alert alert-warning"
+                     role="alert"
+                     attrs="{'invisible': [('is_konvergo_template', '=', False)]}"
+                     >
+                        This template is used to update other email templates.
+                        It can not be used directly for sending emails.
+                </div>
+            </sheet>
+            <notebook position="inside">
+                <page name="konvergo" string="Konvergo" groups="base.group_system">
+                    <group>
+                        <group>
+                            <field name="is_konvergo_template"/>
+                            <field name="odoo_template_ref"
+                                 attrs="{'invisible': [('is_konvergo_template', '=', False)]}"/>
+                            <field name="updated_from_konvergo"
+                                 attrs="{'invisible': [('is_konvergo_template', '=', True)]}"/>
+                        </group>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+</odoo>
