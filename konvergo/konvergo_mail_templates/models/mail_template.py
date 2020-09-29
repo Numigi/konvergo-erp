@@ -39,31 +39,26 @@ class MailTemplate(models.Model):
 
     @api.model
     def update_from_konvergo_templates(self):
-        _logger.info("Updating mail templates from konvergo templates")
         konvergo_templates = self._get_konvergo_templates()
         for template in konvergo_templates:
-            template._update_odoo_template_if_exists()
+            template._update_odoo_template_if_required()
 
     def _get_konvergo_templates(self):
         return self.env["mail.template"].search([("is_konvergo_template", "=", True)])
 
-    def _update_odoo_template_if_exists(self):
+    def _update_odoo_template_if_required(self):
         template = self.env.ref(self.odoo_template_ref or "", raise_if_not_found=False)
-        if template.updated_from_konvergo:
-            _logger.info(
-                "The template {} was already updated from konvergo".format(
-                    self.odoo_template_ref
-                )
-            )
-        elif template:
+        should_update_template = (
+            template
+            and not template.updated_from_konvergo
+            and not template._last_edited_by_non_superuser()
+        )
+        if should_update_template:
             self._update_odoo_template(template)
             _logger.info("Template {} updated".format(self.odoo_template_ref))
-        else:
-            _logger.info(
-                "No mail template found for the xml ID {}".format(
-                    self.odoo_template_ref
-                )
-            )
+
+    def _last_edited_by_non_superuser(self):
+        return not self.write_uid._is_superuser()
 
     def _update_odoo_template(self, odoo_template):
         self._update_odoo_template_vals(odoo_template)
@@ -78,7 +73,6 @@ class MailTemplate(models.Model):
 
     def _get_konvergo_template_vals(self):
         return {
-            "attachment_ids": [(6, 0, self.attachment_ids.ids)],
             "auto_delete": self.auto_delete,
             "body_html": self.body_html,
             "email_cc": self.email_cc,
@@ -87,8 +81,6 @@ class MailTemplate(models.Model):
             "lang": self.lang,
             "partner_to": self.partner_to,
             "reply_to": self.reply_to,
-            "report_name": self.report_name,
-            "report_template": self.report_template.id,
             "subject": self.subject,
             "updated_from_konvergo": True,
             "use_default_to": self.use_default_to,

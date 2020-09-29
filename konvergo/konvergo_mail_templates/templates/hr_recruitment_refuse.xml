@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <record id="hr_recruitement_refuse_template" model="mail.template">
+    <field name="name">Applicant: Refuse</field>
+    <field name="is_konvergo_template" eval="True"/>
+    <field name="odoo_template_ref">hr_recruitment.email_template_data_applicant_refuse</field>
+    <field name="email_to">${(not object.partner_id and object.email_from or '') | safe}</field>
+    <field name="partner_to">${object.partner_id.id or ''}</field>
+    <field name="lang">${object.partner_id.lang or ''}</field>
+    <field name="user_signature" eval="False"/>
+    <field name="auto_delete" eval="True"/>
+    <field name="subject_en">Follow-up of your application for the job position of ${object.job_id.name | safe}</field>
+    <field name="subject_fr">Suivi de votre candidature au poste de ${object.job_id.name | safe}</field>
+    <field name="body_html_en" type="html">
+<table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+  <tbody>
+    <tr>
+      <td valign="top">
+        <div style="font-size: 13px; margin: 0px; padding: 0px;">
+          Hello,
+          <br/>
+          <br/>
+          Thank you for your interest in joining our teams.
+          We would like to inform you that your job application is not selected
+          for the position job of ${object.job_id.name}.
+          <br/>
+          <br/>
+          Unless you advise otherwise, we keep your profile for
+          possible future needs.
+          <br/>
+          <br/>
+          % if 'website_url' in object.job_id and object.job_id.website_url               
+            Our company is growing, we invite you to follow our news for future opportunities
+            in our website.
+            <br/>
+            <br/>
+          % endif
+          We sincerely hope that you soon will find the job position that suits you.
+          <br/>
+          <br/>
+          Best regards,
+          <br/>
+          <div style="font-size: 11px; color: #5D6A7F;">
+          --
+          <br/>
+          <font style="font-size: 13px;">
+            <b>
+              The talent management team
+            </b>
+          </font>
+          <br/>
+          % if 'website_url' in object.job_id and object.job_id.website_url:
+            Discover
+            <a href="/jobs" style="color:#717188;">
+              all our jobs positions
+            </a>
+            .
+            <br/>
+          % endif
+          </div>
+          <hr width="97%" style="background-color: rgb(236, 11, 67); border: medium none; clear: both; display: block; font-size: 0px; min-height: 1px; line-height: 0; margin: 17px 0px 16px 0px;"/>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </field>
+    <field name="body_html_fr" type="html">
+<table border="0" cellpadding="0" cellspacing="0" width="590" style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+  <tbody>
+    <tr>
+      <td valign="top">
+        <div style="font-size: 13px; margin: 0px; padding: 0px;">
+          Bonjour,
+          <br/>
+          <br/>
+          Nous vous remercions de votre intérêt à rejoindre notre équipe.
+          Nous tenons à vous informer que votre candidature
+          <b>n'a pas été retenue</b>
+          pour le poste de ${object.job_id.name}.
+          <br/>
+          <br/>
+          Sauf avis contraire de votre part, nous conservons votre profil pour d'éventuels besoins.
+          <br/>
+          <br/>
+          % if 'website_url' in object.job_id and object.job_id.website_url               
+            Notre compagnie est en pleine croissance. Nous vous invitons à suivre
+            notre actualité sur notre site internet pour les prochaines opportunités.
+            <br/>
+            <br/>
+          % endif
+          Nous vous souhaitons sincèrement de trouver le poste qui vous correspond.
+          <br/>
+          <br/>
+          Merci,
+          <br/>
+          <div style="font-size: 11px; color: #5D6A7F;">
+          --
+          <br/>
+          <font style="font-size: 13px;">
+            <b>
+              L'équipe de gestion des talents
+            </b>
+          </font>
+          % if 'website_url' in object.job_id and object.job_id.website_url
+              Découvrez <a href="/jobs" style="color:#717188;">tous nos postes</a>.<br/>
+          % endif
+          </div>
+          <hr width="97%" style="background-color: rgb(236, 11, 67); border: medium none; clear: both; display: block; font-size: 0px; min-height: 1px; line-height: 0; margin: 17px 0px 16px 0px;"/>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </field>
+  </record>
+
+</odoo>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <record id="hr_recruitement_acknowledgment_template" model="mail.template">
+    <field name="name">Applicant: Acknowledgment</field>
+    <field name="is_konvergo_template" eval="True"/>
+    <field name="odoo_template_ref">hr_recruitment.email_template_data_applicant_congratulations</field>
+    <field name="email_to">${(not object.partner_id and object.email_from or '') | safe}</field>
+    <field name="partner_to">${object.partner_id.id or ''}</field>
+    <field name="lang">${object.partner_id.lang or ''}</field>
+    <field name="user_signature" eval="False"/>
+    <field name="auto_delete" eval="True"/>
+    <field name="subject_en">Acknowledgment of your Job Application for ${object.job_id.name | safe}</field>
+    <field name="subject_fr">Réception de votre candidature au poste de ${object.job_id.name | safe}</field>
+    <field name="body_html_en" type="html">
+<table border="0" cellpadding="0" cellspacing="0" width="590" style="background-color: white; border-collapse: collapse; margin-left: 20px;">
+  <tbody>
+    <tr>
+      <td valign="top" style="padding: 0px 10px;">
+        <div style="font-size: 13px; margin: 0px; padding: 0px;">
+          Hello,
+          <br/>
+          <br/>
+          We have received your application for the position of
+          "<a href="${object.job_id.website_url or ''}" style="color:#5D6A7F;">
+            <strong>${object.job_id.name}</strong>
+          </a>"
+          and we thank you for the interest in our company.
+          <br/>
+          <br/>
+          We will study your professional background as well as the documents sent as soon as possible.
+
+          <br/>
+          <br/>
+          % if 'website_url' in object.job_id and object.job_id.website_url:
+          <div style="margin: 0px 8px 0px 8px;">
+            <a href="${object.job_id.website_url}" style="text-decoration: none; padding: 8px 16px; border-radius: 5px;" class="btn btn-alpha">
+              Job Description
+            </a>
+          </div>
+          % endif
+
+          <hr width="97%" style="background-color: rgb(204,204,204); border: medium none; clear: both; display: block; font-size: 0px; min-height: 1px; line-height: 0; margin: 16px 0px 16px 0px;"/>
+          <h3 style="color:#9A6C8E;">
+            <strong>
+              <font class="text-alpha">
+                What is the next step?
+              </font>
+            </strong>
+          </h3>
+          If your application matches the job requirements someone from the talent managment team will contact you.
+          <br/>
+          <br/>
+          Thank you for contacting us and we wish you good luck in your job research.
+          <hr width="97%" style="background-color: rgb(204,204,204); border: medium none; clear: both; display: block; font-size: 0px; min-height: 1px; line-height: 0; margin: 17px 0px 16px 0px;"/>
+          The talent managment team
+          <br/>
+          <br/>
+          % if object.job_id.address_id.name:
+          <strong>${object.job_id.address_id.name}</strong>
+          <br/>
+          % endif
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </field>
+    <field name="body_html_fr" type="html">
+<table border="0" cellpadding="0" cellspacing="0" width="590" style="background-color: white; border-collapse: collapse; margin-left: 20px;">
+  <tbody>
+    <tr>
+      <td valign="top" style="padding: 0px 10px;">
+        <div style="font-size: 13px; margin: 0px; padding: 0px;">
+          Bonjour,
+          <br/>
+          <br/>
+          Nous avons bien reçu votre candidature pour le poste de
+          "<a href="${object.job_id.website_url or ''}" style="color:#5D6A7F;">
+            <strong>${object.job_id.name}</strong>
+          </a>"
+          et nous vous remercions de l'intérêt envers notre compagnie.
+          <br/>
+          <br/>
+          Nous allons étudier votre parcours ainsi que les documents transmis dans les prochains jours.
+          <br/>
+          <br/>
+          % if 'website_url' in object.job_id and object.job_id.website_url:
+          <div style="margin: 0px 8px 0px 8px;">
+            <a href="${object.job_id.website_url}" style="text-decoration: none; padding: 8px 16px; border-radius: 5px;" class="btn btn-alpha">
+              Description du poste
+            </a>
+          </div>
+          % endif
+
+          <hr width="97%" style="background-color: rgb(204,204,204); border: medium none; clear: both; display: block; font-size: 0px; min-height: 1px; line-height: 0; margin: 16px 0px 16px 0px;"/>
+          <h3 style="color:#9A6C8E;">
+            <strong>
+              <font class="text-alpha">
+                Quelle est la prochaine étape?
+              </font>
+            </strong>
+          </h3>
+          Si votre candidature correspond aux exigences du poste, une personne de l'équipe de gestion des talents prendra contact avec vous.
+          <br/>
+          <br/>
+          Nous vous remercions de nous avoir contacté et vous souhaitons bonne chance dans votre recherche.
+          <hr width="97%" style="background-color: rgb(204,204,204); border: medium none; clear: both; display: block; font-size: 0px; min-height: 1px; line-height: 0; margin: 17px 0px 16px 0px;"/>
+          L'équipe de gestion des talents
+          <br/>
+          <br/>
+          % if object.job_id.address_id.name:
+          <strong>${object.job_id.address_id.name}</strong>
+          <br/>
+          % endif
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </field>
+  </record>
+
+</odoo>

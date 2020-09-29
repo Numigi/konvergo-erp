@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <record id="portal_new_user_template" model="mail.template">
+    <field name="name">Portal: new user</field>
+    <field name="is_konvergo_template" eval="True"/>
+    <field name="odoo_template_ref">portal.mail_template_data_portal_welcome</field>
+    <field name="email_to">${object.user_id.email_formatted |safe}</field>
+    <field name="lang">${object.partner_id.lang}</field>
+    <field name="user_signature" eval="False"/>
+    <field name="auto_delete" eval="True"/>
+    <field name="subject_en">Your Konvergo's Account at ${user.company_id.name}</field>
+    <field name="subject_fr">Votre accès au portail Konvergo ${user.company_id.name}</field>
+    <field name="body_html_en" type="html">
+<table style="padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;" cellspacing="0" cellpadding="0" border="0">
+  <tbody>
+    <tr>
+      <td align="center">
+        <table style="padding: 16px; background-color: white; color: #454748; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+            <!-- HEADER -->
+            <tr>
+              <td style="min-width: 590px;" align="center">
+                <table style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                  <tbody>
+                    <tr>
+                      <td valign="middle">
+                        <span style="font-size: 10px;">Your Account</span>
+                        <br/>
+                        <span style="font-size: 20px; font-weight: bold;">
+                          ${object.user_id.name}
+                        </span>
+                      </td>
+                      <td valign="middle" align="right">
+                        <img
+                          src="/logo.png?company=${object.user_id.company_id.id}"
+                          style="padding: 0px; margin: 0px; height: auto; width: 80px;"
+                          alt="${object.user_id.company_id.name}"
+                          />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" style="text-align:center;">
+                        <hr style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin:16px 0px 16px 0px;" width="100%"/>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <!-- CONTENT -->
+            <tr>
+              <td style="min-width: 590px;" align="center">
+                <table style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                  <tbody>
+                    <tr>
+                      <td style="font-size: 13px;" valign="top">
+                        <div style="line-height: 1.75em;">
+                          Dear ${object.user_id.name or ''},
+                          <br/>
+                          <br/>
+                          We are pleased to confirm that your portal access to
+                          <b>
+                            ${object.user_id.company_id.name}
+                          </b> has been activated.
+                          <br/>
+                          <br/>
+                          Your login account information is:
+                          <ul>
+                            <li>
+                              <b>Username:</b> ${object.user_id.login or ''}
+                            </li>
+                            <li>
+                              <b>Portal Access:</b>
+                              <a href="${'portal_url' in ctx and ctx['portal_url'] or ''}">
+                                ${'portal_url' in ctx and ctx['portal_url'] or ''}
+                              </a>
+                            </li>
+                          </ul>
+                            To set your password, click on the link below:
+                          <ul>
+                            <li>
+                              <a href="${object.user_id.signup_url}">
+                                ${object.user_id.signup_url}
+                              </a>
+                            </li>
+                          </ul>
+                          ${object.wizard_id.welcome_message or ''}
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center;">
+                        <hr style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;" width="100%"/>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <!-- FOOTER -->
+            <tr>
+              <td style="min-width: 590px;" align="center">
+                <table style="min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                  <tbody>
+                    <tr>
+                      <td valign="middle" align="left">
+                        ${object.user_id.company_id.name}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="opacity: 0.7;" valign="middle" align="left">
+                        ${object.user_id.company_id.phone}
+                        % if object.user_id.company_id.email
+                          |
+                          <a href="'mailto:%s' % ${object.user_id.company_id.email}" style=" color: #454748;">
+                            ${object.user_id.company_id.email}
+                          </a>
+                        % endif
+                        % if object.user_id.company_id.website
+                          |
+                          <a href="'%s' % ${object.user_id.company_id.website}" style=" color: #454748;">
+                            ${object.user_id.company_id.website}
+                          </a>
+                        % endif
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <!-- POWERED BY -->
+    <tr>
+      <td style="min-width: 590px;" align="center">
+        <table style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+            <tr>
+              <td style="text-align: center; font-size: 13px;">
+                Powered by
+                <b>
+                  <a target="_blank" href="https://www.konvergo.com?utm_source=db&amp;utm_medium=portalinvite" style="color: #5D6A7F;">
+                    Konvergo
+                  </a>
+                </b>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </field>
+    <field name="body_html_fr" type="html">
+<table style="padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;" cellspacing="0" cellpadding="0" border="0">
+  <tbody>
+    <tr>
+      <td align="center">
+        <table style="padding: 16px; background-color: white; color: #454748; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+            <!-- HEADER -->
+            <tr>
+              <td style="min-width: 590px;" align="center">
+                <table style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                  <tbody>
+                    <tr>
+                      <td valign="middle">
+                        <span style="font-size: 10px;">Votre compte</span>
+                        <br/>
+                        <span style="font-size: 20px; font-weight: bold;">
+                          ${object.user_id.name}
+                        </span>
+                      </td>
+                      <td valign="middle" align="right">
+                        <img
+                          src="/logo.png?company=${object.user_id.company_id.id}"
+                          style="padding: 0px; margin: 0px; height: auto; width: 80px;"
+                          alt="${object.user_id.company_id.name}"
+                          />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" style="text-align:center;">
+                        <hr style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin:16px 0px 16px 0px;" width="100%"/>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <!-- CONTENT -->
+            <tr>
+              <td style="min-width: 590px;" align="center">
+                <table style="min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                  <tbody>
+                    <tr>
+                      <td style="font-size: 13px;" valign="top">
+                        <div style="line-height: 1.75em;">
+                          Cher(e) ${object.user_id.name or ''},
+                          <br/>
+                          <br/>
+                          Nous sommes ravis de vous confirmer que votre accès au portail
+                          <b>
+                            ${object.user_id.company_id.name}
+                          </b>
+                          a été activé.
+                          <br/>
+                          <br/>
+                          Vos données de connexion sont les suivantes :
+                          <ul>
+                            <li>
+                              <b>Nom d'utilisateur :</b> ${object.user_id.login or ''}
+                            </li>
+                            <li>
+                              <b>Accès portail :</b>
+                              <a href="${'portal_url' in ctx and ctx['portal_url'] or ''}">
+                                ${'portal_url' in ctx and ctx['portal_url'] or ''}
+                              </a>
+                            </li>
+                          </ul>
+                            Cliquez sur le lien ci-dessous pour définir votre mot de passe :
+                          <ul>
+                            <li>
+                              <a href="${object.user_id.signup_url}">
+                                ${object.user_id.signup_url}
+                              </a>
+                            </li>
+                          </ul>
+                          ${object.wizard_id.welcome_message or ''}
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="text-align:center;">
+                        <hr style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;" width="100%"/>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <!-- FOOTER -->
+            <tr>
+              <td style="min-width: 590px;" align="center">
+                <table style="min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+                  <tbody>
+                    <tr>
+                      <td valign="middle" align="left">
+                        ${object.user_id.company_id.name}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="opacity: 0.7;" valign="middle" align="left">
+                        ${object.user_id.company_id.phone}
+                        % if object.user_id.company_id.email
+                          |
+                          <a href="'mailto:%s' % ${object.user_id.company_id.email}" style=" color: #454748;">
+                            ${object.user_id.company_id.email}
+                          </a>
+                        % endif
+                        % if object.user_id.company_id.website
+                          |
+                          <a href="'%s' % ${object.user_id.company_id.website}" style=" color: #454748;">
+                            ${object.user_id.company_id.website}
+                          </a>
+                        % endif
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <!-- POWERED BY -->
+    <tr>
+      <td style="min-width: 590px;" align="center">
+        <table style="min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;" width="590" cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+            <tr>
+              <td style="text-align: center; font-size: 13px;">
+                Powered by
+                <b>
+                  <a target="_blank" href="https://www.konvergo.com?utm_source=db&amp;utm_medium=portalinvite" style="color: #5D6A7F;">
+                    Konvergo
+                  </a>
+                </b>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </field>
+  </record>
+
+</odoo>

@@ -49,13 +49,13 @@ class TestMailTemplateSearch(common.SavepointCase):
     def test_translated_fields(self, field):
         en_value = "My beautiful content"
         fr_value = "Mon beau contenu"
-        _with_en(self.konvergo_template)[field] = en_value
-        _with_fr(self.konvergo_template)[field] = fr_value
-        _with_en(self.odoo_template)[field] = "Old Body"
-        _with_fr(self.odoo_template)[field] = "Ancien contenu"
+        self.konvergo_template.with_en()[field] = en_value
+        self.konvergo_template.with_fr()[field] = fr_value
+        self.odoo_template.with_en()[field] = "Old Body"
+        self.odoo_template.with_fr()[field] = "Ancien contenu"
         self.env["mail.template"].update_from_konvergo_templates()
-        assert _with_en(self.odoo_template)[field] == en_value
-        assert _with_fr(self.odoo_template)[field] == fr_value
+        assert self.odoo_template.with_en()[field] == en_value
+        assert self.odoo_template.with_fr()[field] == fr_value
 
     def test_template_not_updated_twice(self):
         self.env["mail.template"].update_from_konvergo_templates()
@@ -63,14 +63,9 @@ class TestMailTemplateSearch(common.SavepointCase):
         self.env["mail.template"].update_from_konvergo_templates()
         assert self.odoo_template.email_from == self.email_from
 
-
-def _with_en(record):
-    return _with_lang(record, "en_US")
-
-
-def _with_fr(record):
-    return _with_lang(record, "fr_FR")
-
-
-def _with_lang(record, lang):
-    return record.with_context(lang=lang)
+    def test_template_not_updated_if_edited_by_non_superuser(self):
+        old_value = "oldvalue@example.com"
+        admin = self.env.ref("base.user_admin")
+        self.odoo_template.sudo(admin).email_from = old_value
+        self.env["mail.template"].update_from_konvergo_templates()
+        assert self.odoo_template.email_from == old_value

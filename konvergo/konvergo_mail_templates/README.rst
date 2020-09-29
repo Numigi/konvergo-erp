@@ -64,13 +64,6 @@ If checked, the template will not be overwritten by the konvergo template.
 
 This allows the client to further customize his email templates.
 
-Templates
----------
-
-Sale Order
-~~~~~~~~~~
-.. image:: static/description/sale_order.png
-
 Contributors
 ------------
 * Numigi (tm) and all its contributors (https://bit.ly/numigiens)

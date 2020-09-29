@@ -8,8 +8,6 @@
     <field name="email_from">${object.user_id.email_formatted |safe}</field>
     <field name="partner_to">${object.partner_id.id}</field>
     <field name="lang">${object.partner_id.lang}</field>
-    <field name="report_template" ref="sale.action_report_saleorder"/>
-    <field name="report_name">${(object.name or '').replace('/','_')}</field>
     <field name="user_signature" eval="False"/>
     <field name="auto_delete" eval="True"/>
     <field name="subject">Your Order ${object.name}</field>
@@ -77,7 +75,7 @@
                           <br/>
                           Here is your ${'quotation' if is_quotation else 'order'}
                           <strong>${object.name}</strong>
-                          in the amount of
+                          amounting in
                           <strong>${format_amount(object.amount_total, object.pricelist_id.currency_id)}</strong>
                           from ${object.company_id.name}.
                           <br/>

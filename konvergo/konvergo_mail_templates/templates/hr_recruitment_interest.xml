@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <record id="hr_recruitement_interest_template" model="mail.template">
+    <field name="name">Applicant: Interest</field>
+    <field name="is_konvergo_template" eval="True"/>
+    <field name="odoo_template_ref">hr_recruitment.email_template_data_applicant_interest</field>
+    <field name="email_to">${(not object.partner_id and object.email_from or '') | safe}</field>
+    <field name="partner_to">${object.partner_id.id or ''}</field>
+    <field name="lang">${object.partner_id.lang or ''}</field>
+    <field name="user_signature" eval="False"/>
+    <field name="auto_delete" eval="True"/>
+    <field name="subject_en">Your Job Application for ${object.job_id.name | safe}</field>
+    <field name="subject_fr">Votre candidature au poste de ${object.job_id.name | safe}</field>
+    <field name="body_html_en" type="html">
+<table style="background-color: white; border-collapse: collapse; margin-left: 20px;" width="590" cellspacing="0" cellpadding="0" border="0">
+  <tbody>
+    <tr>
+      <td style="padding: 0px 10px;" valign="top">
+        <div>
+          <h2>
+            <font style="font-size: 24px;">
+              Congratulations!
+            </font>
+          </h2>
+          <div>
+            <font style="font-size: 18px;">
+              Your Job application has validated.
+            </font>
+          </div>
+        </div>
+        <br/>
+        <div style="font-size: 13px; margin: 0px; padding: 0px;">
+          <font style="font-size: 14px;">
+            Your application has been studied and has received our full attention.
+            We will contact you in a few days to arrange a date and time for a telephone interview.
+          </font>
+          <br/>
+          <br/>
+          <font style="font-size: 14px;">
+            To contact us, simply reply to this email directly.
+          </font>
+          <br/>
+          <br/>
+          <font style="font-size: 14px;">
+            Thank you and look forward to discussing with you!
+          </font>
+          <br/>
+          <br/>
+          % if 'website_url' in object.job_id and object.job_id.website_url:
+          <div style="margin: 0px 8px 0px 8px;">
+            <a href="${object.job_id.website_url}" style="text-decoration: none; padding: 8px 16px; border-radius: 5px;" class="btn btn-alpha">
+              Job Description
+            </a>
+          </div>
+          <br/>
+          % endif
+          <font style="font-size: 14px;">See you soon,</font>
+          <div style="font-size: 11px; color: #5D6A7F;">
+            --
+            <br/>
+            <font style="font-size: 14px;">
+              <b>
+                The talent management team
+              </b>
+            </font>
+            <br/>
+            % if 'website_url' in object.job_id and object.job_id.website_url:
+              Discover
+              <a href="/jobs" style="color:#717188;">
+                all our jobs positions
+              </a>
+              .
+              <br/>
+            % endif
+          </div>
+          <hr style="background-color: rgb(236, 11, 67); border: medium none; clear: both; display: block; font-size: 0px; min-height: 1px; line-height: 0; margin: 17px 0px 16px 0px;" width="97%"/>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </field>
+    <field name="body_html_fr" type="html">
+<table style="background-color: white; border-collapse: collapse; margin-left: 20px;" width="590" cellspacing="0" cellpadding="0" border="0">
+  <tbody>
+    <tr>
+      <td style="padding: 0px 10px;" valign="top">
+        <div>
+          <h2>
+            <font style="font-size: 24px;">
+              Félicitations!
+            </font>
+          </h2>
+          <div>
+            <font style="font-size: 18px;">
+              Votre candidature a retenu notre attention.
+            </font>
+          </div>
+        </div>
+        <br/>
+        <div style="font-size: 13px; margin: 0px; padding: 0px;">
+          <font style="font-size: 14px;">
+            Votre candidature a été étudiée et a retenu toute notre attention.
+            Nous vous contacterons dans les prochains jours afin de convenir d'une date et d'une heure pour une entrevue téléphonique.
+          </font>
+          <br/>
+          <br/>
+          <font style="font-size: 14px;">
+            Pour communiquer avec nous, il vous suffit de répondre directement à ce courriel.
+          </font>
+          <br/>
+          <br/>
+          <font style="font-size: 14px;">
+            Merci et au plaisir d'échanger avec vous!
+          </font>
+          <br/>
+          <br/>
+          % if 'website_url' in object.job_id and object.job_id.website_url:
+          <div style="margin: 0px 8px 0px 8px;">
+            <a href="${object.job_id.website_url}" style="text-decoration: none; padding: 8px 16px; border-radius: 5px;" class="btn btn-alpha">
+              Description du poste
+            </a>
+          </div>
+          <br/>
+          % endif
+          <font style="font-size: 14px;">À bientôt,</font>
+          <div style="font-size: 11px; color: #5D6A7F;">
+            --
+            <br/>
+            <font style="font-size: 14px;">
+              <b>
+                L'équipe de gestion des talents
+              </b>
+            </font>
+            <br/>
+            % if 'website_url' in object.job_id and object.job_id.website_url
+              Découvrez
+              <a href="/jobs" style="color:#717188;">
+                tous nos postes
+              </a>
+              .
+              <br/>
+            % endif
+          </div>
+          <hr style="background-color: rgb(236, 11, 67); border: medium none; clear: both; display: block; font-size: 0px; min-height: 1px; line-height: 0; margin: 17px 0px 16px 0px;" width="97%"/>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </field>
+  </record>
+
+</odoo>

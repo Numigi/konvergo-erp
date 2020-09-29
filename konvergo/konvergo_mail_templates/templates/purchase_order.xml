@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <record id="account_invoice_template" model="mail.template">
+    <field name="name">Purchase Order (PO): original linked to button</field>
+    <field name="is_konvergo_template" eval="True"/>
+    <field name="odoo_template_ref">purchase.email_template_edi_purchase_done</field>
+    <field name="partner_to">${object.partner_id.id}</field>
+    <field name="lang">${object.partner_id.lang}</field>
+    <field name="user_signature" eval="False"/>
+    <field name="auto_delete" eval="True"/>
+    <field name="subject_en">${object.company_id.name} | Purchase Order #${object.name} - ${format_date(object.date_order, "MM/dd/yyyy")}</field>
+    <field name="subject_fr">${object.company_id.name} | Commande numéro ${object.name} du ${format_date(object.date_order, "d MMMM yyyy")}</field>
+    <field name="body_html_en" type="html">
+<div style="line-height:2em; margin: 0px; padding: 0px; font-size: 13px;">
+  <p>
+    Hello,
+    <br/>
+    Here is your purchase order number
+
+    % if object.name:
+    <strong>
+      ${object.name}
+    </strong>
+    % else:
+    n/a
+    % endif
+
+    % if object.partner_ref:
+    with reference <b>${object.partner_ref}</b>
+    % endif
+    .
+    <br/>
+    Please confirm the receipt of this purchase order and if you have any questions, do not hesitate to contact us.
+    <br/>
+    Best regards,
+  </p>
+  <p>
+    <i>Accounts Payable Team</i>
+  </p>
+  <hr style="
+    border-color: #D3D3D3; 
+    border-top-color: rgb(249, 249, 249);
+    border-top-style: solid;
+    border-width: 0,5px;
+    margin-left: auto;
+    margin:18px 0 18px 0;
+    width: 100%;
+    "
+    />
+  <p style="margin:0px 0px 9px 0px;color:#333533">
+    <font style="font-size: 11px;">
+      The recipients included in this message are:
+      <i>${', '.join(object.message_partner_ids.mapped('name'))}</i>
+    </font>
+  </p>
+</div>
+    </field>
+    <field name="body_html_en" type="html">
+<div style="line-height:2em; margin: 0px; padding: 0px; font-size: 13px;">
+  <p>
+    Bonjour,
+    <br/>
+    Vous trouverez ci-joint la confirmation de commande numéro
+    % if object.name:
+    <strong>
+      ${object.name}
+    </strong>
+    % else:
+    n/a
+    % endif
+
+    % if object.partner_ref:
+    en référence à votre soumission numéro <b>${object.partner_ref}</b>
+    % endif
+    .
+    <br/>
+    Nous vous remercions de bien vouloir accuser réception de notre commande et si cela n'est pas fait, de nous transmettre vos coordonnées bancaires en répondant à ce courriel.
+    <br/>
+    Merci et bonne journée,
+  </p>
+  <p>
+    <i>L'équipe des comptes payables</i>
+  </p>
+  <hr style="
+    border-color: #D3D3D3; 
+    border-top-color: rgb(249, 249, 249);
+    border-top-style: solid;
+    border-width: 0,5px;
+    margin-left: auto;
+    margin:18px 0 18px 0;
+    width: 100%;
+    "
+    />
+  <p style="margin:0px 0px 9px 0px;color:#333533">
+    <font style="font-size: 11px;">
+      Les destinataires inclus dans ce message sont :
+      <i>${', '.join(object.message_partner_ids.mapped('name'))}</i>
+    </font>
+  </p>
+</div>
+    </field>
+  </record>
+
+</odoo>
