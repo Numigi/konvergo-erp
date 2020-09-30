@@ -17,6 +17,7 @@
         'konvergo_favicon_title',  # TA#16527
         'konvergo_icons',
         'konvergo_login_page',  # TA#18145
+        'mail_color_konvergo',
 
         # OCA/social
         'mail_debrand',  # TA#16549
