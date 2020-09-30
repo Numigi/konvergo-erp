@@ -32,6 +32,12 @@ class MailMessage(models.Model):
 
 
 def get_body_with_konvergo_colors(body):
+    if not body:
+        return ""
+
+    if isinstance(body, bytes):
+        body = body.decode('utf-8')
+
     replacements = (
         (ODOO_FONT_COLOR, KONVERGO_FONT_COLOR),
         (ODOO_BG_COLOR, KONVERGO_BG_COLOR),

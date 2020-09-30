@@ -49,3 +49,7 @@ class TestColorizedBody(SavepointCase):
     def test_new_coulours_in_mail_message(self):
         message = self.lead.message_post(body=ODOO_FONT_COLOR)
         assert KONVERGO_FONT_COLOR in message.body
+
+    def test_post_message_in_bytes(self):
+        message = self.lead.message_post(body=ODOO_FONT_COLOR.encode('utf-8'))
+        assert KONVERGO_FONT_COLOR in message.body
