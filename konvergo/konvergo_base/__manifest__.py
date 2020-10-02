@@ -11,16 +11,17 @@
     'summary': 'Dependencies for Konvergo',
     'depends': [
         # Numigi/odoo-base
-        'numipack',
         'konvergo_bot',  # TA#16528
         'konvergo_cron_publisher',  # TA#16530
         'konvergo_favicon_title',  # TA#16527
         'konvergo_icons',
         'konvergo_login_page',  # TA#18145
+        'konvergo_mail_notification',
         'mail_color_konvergo',
+        'numipack',
 
-        # OCA/social
-        'mail_debrand',  # TA#16549
+        # Numigi/odoo-base-addons
+        'mail_notification_no_action_button',
 
         # OCA/server-brand
         'remove_odoo_enterprise',  # TA#22257
