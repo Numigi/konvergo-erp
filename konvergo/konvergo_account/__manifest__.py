@@ -3,7 +3,7 @@
 
 {
     'name': 'Konvergo / Accounting',
-    'version': '1.0.0',
+    'version': '1.1.0',
     'author': 'Numigi',
     'maintainer': 'Numigi',
     'license': 'LGPL-3',
@@ -54,6 +54,9 @@
         # akretion
         'account_viewer',  # TA#16549
         'account_report_viewer',  # TA#16549
+    ],
+    'data': [
+        'views/menu.xml',
     ],
     'installable': True,
 }

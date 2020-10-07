@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <function name="rename" model="ir.ui.menu">
+        <value type="char">account_financial_report.menu_oca_reports</value>
+        <value type="char">en_US</value>
+        <value type="char">Accounting</value>
+    </function>
+
+    <function name="rename" model="ir.ui.menu">
+        <value type="char">account_financial_report.menu_oca_reports</value>
+        <value type="char">fr_FR</value>
+        <value type="char">Comptabilité</value>
+    </function>
+
+    <function name="rename" model="ir.ui.menu">
+        <value type="char">account_tax_balance.menu_tax_balances</value>
+        <value type="char">en_US</value>
+        <value type="char">Taxes</value>
+    </function>
+
+    <function name="rename" model="ir.ui.menu">
+        <value type="char">account_tax_balance.menu_tax_balances</value>
+        <value type="char">fr_FR</value>
+        <value type="char">Taxes</value>
+    </function>
+
+    <function name="rename" model="ir.ui.menu">
+        <value type="char">mis_builder.mis_report_finance_menu</value>
+        <value type="char">en_US</value>
+        <value type="char">Finances</value>
+    </function>
+
+    <function name="rename" model="ir.ui.menu">
+        <value type="char">mis_builder.mis_report_finance_menu</value>
+        <value type="char">fr_FR</value>
+        <value type="char">Finances</value>
+    </function>
+
+</odoo>
