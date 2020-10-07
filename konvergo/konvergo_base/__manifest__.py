@@ -21,6 +21,7 @@
         'numipack',
 
         # Numigi/odoo-base-addons
+        'mail_bot_no_pong',
         'mail_notification_no_action_button',
 
         # OCA/server-brand
