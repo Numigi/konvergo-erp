@@ -11,6 +11,7 @@
     'summary': 'Dependencies for Konvergo',
     'depends': [
         # Numigi/odoo-base
+        'canada_vat_label',
         'konvergo_bot',  # TA#16528
         'konvergo_cron_publisher',  # TA#16530
         'konvergo_favicon_title',  # TA#16527
