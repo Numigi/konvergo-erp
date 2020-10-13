@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <template id="assets_frontend" name="assets_frontend" inherit_id="web.assets_frontend" priority="1">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/theme_konvergo/static/src/scss/font.scss"/>
+        </xpath>
+    </template>
+
+    <template id="web_editor_assets" name="web_editor_assets"  inherit_id="web_editor._assets_primary_variables" priority="1">
+        <xpath expr="//link[@href='/web_editor/static/src/scss/web_editor.variables.scss']" position="before">
+            <link rel="stylesheet" type="text/scss" href="/theme_konvergo/static/src/scss/web_editor.scss"/>
+        </xpath>
+    </template>
+
+</odoo>
