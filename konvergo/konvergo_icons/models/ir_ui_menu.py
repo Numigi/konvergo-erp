@@ -50,6 +50,7 @@ ICONS = {
     "crm.crm_menu_root": "crm.png",
     "event.event_main_menu": "events.png",
     "fleet.menu_root": "fleet.png",
+    "helpdesk_mgmt.helpdesk_ticket_main_menu": "helpdesk.png",
     "hr.menu_hr_root": "employees.png",
     "hr_attendance.menu_hr_attendance_root": "presence.png",
     "hr_expense.menu_hr_expense_root": "expenses.png",
