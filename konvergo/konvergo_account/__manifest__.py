@@ -23,6 +23,7 @@
         'account_manual_entry_restricted',
         'account_payment_from_move_line',
         'account_payment_widget_link',
+        'account_report_trial_balance',
         'account_show_full_features',  # TA#16549
         'account_unaffected_earnings_disabled',  # TA#22357
         'canada_account_types',  # TA#22360
