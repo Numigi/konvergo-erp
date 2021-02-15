@@ -14,6 +14,7 @@
         'mis_builder',
         # Numigi/odoo-account-addons
         'canada_account_types',
+        'account_closing_journal_mis_builder',
         # Numigi/odoo-base
         'lang_fr_activated',
     ],
