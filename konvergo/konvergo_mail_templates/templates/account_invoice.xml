@@ -8,7 +8,6 @@
     <field name="email_from">${object.user_id.email_formatted | safe}</field>
     <field name="partner_to">${object.partner_id.id}</field>
     <field name="lang">${object.partner_id.lang}</field>
-    <field name="user_signature" eval="False"/>
     <field name="auto_delete" eval="True"/>
     <field name="subject_en">${object.company_id.name} Invoice # ${object.number or 'n/a'} - ${format_date(object.date, "MM/dd/yyyy")}</field>
     <field name="subject_fr">${object.company_id.name} Facture numéro ${object.number or 'n/a'} du ${format_date(object.date, "dd MMMM yyyy")}</field>

@@ -26,7 +26,7 @@
         'mail_notification_no_action_button',
 
         # OCA/server-brand
-        'remove_odoo_enterprise',  # TA#22257
+        # 'remove_odoo_enterprise',  # TA#22257
 
         # theme
         'muk_web_theme',

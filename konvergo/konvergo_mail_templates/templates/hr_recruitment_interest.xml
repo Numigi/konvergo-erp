@@ -8,7 +8,6 @@
     <field name="email_to">${(not object.partner_id and object.email_from or '') | safe}</field>
     <field name="partner_to">${object.partner_id.id or ''}</field>
     <field name="lang">${object.partner_id.lang or ''}</field>
-    <field name="user_signature" eval="False"/>
     <field name="auto_delete" eval="True"/>
     <field name="subject_en">Your Job Application for ${object.job_id.name | safe}</field>
     <field name="subject_fr">Votre candidature au poste de ${object.job_id.name | safe}</field>

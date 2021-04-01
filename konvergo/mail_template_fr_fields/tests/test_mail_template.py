@@ -46,10 +46,3 @@ class TestMailTemplate(common.SavepointCase):
         assert self.template.body_html == new_value_en
         assert self.template.body_html_fr == new_value_fr
         assert self.template.body_html_en == new_value_en
-
-    def test_write_body_html__original_field(self):
-        new_value_en = "New content value"
-        self.template.body_html = new_value_en
-        assert self.template.body_html == new_value_en
-        assert self.template.body_html_fr == self.body_html_fr
-        assert self.template.body_html_en == new_value_en

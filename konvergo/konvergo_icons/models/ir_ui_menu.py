@@ -8,7 +8,6 @@ class MenuItem(models.Model):
 
     _inherit = "ir.ui.menu"
 
-    @api.multi
     def write(self, vals):
         super().write(vals)
         if self._should_update_konvergo_icons(vals):

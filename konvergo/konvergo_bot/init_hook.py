@@ -13,7 +13,7 @@ def post_init_hook(cr, _):
     bot = env.ref('base.partner_root')
     bot.name = KONVERGO_BOT
     bot.email = "monkeybot@konvergo.com"
-    bot.image = _get_bot_image_data()
+    bot.image_1920 = _get_bot_image_data()
 
 
 def _get_bot_image_data():

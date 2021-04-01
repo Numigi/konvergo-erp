@@ -62,5 +62,5 @@
     'data': [
         'views/menu.xml',
     ],
-    'installable': True,
+    'installable': False,
 }

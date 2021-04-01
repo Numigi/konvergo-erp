@@ -14,7 +14,6 @@ class MailMessage(models.Model):
         new_vals = self._get_vals_with_konvergo_body(vals)
         return super().create(new_vals)
 
-    @api.multi
     def write(self, vals):
         new_vals = self._get_vals_with_konvergo_body(vals)
         return super().write(new_vals)

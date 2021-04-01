@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="login_layout" inherit_id="web.login_layout" name="Login Layout Konvergo">
-        <xpath expr="//div[@class='container mb-5 pb-5']" position="replace">
+        <xpath expr="//div[hasclass('container')]" position="replace">
             <div class="container-fluid h-100">
                 <div class="row h-100 float-center">
                     <div class="col-lg-3 my-auto">
@@ -94,7 +94,7 @@
 
     <!-- Make sure the auth_oauth / oauth_signup elements are inserted inside the new login page. -->
     <record id="konvergo_login_page.login" model="ir.ui.view">
-        <field name="sequence" eval="0"/>
+        <field name="priority" eval="0"/>
     </record>
     
 </odoo>

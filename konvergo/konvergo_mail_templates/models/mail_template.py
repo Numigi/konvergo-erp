@@ -84,7 +84,6 @@ class MailTemplate(models.Model):
             "subject": self.subject,
             "updated_from_konvergo": True,
             "use_default_to": self.use_default_to,
-            "user_signature": self.user_signature,
         }
 
 

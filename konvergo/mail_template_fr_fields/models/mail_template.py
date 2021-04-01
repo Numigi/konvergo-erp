@@ -49,7 +49,6 @@ class MailTemplate(models.Model):
         template._set_en_field_values(vals_copy)
         return template
 
-    @api.multi
     def write(self, vals):
         vals_copy = vals.copy()
         super().write(vals)
