@@ -20,8 +20,6 @@
 
         # Numigi/odoo-account-addons
         'account_closing_journal',  # TA#22629
-        'account_manual_entry_restricted',
-        'account_payment_from_move_line',
         'account_payment_widget_link',
         'account_report_trial_balance',
         'account_show_full_features',  # TA#16549
@@ -39,28 +37,24 @@
         # OCA/server-ux
         'date_range',  # TA#16549 (dependency of mis_builder)
 
-        # OCA/web
-        'web_widget_color',  # TA#16549 (dependency of mis_builder)
-
         # OCA/account-financial-reporting
-        'account_export_csv',  # TA#16549
+        # 'account_export_csv',  # TA#16549
         'account_financial_report',  # TA#16549
-        'account_tax_balance',  # TA#16549
-        'mis_builder_cash_flow',  # TA#16549
-        'partner_statement',  # TA#16549
+        # 'mis_builder_cash_flow',  # TA#16549
+        # 'partner_statement',  # TA#16549
 
         # OCA/account-financial-tools
         'account_lock_date_update',  # TA#30205
 
         # OCA/bank-statement-import
-        'account_bank_statement_import_txt_xlsx',  # TA#20564
+        # 'account_bank_statement_import_txt_xlsx',  # TA#20564
 
         # akretion
-        'account_viewer',  # TA#16549
-        'account_report_viewer',  # TA#16549
+        # 'account_viewer',  # TA#16549
+        # 'account_report_viewer',  # TA#16549
     ],
     'data': [
         'views/menu.xml',
     ],
-    'installable': False,
+    'installable': True,
 }

@@ -22,5 +22,5 @@
         'data/mis_report_style.xml',
         'data/mis_report.xml',
     ],
-    'installable': False,
+    'installable': True,
 }
