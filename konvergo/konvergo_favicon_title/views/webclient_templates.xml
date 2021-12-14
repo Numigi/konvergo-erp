@@ -2,9 +2,7 @@
 <odoo>
     <template id="favicon" inherit_id="web.layout" name="Konvergo Favicon">
         <xpath expr="//link[@rel='shortcut icon']" position="before">
-            <t t-if="not website">
-                <t t-set="x_icon" t-value="'/konvergo_favicon_title/static/src/img/favicon.ico'"/>
-            </t>
+            <t t-set="x_icon" t-value="'/konvergo_favicon_title/static/src/img/favicon.ico'"/>
         </xpath>
     </template>
 
