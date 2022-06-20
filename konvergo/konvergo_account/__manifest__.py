@@ -45,6 +45,9 @@
 
         # OCA/account-financial-tools
         'account_lock_date_update',  # TA#30205
+        
+        # OCA/account-reconcile
+        'account_reconciliation_widget' # TA#45105
 
         # OCA/bank-statement-import
         # 'account_bank_statement_import_txt_xlsx',  # TA#20564
