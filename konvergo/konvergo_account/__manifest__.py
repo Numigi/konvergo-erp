@@ -41,7 +41,7 @@
         # 'account_export_csv',  # TA#16549
         'account_financial_report',  # TA#16549
         # 'mis_builder_cash_flow',  # TA#16549
-        # 'partner_statement',  # TA#16549
+        'partner_statement',  # TA#45126
 
         # OCA/account-financial-tools
         'account_lock_date_update',  # TA#30205
