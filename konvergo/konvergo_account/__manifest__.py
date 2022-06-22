@@ -23,7 +23,7 @@
         'account_payment_widget_link',
         # 'account_report_trial_balance',  # TA#45104
         'account_show_full_features',  # TA#16549
-        'account_unaffected_earnings_disabled',  # TA#22357
+        # 'account_unaffected_earnings_disabled',  # TA#45104
         'canada_account_types',  # TA#22360
         'invoice_refund_not_earlier',
         'old_accounts',
