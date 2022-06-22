@@ -26,6 +26,7 @@
         'mail_notification_no_action_button',
 
         # OCA/server-brand
+        'disable_odoo_online',  # TA#45124
         'remove_odoo_enterprise',  # TA#45105
 
         # theme
