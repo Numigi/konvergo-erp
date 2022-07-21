@@ -45,6 +45,7 @@
 
         # OCA/account-financial-tools
         'account_lock_date_update',  # TA#30205
+        'account_move_name_sequence',  # TA#45258
         
         # OCA/account-reconcile
         'account_reconciliation_widget' # TA#45105
