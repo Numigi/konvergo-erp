@@ -74,6 +74,7 @@ ICONS = {
     "repair.menu_repair_order": "repair.png",
     "sale.sale_menu_root": "sales.png",
     "sale_warranty.menu_warranty": "warranty.png",
+    "stock_barcodes.stock_barcodes_root": "stock_barcodes.png",
     "stock.menu_stock_root": "inventory.png",
     "survey.menu_surveys": "surveys.png",
     "utm.menu_link_tracker_root": "link_tracker.png",
