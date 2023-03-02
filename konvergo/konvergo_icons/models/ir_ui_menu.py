@@ -69,6 +69,7 @@ ICONS = {
     "product_panel_shortcut.menu_product_root": "products.png",
     "project.menu_main_pm": "project.png",
     "purchase.menu_purchase_root": "purchase.png",
+    "purchase_request.parent_menu_purchase_request": "purchase_request.png",
     "queue_job.menu_queue_job_root": "job_queue.png",
     "recording.menu_recording_root": "music.png",
     "repair.menu_repair_order": "repair.png",
