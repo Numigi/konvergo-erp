@@ -34,6 +34,31 @@ kpi_descriptions = [
     ('TOTAL_EQUITY_LIABILITIES', 'Total passif et capitaux propres'),
     ('TOTAL_LIABILITIES', 'Total passif'),
     ('TOTAL_NON_CURRENT_ASSETS', 'Total actifs non courants'),
+    ('BANK_OP_NO_ACCOUNT_LINE',
+     'Transactions bancaires non liées à une écriture comptable'),
+    ('ENCASHMENT_LINE_NO_STATEMENT',
+     'Encaissements non liés à une transaction bancaire'),
+    ('PAYMENT_LINE_NO_STATEMENT', 'Paiements non liés à une transaction bancaire'),
+    ('GST_DECLA', 'Déclaration TPS sur la période'),
+    ('GST_SALE', 'TPS collectée sur ventes'),
+    ('GST_PURC', 'TPS payée sur Achats'),
+    ('GST_BALANCE', 'Solde TPS'),
+    ('QST_DECLA', 'Déclaration TVQ sur la période'),
+    ('QST_SALE', 'TVQ collectée sur ventes'),
+    ('QST_PURC', 'TVQ payée sur Achats'),
+    ('QST_BALANCE', 'Solde TVQ'),
+    ('TOTAL_SALE', 'Total taxes collectée sur Ventes'),
+    ('TOTAL_PURC', 'Total Taxes payées sur Achats'),
+    ('BALANCE', 'Balance à payer'),
+    ('CTRL', 'Contrôles'),
+    ('CTRL_GST_SALE', 'Balance cumulée - TPS collectée'),
+    ('CTRL_GST_PURC', 'Balance cumulée - TPS payée'),
+    ('SS_TOT_GST', 'Balance cumulée TPS'),
+    ('DIFF_GST', 'Écart sur TPS'),
+    ('CTRL_QST_SALE', 'Balance cumulée - TVQ collectée'),
+    ('CTRL_QST_PURC', 'Balance cumulée - TVQ payée'),
+    ('SS_TOT_QST', 'Balance cumulée TVQ'),
+    ('DIFF_QST', 'Écart sur TVQ'),
 ]
 
 
@@ -60,18 +85,24 @@ class MisReport(models.Model):
         for kpi_name, fr_term in kpi_descriptions:
             self._translate_canada_kpi(kpi_name, fr_term)
 
+    def _checking_done_translation(self, reports, kpi_name, fr_term):
+        kpi_lines = reports.mapped("kpi_ids").filtered(
+            lambda k: k.name == kpi_name)
+
+        for kpi in kpi_lines:
+            if not _has_been_translated(kpi):
+                _with_lang_fr(kpi).description = fr_term
+
     def _translate_canada_kpi(self, kpi_name, fr_term):
         reports = (
             self.env.ref("canada_mis_report.income_statement_summary") |
             self.env.ref("canada_mis_report.income_statement_detailed") |
             self.env.ref("canada_mis_report.balance_sheet_summary") |
-            self.env.ref("canada_mis_report.balance_sheet_detailed")
+            self.env.ref("canada_mis_report.balance_sheet_detailed") |
+            self.env.ref("canada_mis_report.bank_reconciliation") |
+            self.env.ref("canada_mis_report.tax_report")
         )
-        kpi_lines = reports.mapped("kpi_ids").filtered(lambda k: k.name == kpi_name)
-
-        for kpi in kpi_lines:
-            if not _has_been_translated(kpi):
-                _with_lang_fr(kpi).description = fr_term
+        self._checking_done_translation(reports, kpi_name, fr_term)
 
 
 def _has_been_translated(kpi):

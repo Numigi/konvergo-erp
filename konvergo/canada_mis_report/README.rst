@@ -25,6 +25,12 @@ The detailed version is similar to the summary, but each section is detailed per
 
 .. image:: static/description/income_statement_detailed.png
 
+Tax Report
+----------
+Since version 1.0.1, a new report template names "Tax Report" is added to the module.
+
+.. image:: static/description/tax_report.png
+
 Customizing the Reports
 -----------------------
 In production, it is possible to customize the report templates.
