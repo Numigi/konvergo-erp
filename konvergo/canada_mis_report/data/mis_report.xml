@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<odoo noupdate="0">
+<odoo noupdate="1">
 
     <record id="income_statement_summary" model="mis.report">
         <field name="name">Income Statement (Summary)</field>
@@ -245,14 +245,6 @@
         ]"/>
     </record>
 
-    <!-- Open update for balance_sheet_summary -->
-    <function name="write" model="ir.model.data">
-        <function name="search" model="ir.model.data">
-            <value eval="[('module', '=', 'canada_mis_report'), ('name', '=', 'balance_sheet_summary')]"/>
-        </function>
-        <value eval="{'noupdate': False}" />
-    </function>
-
     <record id="balance_sheet_summary" model="mis.report">
         <field name="name">Balance Sheet (Summary)</field>
         <field name="description">Balance sheet without details</field>
@@ -457,22 +449,6 @@
             }),
         ]"/>
     </record>
-
-    <!-- Close update for balance_sheet_summary -->
-    <function name="write" model="ir.model.data">
-        <function name="search" model="ir.model.data">
-            <value eval="[('module', '=', 'canada_mis_report'), ('name', '=', 'balance_sheet_summary')]"/>
-        </function>
-        <value eval="{'noupdate': True}" />
-    </function>
-
-    <!-- Open for update for balance_sheet_detailed -->
-    <function name="write" model="ir.model.data">
-        <function name="search" model="ir.model.data">
-            <value eval="[('module', '=', 'canada_mis_report'), ('name', '=', 'balance_sheet_detailed')]"/>
-        </function>
-        <value eval="{'noupdate': False}" />
-    </function>
 
     <record id="balance_sheet_detailed" model="mis.report">
         <field name="name">Balance Sheet (Detailed)</field>
@@ -690,18 +666,10 @@
         ]"/>
     </record>
 
-    <!-- Close update for balance_sheet_detailed -->
-    <function name="write" model="ir.model.data">
-        <function name="search" model="ir.model.data">
-            <value eval="[('module', '=', 'canada_mis_report'), ('name', '=', 'balance_sheet_detailed')]"/>
-        </function>
-        <value eval="{'noupdate': True}" />
-    </function>
-
     <!-- New records to add -->
     <record id="bank_reconciliation" model="mis.report">
         <field name="name">Bank Reconciliation</field>
-        <field name="description"></field>
+        <field name="description">Bank Reconciliation</field>
         <field name="kpi_ids" eval="[
             (5, 0),
             (0, 0, {

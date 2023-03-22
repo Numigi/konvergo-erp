@@ -57,6 +57,7 @@ msgstr "État des résultats sans les détails par compte"
 
 #. module: canada_mis_report
 #: model:mis.report,name:canada_mis_report.bank_reconciliation
+#: model:mis.report,description:canada_mis_report.bank_reconciliation
 msgid "Bank Reconciliation"
 msgstr "Conciliation bancaire"
 
