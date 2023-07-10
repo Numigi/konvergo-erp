@@ -78,6 +78,7 @@ ICONS = {
     "stock_barcodes.stock_barcodes_root": "stock_barcodes.png",
     "stock.menu_stock_root": "inventory.png",
     "survey.menu_surveys": "surveys.png",
+    "sync_plm.revision_bom_main_menu": "sync_plm.png",
     "utm.menu_link_tracker_root": "link_tracker.png",
     "website.menu_website_configuration": "website.png",
 }
