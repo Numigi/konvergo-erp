@@ -58,6 +58,7 @@
         # 'account_viewer',  # TA#16549
         # 'account_report_viewer',  # TA#16549
     ],
+    'excludes': ["konvergo_account_fr"],
     'data': [
         'views/menu.xml',
     ],
