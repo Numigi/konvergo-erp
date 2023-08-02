@@ -10,6 +10,17 @@
     'category': 'Accounting',
     'summary': 'Accounting Dependencies for Konvergo France',
     'depends': [
+        # OCA/account-financial-reporting
+        'account_financial_report',
+        'account_tax_balance',
+        'partner_statement',        
+        
+        # OCA/account-financial-tools
+        'account_move_name_sequence',
+
+        # OCA/account-reconcile
+        'account_reconciliation_widget',
+        
         # OCA/l10n-france
         'l10n_fr_department',
         'l10n_fr_account_invoice_facturx',
