@@ -19,6 +19,7 @@
         'konvergo_login_page',  # TA#18145
         'konvergo_mail_notification',
         'konvergo_mail_templates',  # TA#54157
+        'konvergo_web_logo',  # TA#25792
         'mail_color_konvergo',
         'numipack',
 
