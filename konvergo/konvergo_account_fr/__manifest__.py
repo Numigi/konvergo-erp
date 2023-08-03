@@ -3,7 +3,7 @@
 
 {
     'name': 'Konvergo / Accounting',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'author': 'Numigi',
     'maintainer': 'Numigi',
     'license': 'LGPL-3',
@@ -46,6 +46,7 @@
         'account_negative_debit_credit',
         'account_payment_cancel_group',
         'account_show_full_features',
+        'bank_statement_import_csv',
 
         # Numigi/aeroo_reports
         'account_check_printing_aeroo',
