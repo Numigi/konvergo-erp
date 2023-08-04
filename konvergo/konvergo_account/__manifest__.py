@@ -3,7 +3,7 @@
 
 {
     'name': 'Konvergo / Accounting',
-    'version': '1.1.0',
+    'version': '1.1.1',
     'author': 'Numigi',
     'maintainer': 'Numigi',
     'license': 'LGPL-3',
@@ -23,6 +23,7 @@
         'account_payment_widget_link',
         # 'account_report_trial_balance',  # TA#45104
         'account_show_full_features',  # TA#16549
+        'bank_statement_import_csv', # TA#55969
         # 'account_unaffected_earnings_disabled',  # TA#45104
         'canada_account_types',  # TA#22360
         'invoice_refund_not_earlier',

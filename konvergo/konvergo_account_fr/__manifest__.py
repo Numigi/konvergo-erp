@@ -3,7 +3,7 @@
 
 {
     'name': 'Konvergo / Accounting',
-    'version': '1.0.2',
+    'version': '1.0.3',
     'author': 'Numigi',
     'maintainer': 'Numigi',
     'license': 'LGPL-3',
@@ -12,6 +12,7 @@
     'depends': [
         # OCA/account-financial-reporting
         'account_financial_report',
+        'account_lock_date_update', # TA#55969
         'account_tax_balance',
         'partner_statement',        
         
@@ -45,6 +46,7 @@
         'account_move_unique_reversal',
         'account_negative_debit_credit',
         'account_payment_cancel_group',
+        'account_payment_widget_link', # TA#55969
         'account_show_full_features',
         'bank_statement_import_csv',
 
