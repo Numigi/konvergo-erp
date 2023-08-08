@@ -66,6 +66,7 @@ ICONS = {
     "mrp.menu_mrp_root": "manufacturing.png",
     "note.menu_note_notes": "notes.png",
     "ks_office365_base.ks_office365_main_sidemenu": "office-365.png",
+    "product_configurator.menu_product_configurable": "configurator.png",
     "product_panel_shortcut.menu_product_root": "products.png",
     "project.menu_main_pm": "project.png",
     "purchase.menu_purchase_root": "purchase.png",
