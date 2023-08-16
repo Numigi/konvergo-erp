@@ -3,7 +3,7 @@
 
 {
     'name': 'Konvergo / Accounting',
-    'version': '1.0.3',
+    'version': '1.0.4',
     'author': 'Numigi',
     'maintainer': 'Numigi',
     'license': 'LGPL-3',
@@ -33,6 +33,9 @@
         'l10n_fr_siret',
         'l10n_fr_state',
 
+        # OCA/partner-contact
+        'partner_firstname', # TA#56107
+
         # Numigi/odoo-base
         'konvergo_base',
         'numipack',
@@ -52,6 +55,9 @@
 
         # Numigi/aeroo_reports
         'account_check_printing_aeroo',
+
+        # Numigi/odoo-partner-addons
+        'partner_firstname_before_lastname', # TA#56107
 
         # Numigi/odoo-web-addons
         'web_search_date_range_account',
