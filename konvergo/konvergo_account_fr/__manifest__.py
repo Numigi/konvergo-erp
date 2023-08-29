@@ -45,6 +45,7 @@
 
         # Numigi/odoo-account-addons
         'account_bank_menu',
+        'account_invoice_constraint_chronology', # TA#55774
         'account_move_reversal_access',
         'account_move_unique_reversal',
         'account_negative_debit_credit',
