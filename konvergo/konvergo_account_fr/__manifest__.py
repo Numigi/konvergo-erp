@@ -3,7 +3,7 @@
 
 {
     'name': 'Konvergo / Accounting',
-    'version': '1.0.4',
+    'version': '1.0.5',
     'author': 'Numigi',
     'maintainer': 'Numigi',
     'license': 'LGPL-3',
@@ -12,16 +12,16 @@
     'depends': [
         # OCA/account-financial-reporting
         'account_financial_report',
-        'account_lock_date_update', # TA#55969
+        'account_lock_date_update',  # TA#55969
         'account_tax_balance',
-        'partner_statement',        
-        
+        'partner_statement',
+
         # OCA/account-financial-tools
         'account_move_name_sequence',
 
         # OCA/account-reconcile
         'account_reconciliation_widget',
-        
+
         # OCA/l10n-france
         'l10n_fr_department',
         'l10n_fr_account_invoice_facturx',
@@ -34,7 +34,7 @@
         'l10n_fr_state',
 
         # OCA/partner-contact
-        'partner_firstname', # TA#56107
+        'partner_firstname',  # TA#56107
 
         # Numigi/odoo-base
         'konvergo_base',
@@ -45,12 +45,12 @@
 
         # Numigi/odoo-account-addons
         'account_bank_menu',
-        'account_invoice_constraint_chronology', # TA#55774
+        'account_invoice_constraint_chronology',  # TA#55774
         'account_move_reversal_access',
         'account_move_unique_reversal',
         'account_negative_debit_credit',
         'account_payment_cancel_group',
-        'account_payment_widget_link', # TA#55969
+        'account_payment_widget_link',  # TA#55969
         'account_show_full_features',
         'bank_statement_import_csv',
 
@@ -58,7 +58,7 @@
         'account_check_printing_aeroo',
 
         # Numigi/odoo-partner-addons
-        'partner_firstname_before_lastname', # TA#56107
+        'partner_firstname_before_lastname',  # TA#56107
 
         # Numigi/odoo-web-addons
         'web_search_date_range_account',
