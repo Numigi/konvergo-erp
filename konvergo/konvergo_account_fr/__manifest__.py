@@ -2,7 +2,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 {
-    'name': 'Konvergo / Accounting',
+    'name': 'Konvergo / Accounting France',
     'version': '1.0.5',
     'author': 'Numigi',
     'maintainer': 'Numigi',
