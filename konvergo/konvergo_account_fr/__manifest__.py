@@ -3,7 +3,7 @@
 
 {
     'name': 'Konvergo / Accounting France',
-    'version': '1.0.5',
+    'version': '1.0.6',
     'author': 'Numigi',
     'maintainer': 'Numigi',
     'license': 'LGPL-3',
@@ -45,6 +45,7 @@
 
         # Numigi/odoo-account-addons
         'account_bank_menu',
+        'account_fiscalyear_end_on_company',  # TA#58024
         'account_invoice_constraint_chronology',  # TA#55774
         'account_move_reversal_access',
         'account_move_unique_reversal',
