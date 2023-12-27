@@ -3,7 +3,7 @@
 
 {
     'name': 'Konvergo / Accounting France',
-    'version': '1.0.6',
+    'version': '1.0.7',
     'author': 'Numigi',
     'maintainer': 'Numigi',
     'license': 'LGPL-3',
@@ -17,6 +17,7 @@
         'partner_statement',
 
         # OCA/account-financial-tools
+        'account_invoice_constraint_chronology',
         'account_move_name_sequence',
 
         # OCA/account-reconcile
@@ -39,6 +40,9 @@
         # Numigi/odoo-base
         'konvergo_base',
         'numipack',
+
+        #Numigi/odoo-account-addons
+        'account_invoice_constraint_chronology_forced',
 
         # Numigi/odoo-base-addons
         'base_extended_security',
