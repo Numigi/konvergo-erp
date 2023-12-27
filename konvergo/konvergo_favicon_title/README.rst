@@ -4,7 +4,7 @@ This module setups favicon and title for Konvergo instances.
 
 Context
 -------
-In vanilla Odoo, as of version ``14.0``, the favicon is parametrizable for each company.
+In vanilla Odoo, as of version ``14.0``, the favicon is set for each company.
 
 .. image:: static/description/vanilla_odoo_company.png
 
