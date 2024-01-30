@@ -2,25 +2,25 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 {
-    'name': 'Canada MIS Builder Reports',
-    'version': '1.0.2',
-    'author': 'Numigi',
-    'maintainer': 'Numigi',
-    'license': 'LGPL-3',
-    'category': 'Other',
-    'summary': 'Add MIS Builder Reports for Canada',
-    'depends': [
+    "name": "Canada MIS Builder Reports",
+    "version": "1.0.3",
+    "author": "Numigi",
+    "maintainer": "Numigi",
+    "license": "LGPL-3",
+    "category": "Other",
+    "summary": "Add MIS Builder Reports for Canada",
+    "depends": [
         # OCA/mis-builder
-        'mis_builder',
+        "mis_builder",
         # Numigi/odoo-account-addons
-        'canada_account_types',
-        'account_closing_journal_mis_builder',
+        "canada_account_types",
+        "account_closing_journal_mis_builder",
         # Numigi/odoo-base
-        'lang_fr_activated',
+        "lang_fr_activated",
     ],
-    'data': [
-        'data/mis_report_style.xml',
-        'data/mis_report.xml',
+    "data": [
+        "data/mis_report_style.xml",
+        "data/mis_report.xml",
     ],
-    'installable': True,
+    "installable": True,
 }
