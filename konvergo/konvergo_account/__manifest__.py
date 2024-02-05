@@ -3,7 +3,7 @@
 
 {
     'name': 'Konvergo / Accounting',
-    'version': '1.1.1',
+    'version': '1.1.2',
     'author': 'Numigi',
     'maintainer': 'Numigi',
     'license': 'LGPL-3',
@@ -17,6 +17,7 @@
         'konvergo_base',
         'numipack_account',
         'canada_mis_report',
+        'canada_vat_label',  # TA#60491
 
         # Numigi/odoo-account-addons
         'account_closing_journal',  # TA#22629
