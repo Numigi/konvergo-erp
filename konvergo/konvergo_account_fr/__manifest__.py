@@ -3,7 +3,7 @@
 
 {
     'name': 'Konvergo / Accounting France',
-    'version': '1.0.7',
+    'version': '1.0.8',
     'author': 'Numigi',
     'maintainer': 'Numigi',
     'license': 'LGPL-3',
@@ -26,6 +26,7 @@
         # OCA/l10n-france
         'l10n_fr_department',
         'l10n_fr_account_invoice_facturx',
+        'l10n_fr_account_tax_unece', # TA#61162
         'l10n_fr_account_vat_return',
         'l10n_fr_department_delivery',
         'l10n_fr_fec_oca',
