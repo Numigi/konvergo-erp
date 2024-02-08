@@ -84,4 +84,5 @@ ICONS = {
     "sync_plm.revision_bom_main_menu": "sync_plm.png",
     "utm.menu_link_tracker_root": "link_tracker.png",
     "website.menu_website_configuration": "website.png",
+    "website_slides.website_slides_menu_root": "e-learning.png",
 }
