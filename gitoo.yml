@@ -1,0 +1,4 @@
+- url: https://github.com/OCA/mis-builder
+  branch: "16.0"
+  includes:
+    - mis_builder
