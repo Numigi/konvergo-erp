@@ -11,6 +11,8 @@
     "category": "Other",
     "summary": "Install all addons required for testing.",
     "depends": [
+        "base",
+        "konvergo_icons",
         "konvergo_login_page",
     ],
     "installable": True,
