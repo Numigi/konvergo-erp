@@ -22,7 +22,7 @@ class ResCompany(models.Model):
         img_path = get_resource_path(
             'konvergo_favicon_title',
             'static/src/img/favicon.ico'
-            )
+        )
         with tools.file_open(img_path, 'rb') as f:
             return base64.b64encode(f.read())
 
