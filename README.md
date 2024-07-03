@@ -1,2 +1,2 @@
-# Konvergo-erp-addons
+# Konvergo-erp
 Konvergo ERP related addons
