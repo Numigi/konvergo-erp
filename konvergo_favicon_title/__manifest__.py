@@ -3,7 +3,7 @@
 
 {
     "name": "Konvergo Favicon & title",
-    "version": "1.1.1",
+    "version": "16.0.1.0.0",
     "author": "Numigi",
     "maintainer": "Numigi",
     "license": "LGPL-3",
@@ -14,9 +14,13 @@
     ],
     "data": [
         "views/webclient_templates.xml",
-        "views/assets.xml",
         "views/res_company.xml",
     ],
+    'assets': {
+        "web.assets_backend": [
+            "konvergo_favicon_title/static/src/js/title.js",
+        ],
+    },
     "installable": True,
     "post_init_hook": "post_init_hook",
 }
