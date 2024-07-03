@@ -13,6 +13,7 @@
     "depends": [
         "base",
         "konvergo_icons",
+        "konvergo_login_page",
     ],
     "installable": True,
 }
