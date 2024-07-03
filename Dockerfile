@@ -13,6 +13,7 @@ RUN gitoo install-all --conf_file /gitoo.yml --destination "${THIRD_PARTY_ADDONS
 
 USER odoo
 
+COPY konvergo_bot /mnt/extra-addons/konvergo_bot
 COPY konvergo_favicon_title /mnt/extra-addons/konvergo_favicon_title
 COPY konvergo_icons /mnt/extra-addons/konvergo_icons
 COPY konvergo_login_page /mnt/extra-addons/konvergo_login_page
