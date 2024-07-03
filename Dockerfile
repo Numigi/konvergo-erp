@@ -15,6 +15,7 @@ USER odoo
 
 COPY konvergo_icons /mnt/extra-addons/konvergo_icons
 COPY konvergo_login_page /mnt/extra-addons/konvergo_login_page
+COPY konvergo_web_logo /mnt/extra-addons/konvergo_web_logo
 
 COPY .docker_files/main /mnt/extra-addons/main
 COPY .docker_files/odoo.conf /etc/odoo
