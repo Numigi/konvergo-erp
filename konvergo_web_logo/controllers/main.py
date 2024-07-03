@@ -3,7 +3,7 @@
 
 import re
 
-from odoo.addons.web.controllers.main import Database
+from odoo.addons.web.controllers.database import Database
 
 
 class Database(Database):

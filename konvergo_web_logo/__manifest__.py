@@ -3,7 +3,7 @@
 
 {
     "name": "Konvergo Web Logo",
-    "version": "1.0.3",
+    "version": "16.0.1.0.0",
     "author": "Numigi",
     "maintainer": "Numigi",
     "license": "AGPL-3",

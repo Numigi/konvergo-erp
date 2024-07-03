@@ -11,7 +11,7 @@
     "category": "Other",
     "summary": "Install all addons required for testing.",
     "depends": [
-        "base",
+        "konvergo_web_logo",
     ],
     "installable": True,
 }
