@@ -1,4 +1,4 @@
-# © 2024 Numigi
+# Copyright 2024-today Numigi and all its contributors (https://bit.ly/numigiens)
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 {
@@ -13,8 +13,10 @@
     "depends": [
         "base",
         "konvergo_bot",
+        "konvergo_favicon_title",
         "konvergo_icons",
         "konvergo_login_page",
+        "konvergo_mail_notification",
         "konvergo_web_logo",
     ],
     "installable": True,
