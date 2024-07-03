@@ -6,9 +6,6 @@ USER root
 COPY .docker_files/requirements.txt .
 RUN pip3 install -r requirements.txt
 
-# Variable used for fetching private git repositories.
-ARG GIT_TOKEN
-
 ENV THIRD_PARTY_ADDONS /mnt/third-party-addons
 RUN mkdir -p "${THIRD_PARTY_ADDONS}" && chown -R odoo "${THIRD_PARTY_ADDONS}"
 COPY ./gitoo.yml /gitoo.yml
