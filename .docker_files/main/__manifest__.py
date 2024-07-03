@@ -13,6 +13,7 @@
     "depends": [
         "base",
         "konvergo_bot",
+        "konvergo_cron_publisher",
         "konvergo_favicon_title",
         "konvergo_icons",
         "konvergo_login_page",
