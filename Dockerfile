@@ -16,5 +16,7 @@ RUN gitoo install-all --conf_file /gitoo.yml --destination "${THIRD_PARTY_ADDONS
 
 USER odoo
 
+COPY konvergo_login_page /mnt/extra-addons/konvergo_login_page
+
 COPY .docker_files/main /mnt/extra-addons/main
 COPY .docker_files/odoo.conf /etc/odoo
