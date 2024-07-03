@@ -9,7 +9,7 @@
     "license": "LGPL-3",
     "category": "Other",
     "summary": "Add custom app panel icons for Konvergo",
-    "depends": ["base",],
+    "depends": ["base"],
     "data": [
         "actions/ir_ui_menu.xml",
     ],
