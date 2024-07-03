@@ -11,6 +11,7 @@
     'summary': 'Customize mail notifications for Konvergo',
     'depends': [
         'mail',
+        'crm',
     ],
     'installable': True,
 }
