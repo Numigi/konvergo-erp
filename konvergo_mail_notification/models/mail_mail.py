@@ -34,10 +34,8 @@ class MailMessage(models.Model):
 def get_body_for_konvergo(body):
     if not body:
         return body
-
     if isinstance(body, bytes):
         body = body.decode('utf-8')
-
     body = re.sub(ODOO_REGEX, KONVERGO, body)
     body = re.sub(ODOO_WEBSITE_REGEX, KONVERGO_WEBSITE, body)
     return body
