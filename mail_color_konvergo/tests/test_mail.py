@@ -20,7 +20,7 @@ class TestColorizedBody(SavepointCase):
             }
         )
         cls.partner = cls.user.partner_id
-        cls.lead = cls.env["crm.lead"].create({"name": "M Lead",})
+        cls.lead = cls.env["crm.lead"].create({"name": "M Lead"})
         cls.subtype = cls.env.ref("mail.mt_comment")
         cls.lead.message_subscribe([cls.partner.id], subtype_ids=[cls.subtype.id])
 
