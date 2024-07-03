@@ -1,4 +1,4 @@
-# © 2020 Numigi (tm) and all its contributors (https://bit.ly/numigiens)
+# Copyright 2024-today Numigi and all its contributors (https://bit.ly/numigiens)
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from odoo.tests import SavepointCase
@@ -20,7 +20,7 @@ class TestColorizedBody(SavepointCase):
             }
         )
         cls.partner = cls.user.partner_id
-        cls.lead = cls.env["crm.lead"].create({"name": "M Lead",})
+        cls.lead = cls.env["crm.lead"].create({"name": "M Lead"})
         cls.subtype = cls.env.ref("mail.mt_comment")
         cls.lead.message_subscribe([cls.partner.id], subtype_ids=[cls.subtype.id])
 
