@@ -11,7 +11,6 @@
     "category": "Other",
     "summary": "Install all addons required for testing.",
     "depends": [
-        "base",
         "konvergo_bot",
         "konvergo_cron_publisher",
         "konvergo_favicon_title",
