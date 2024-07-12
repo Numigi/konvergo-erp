@@ -2,3 +2,8 @@
   branch: "16.0"
   includes:
     - mis_builder
+
+- url: https://github.com/muk-it/muk_web
+  branch: "16.0"
+  includes:
+    - muk_web_theme
