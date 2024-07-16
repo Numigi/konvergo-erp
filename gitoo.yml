@@ -7,3 +7,8 @@
   branch: "16.0"
   includes:
     - muk_web_theme
+
+- url: https://github.com/Numigi/odoo-base-addons
+  branch: "16.0"
+  includes:
+    - lang_fr_activated

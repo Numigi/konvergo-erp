@@ -19,6 +19,7 @@
         "konvergo_mail_notification",
         "konvergo_web_logo",
         "mail_color_konvergo",
+        "mail_template_fr_fields",
         "ui_color_konvergo",
     ],
     "installable": True,
