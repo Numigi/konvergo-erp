@@ -20,6 +20,7 @@ COPY konvergo_icons /mnt/extra-addons/konvergo_icons
 COPY konvergo_login_page /mnt/extra-addons/konvergo_login_page
 COPY konvergo_mail_notification /mnt/extra-addons/konvergo_mail_notification
 COPY konvergo_web_logo /mnt/extra-addons/konvergo_web_logo
+COPY konvergo_login_page_website /mnt/extra-addons/konvergo_login_page_website
 COPY mail_color_konvergo /mnt/extra-addons/mail_color_konvergo
 COPY mail_template_fr_fields /mnt/extra-addons/mail_template_fr_fields
 COPY ui_color_konvergo /mnt/extra-addons/ui_color_konvergo

@@ -16,6 +16,7 @@
         "konvergo_favicon_title",
         "konvergo_icons",
         "konvergo_login_page",
+        "konvergo_login_page_website",
         "konvergo_mail_notification",
         "konvergo_web_logo",
         "mail_color_konvergo",
