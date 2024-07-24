@@ -66,6 +66,6 @@ class TestMailTemplateSearch(common.SavepointCase):
     def test_template_not_updated_if_edited_by_non_superuser(self):
         old_value = "oldvalue@example.com"
         admin = self.env.ref("base.user_admin")
-        self.with_user(admin).odoo_template.sudo(admin).email_from = old_value
+        self.with_user(admin).odoo_template.email_from = old_value
         self.env["mail.template"].update_from_konvergo_templates()
         assert self.odoo_template.email_from == old_value
