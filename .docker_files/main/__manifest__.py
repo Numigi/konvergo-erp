@@ -18,6 +18,7 @@
         "konvergo_login_page",
         "konvergo_login_page_website",
         "konvergo_mail_notification",
+        "konvergo_mail_templates",
         "konvergo_web_logo",
         "mail_color_konvergo",
         "mail_template_fr_fields",
