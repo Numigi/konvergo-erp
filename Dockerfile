@@ -19,6 +19,7 @@ COPY konvergo_favicon_title /mnt/extra-addons/konvergo_favicon_title
 COPY konvergo_icons /mnt/extra-addons/konvergo_icons
 COPY konvergo_login_page /mnt/extra-addons/konvergo_login_page
 COPY konvergo_mail_notification /mnt/extra-addons/konvergo_mail_notification
+COPY konvergo_mail_templates /mnt/extra-addons/konvergo_mail_templates
 COPY konvergo_web_logo /mnt/extra-addons/konvergo_web_logo
 COPY konvergo_login_page_website /mnt/extra-addons/konvergo_login_page_website
 COPY mail_color_konvergo /mnt/extra-addons/mail_color_konvergo
