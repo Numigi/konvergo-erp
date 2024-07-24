@@ -11,7 +11,8 @@ services:
       - "8071:8071"
     depends_on:
       - db
-    command: odoo
+    #command: odoo
+    command: pytest -s --odoo-database=dev /mnt/extra-addons/konvergo_mail_templates -v --disable-warnings
     environment:
       - LOG_ODOO=/var/log/odoo
   db:
