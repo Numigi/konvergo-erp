@@ -5,7 +5,9 @@ from odoo import api, models
 
 
 ODOO_FONT_COLOR = "#875a7b"
+ODOO_BG_COLOR = "#f2dede"
 KONVERGO_FONT_COLOR = "#1a62c6"
+KONVERGO_BG_COLOR = "#ecf0f6"
 
 
 class MailMessage(models.Model):
@@ -37,6 +39,7 @@ def get_body_with_konvergo_colors(body):
 
     replacements = (
         (ODOO_FONT_COLOR, KONVERGO_FONT_COLOR),
+        (ODOO_BG_COLOR, KONVERGO_BG_COLOR),
     )
     for color_from, color_to in replacements:
         body = _get_html_with_color_replaced(body, color_from, color_to)

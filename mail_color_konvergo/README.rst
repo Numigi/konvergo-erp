@@ -1,5 +1,6 @@
 Mail Color Konvergo
 ===================
+
 This module colorizes the emails with the Konvergo theme.
 
 Before
