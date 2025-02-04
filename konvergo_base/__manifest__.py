@@ -24,7 +24,6 @@
         "mail_color_konvergo",
         # "numipack",  # TA#66879: disabled
         # Numigi/odoo-base-addons
-        "mail_bot_no_pong",
         "mail_notification_no_action_button",
         # OCA/server-brand
         "disable_odoo_online",  # TA#45124
