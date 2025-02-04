@@ -3,6 +3,11 @@
   includes:
     - mis_builder
 
+- url: https://github.com/OCA/server-brand
+  branch: "16.0"
+  includes:
+    - disable_odoo_online
+
 - url: https://github.com/muk-it/muk_web
   branch: "16.0"
   includes:
