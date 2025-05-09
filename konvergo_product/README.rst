@@ -1,6 +1,6 @@
 Konvergo / Product Information Management
 =========================================
-Module that installs contact modules required for Konvergo.
+Module that installs product modules required for Konvergo.
 
 Numigi Modules
 ~~~~~~~~~~~~~~
