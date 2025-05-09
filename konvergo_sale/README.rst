@@ -1,6 +1,6 @@
 Konvergo / Sale
 ===============
-Module that installs contact modules required for Konvergo.
+Module that installs sale modules required for Konvergo.
 
 Numigi Modules
 ~~~~~~~~~~~~~~
