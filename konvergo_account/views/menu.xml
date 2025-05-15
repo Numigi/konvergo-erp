@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <function name="rename" model="ir.ui.menu">
+        <value type="char">account_financial_report.menu_oca_reports</value>
+        <value type="char">en_US</value>
+        <value type="char">Accounting</value>
+    </function>
+
+    <function name="rename" model="ir.ui.menu">
+        <value type="char">account_financial_report.menu_oca_reports</value>
+        <value type="char">fr_FR</value>
+        <value type="char">Comptabilité</value>
+    </function>
+
+    <function name="rename" model="ir.ui.menu">
+        <value type="char">mis_builder.mis_report_finance_menu</value>
+        <value type="char">en_US</value>
+        <value type="char">Finances</value>
+    </function>
+
+    <function name="rename" model="ir.ui.menu">
+        <value type="char">mis_builder.mis_report_finance_menu</value>
+        <value type="char">fr_FR</value>
+        <value type="char">Finances</value>
+    </function>
+
+    <!-- Hide the OCA VAT Report because it does not work properly -->
+    <record id="account_financial_report.menu_vat_report_wizard" model="ir.ui.menu">
+        <field name="name">OCA VAT Report (Do Not Use)</field>
+        <field name="groups_id" eval="[(5, 0), (4, ref('base.group_system'))]"/>
+    </record>
+
+</odoo>
