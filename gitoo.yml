@@ -51,6 +51,7 @@
   branch: "16.0"
   includes:
     - report_xlsx
+    - report_xlsx_helper
 
 - url: https://github.com/OCA/server-ux
   branch: "16.0"
