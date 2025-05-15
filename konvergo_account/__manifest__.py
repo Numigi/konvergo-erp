@@ -13,7 +13,7 @@
         # odoo/odoo
         "l10n_ca",
         # Numigi/konvergo-erp
-        "konvergo_base",
+        # "konvergo_base",
         # Numigi/odoo-base-addons
         "base_fr_ca_labels",
         # Numigi/odoo-account-addons

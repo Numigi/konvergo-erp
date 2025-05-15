@@ -1,1 +1,2 @@
+git+https://github.com/numigi/aeroolib@master
 ddt==1.4.4
