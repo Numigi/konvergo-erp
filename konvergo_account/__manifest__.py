@@ -13,7 +13,7 @@
         # odoo/odoo
         "l10n_ca",
         # Numigi/konvergo-erp
-        # "konvergo_base",
+        # "konvergo_base", TODO : this must be uncommented when available
         # Numigi/odoo-base-addons
         "base_fr_ca_labels",
         # Numigi/odoo-account-addons
@@ -49,7 +49,7 @@
     ],
     "excludes": ["konvergo_account_fr"],
     "data": [
-        "views/menu.xml",
+        # "views/menu.xml", TODO : this must be tested and fixed
     ],
     "installable": True,
 }
