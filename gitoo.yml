@@ -4,6 +4,8 @@
   includes:
     - account_financial_report
     - account_tax_balance
+    - mis_builder_cash_flow
+    - partner_statement
 
 - url: https://github.com/OCA/account-financial-tools
   branch: "14.0"
@@ -20,6 +22,21 @@
   branch: "14.0"
   includes:
     - bank_statement_import_csv
+
+- url: https://github.com/OCA/community-data-files
+  branch: "14.0"
+  includes:
+    - account_tax_unece
+
+- url: https://github.com/OCA/edi
+  branch: "14.0"
+  includes:
+    - account_invoice_facturx
+
+- url: https://github.com/OCA/intrastat-extrastat
+  branch: "14.0"
+  includes:
+    - intrastat_base
 
 - url: https://github.com/OCA/l10n-france
   branch: "14.0"
@@ -77,11 +94,13 @@
 - url: https://github.com/OCA/server-tools
   branch: "14.0"
   includes:
+    - onchange_helper
     - tracking_manager
 
 - url: https://github.com/OCA/server-ux
   branch: "14.0"
   includes:
+    - base_revision
     - date_range
     - date_range_account
 
@@ -89,3 +108,55 @@
   branch: "14.0"
   includes:
     - web_edit_user_filter
+
+
+  - url: https://github.com/Numigi/odoo-account-addons
+  branch: "14.0"
+  includes:
+    - account_bank_menu
+    - account_closing_journal_mis_builder
+    - account_fiscalyear_end_on_company
+    - account_invoice_constraint_chronology
+    - account_invoice_constraint_chronology_forced
+    - account_move_reversal_access
+    - account_move_unique_reversal
+    - account_negative_debit_credit
+    - account_payment_cancel_group
+    - account_payment_widget_link
+    - account_reconciliation_widget
+    - account_show_full_features
+    - bank_statement_import_csv
+    - canada_account_types
+    - invoice_refund_not_earlier
+    - numipack_account
+    - old_accounts
+
+- url: https://github.com/Numigi/aeroo_reports
+  branch: "14.0"
+  includes:
+    - account_check_printing_aeroo
+
+- url: https://github.com/Numigi/odoo-base-addons
+  branch: "14.0"
+  includes:
+    - base_extended_security
+    - mail_bot_no_pong
+    - mail_notification_no_action_button
+    - numipack
+
+- url: https://github.com/Numigi/odoo-partner-addons
+  branch: "14.0"
+  includes:
+    - partner_firstname_before_lastname
+
+- url: https://github.com/Numigi/odoo-web-addons
+  branch: "14.0"
+  includes:
+    - resize_observer_error_catcher
+    - web_custom_label
+    - web_search_date_range_account
+
+- url: https://{{GIT_TOKEN}}@github.com/Numigi/odoo-theme-backend-community
+  branch: "14.0"
+  includes:
+    - muk_web_theme
