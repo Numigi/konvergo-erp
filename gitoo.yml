@@ -1,4 +1,91 @@
+# OCA addons
+- url: https://github.com/OCA/account-financial-reporting
+  branch: "14.0"
+  includes:
+    - account_financial_report
+    - account_tax_balance
+
+- url: https://github.com/OCA/account-financial-tools
+  branch: "14.0"
+  includes:
+    - account_lock_date_update
+    - account_move_name_sequence
+
+- url: https://github.com/OCA/account-invoicing
+  branch: "14.0"
+  includes:
+    - account_invoice_constraint_chronology
+
+- url: https://github.com/OCA/bank-statement-import
+  branch: "14.0"
+  includes:
+    - bank_statement_import_csv
+
+- url: https://github.com/OCA/l10n-france
+  branch: "14.0"
+  includes:
+    - l10n_fr_account_invoice_facturx
+    - l10n_fr_account_tax_unece
+    - l10n_fr_account_vat_return
+    - l10n_fr_department
+    - l10n_fr_department_delivery
+    - l10n_fr_fec_oca
+    - l10n_fr_mis_reports
+    - l10n_fr_oca
+    - l10n_fr_siret
+    - l10n_fr_state
+
 - url: https://github.com/OCA/mis-builder
   branch: "14.0"
   includes:
     - mis_builder
+    - mis_builder_cash_flow
+
+- url: https://github.com/OCA/partner-contact
+  branch: "14.0"
+  includes:
+    - partner_firstname
+    - partner_identification
+
+- url: https://github.com/OCA/product-attribute
+  branch: "14.0"
+  includes:
+    - product_category_active
+    - product_category_type
+    - product_manufacturer
+    - product_restricted_type
+
+- url: https://github.com/OCA/reporting-engine
+  branch: "14.0"
+  includes:
+    - report_xlsx
+
+- url: https://github.com/OCA/sale-workflow
+  branch: "14.0"
+  includes:
+    - product_form_sale_link
+    - sale_force_invoiced
+    - sale_order_price_recalculation
+    - sale_order_revision
+
+- url: https://github.com/OCA/server-brand
+  branch: "14.0"
+  includes:
+    - disable_odoo_online
+    - remove_odoo_enterprise
+
+- url: https://github.com/OCA/server-tools
+  branch: "14.0"
+  includes:
+    - tracking_manager
+
+- url: https://github.com/OCA/server-ux
+  branch: "14.0"
+  includes:
+    - date_range
+    - date_range_account
+
+- url: https://github.com/OCA/web
+  branch: "14.0"
+  includes:
+    - web_edit_user_filter
