@@ -109,8 +109,7 @@
   includes:
     - web_edit_user_filter
 
-
-  - url: https://github.com/Numigi/odoo-account-addons
+- url: https://github.com/Numigi/odoo-account-addons
   branch: "14.0"
   includes:
     - account_bank_menu
