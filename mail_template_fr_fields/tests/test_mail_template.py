@@ -1,7 +1,7 @@
 # © 2020 Numigi (tm) and all its contributors (https://bit.ly/numigiens)
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from ddt import ddt, data, unpack
+from ddt import ddt
 from odoo.tests import common
 
 
@@ -39,10 +39,12 @@ class TestMailTemplate(common.SavepointCase):
     def test_write_body_html(self):
         new_value_fr = "Nouvelle valeur du contenu"
         new_value_en = "New content value"
-        self.template.write({
-            'body_html_fr': new_value_fr,
-            'body_html_en': new_value_en,
-        })
+        self.template.write(
+            {
+                'body_html_fr': new_value_fr,
+                'body_html_en': new_value_en,
+            }
+        )
         assert self.template.body_html == new_value_en
         assert self.template.body_html_fr == new_value_fr
         assert self.template.body_html_en == new_value_en

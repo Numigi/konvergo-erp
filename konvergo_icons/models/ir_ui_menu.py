@@ -67,6 +67,7 @@ ICONS = {
     "mrp.menu_mrp_root": "manufacturing.png",
     "note.menu_note_notes": "notes.png",
     "point_of_sale.menu_point_root": "pos.png",
+    "pr1_multi_domain_email.menu_multi_domain_email_root": "pr1_multi_domain_email.png",
     "product_configurator.menu_product_configurable": "configurator.png",
     "product_panel_shortcut.menu_product_root": "products.png",
     "project.menu_main_pm": "project.png",

@@ -26,7 +26,7 @@
         # OCA/l10n-france
         'l10n_fr_department',
         'l10n_fr_account_invoice_facturx',
-        'l10n_fr_account_tax_unece', # TA#61162
+        'l10n_fr_account_tax_unece',  # TA#61162
         'l10n_fr_account_vat_return',
         'l10n_fr_department_delivery',
         'l10n_fr_fec_oca',
@@ -38,11 +38,14 @@
         # OCA/partner-contact
         'partner_firstname',  # TA#56107
 
+        # OCA/server-ux
+        'date_range_account',  # TA#64006
+
         # Numigi/odoo-base
         'konvergo_base',
         'numipack',
 
-        #Numigi/odoo-account-addons
+        # Numigi/odoo-account-addons
         'account_invoice_constraint_chronology_forced',
 
         # Numigi/odoo-base-addons

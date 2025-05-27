@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-  <record id="account_invoice_template" model="mail.template">
+  <record id="purchase_rfq_template" model="mail.template">
     <field name="name">Request For Quotation (RFQ): original linked to button</field>
     <field name="is_konvergo_template" eval="True"/>
     <field name="odoo_template_ref">purchase.email_template_edi_purchase</field>

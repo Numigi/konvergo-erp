@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <record id="project_task_acknowledgment_template" model="mail.template">
+    <field name="name">Task: Reception Acknowledgment</field>
+    <field name="is_konvergo_template" eval="True"/>
+    <field name="odoo_template_ref">project.mail_template_data_project_task</field>
+    <field name="auto_delete" eval="True"/>
+    <field name="subject_en">[${object.project_id.display_name}] Reception of your request ${object.display_name}</field>
+    <field name="subject_fr">[${object.project_id.display_name}] Réception de votre demande ${object.display_name}</field>
+    <field name="body_html_en" type="html">
+<p>This is an automated response to let you know that our team has received your detailed request as shown below.
+   <br/><br/>
+
+   <b>Request Name: </b>${object.display_name}<br/>
+   <b>Request Date: </b> ${format_date(object.create_date,"d MMMM yyyy")}<br/>
+   <b>Subject:</b> ${object.name}<br/>
+   <b>Project Concerned:</b> ${object.project_id.display_name}
+   <br/><br/>
+   We will communicate with you as soon as possible.
+   <br/>
+</p>
+    </field>
+    <field name="body_html_fr" type="html">
+<p>Ceci est un message automatique pour vous informer que notre équipe a bien reçue votre demande détaillée ci-dessous.
+   <br/><br/>
+
+   <b>Nom de la demande: </b>${object.display_name}<br/>
+   <b>Date de votre demande: </b> ${format_date(object.create_date,"d MMMM yyyy")}<br/>
+   <b>Sujet:</b> ${object.name}<br/>
+   <b>Nom du projet concerné:</b> ${object.project_id.display_name}
+   <br/><br/>
+   Nous communiquerons avec vous dans les plus brefs délais.
+   <br/>
+</p>
+    </field>
+  </record>
+
+</odoo>

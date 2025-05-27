@@ -9,7 +9,6 @@ from odoo.modules.module import get_resource_path
 _logger = logging.getLogger(__name__)
 
 
-
 class ResCompany(models.Model):
 
     _inherit = "res.company"
@@ -20,7 +19,9 @@ class ResCompany(models.Model):
         self.write({"favicon": favicon})
 
     def _get_default_favicon(self, original=False):
-        img_path = get_resource_path('konvergo_favicon_title', 'static/src/img/favicon.ico')
+        img_path = get_resource_path(
+            'konvergo_favicon_title', 'static/src/img/favicon.ico'
+        )
         with tools.file_open(img_path, 'rb') as f:
             return base64.b64encode(f.read())
 

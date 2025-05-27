@@ -10,7 +10,7 @@
     "category": "Other",
     "summary": "Binding between Konvergo login page and website",
     "depends": ["konvergo_login_page", "website"],
-    "data": ["views/login_page.xml",],
+    "data": ["views/login_page.xml"],
     "installable": True,
     "auto_install": True,
 }

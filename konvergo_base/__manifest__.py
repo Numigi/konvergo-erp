@@ -3,7 +3,7 @@
 
 {
     'name': 'Konvergo',
-    'version': '1.0.0',
+    'version': '1.0.1',
     'author': 'Numigi',
     'maintainer': 'Numigi',
     'license': 'LGPL-3',
@@ -26,9 +26,18 @@
         'mail_bot_no_pong',
         'mail_notification_no_action_button',
 
+        # Numigi/odoo-web-addons
+        'resize_observer_error_catcher',  # TA#62825
+
         # OCA/server-brand
         'disable_odoo_online',  # TA#45124
         'remove_odoo_enterprise',  # TA#45105
+
+        # OCA/server-tools
+        'tracking_manager',
+
+        # OCA/web
+        'web_edit_user_filter',  # TA#66491
 
         # theme
         'muk_web_theme',

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-  <record id="account_invoice_template" model="mail.template">
+  <record id="purchase_order_template" model="mail.template">
     <field name="name">Purchase Order (PO): original linked to button</field>
     <field name="is_konvergo_template" eval="True"/>
     <field name="odoo_template_ref">purchase.email_template_edi_purchase_done</field>
     <field name="partner_to">${object.partner_id.id}</field>
     <field name="lang">${object.partner_id.lang}</field>
     <field name="auto_delete" eval="True"/>
-    <field name="subject_en">${object.company_id.name} | Purchase Order #${object.name} - ${format_date(object.date_order, "MM/dd/yyyy")}</field>
-    <field name="subject_fr">${object.company_id.name} | Commande numéro ${object.name} du ${format_date(object.date_order, "d MMMM yyyy")}</field>
+    <field name="subject_en">${object.company_id.name} | Purchase Order #${object.name} - ${format_date(object.effective_date, "MM/dd/yyyy")}</field>
+    <field name="subject_fr">${object.company_id.name} | Commande numéro ${object.name} du ${format_date(object.effective_date, "d MMMM yyyy")}</field>
     <field name="body_html_en" type="html">
 <div style="line-height:2em; margin: 0px; padding: 0px; font-size: 13px;">
   <p>
@@ -55,7 +55,7 @@
   </p>
 </div>
     </field>
-    <field name="body_html_en" type="html">
+    <field name="body_html_fr" type="html">
 <div style="line-height:2em; margin: 0px; padding: 0px; font-size: 13px;">
   <p>
     Bonjour,
