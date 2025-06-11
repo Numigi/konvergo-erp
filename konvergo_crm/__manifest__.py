@@ -2,7 +2,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 {
-    "name": "Konvergo CRM Base",
+    "name": "Konvergo CRM",
     "version": "14.0.1.0.0",
     "author": "Numigi",
     "maintainer": "Numigi",
