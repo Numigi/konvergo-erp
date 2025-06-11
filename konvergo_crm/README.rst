@@ -1,0 +1,21 @@
+Konvergo Pack - CRM
+==========================
+This module setups favicon and title for Konvergo instances.
+
+
+Installed Modules
+-----------------
+This module installs all modules required on every projects that use the crm app.
+
+* `CRM Industry <https://github.com/OCA/crm/tree/14.0/crm_industry>`_
+* `CRM Lead Search Archive <https://github.com/OCA/crm/tree/14.0/crm_lead_search_archive>`_
+* `CRM Security Group <https://github.com/OCA/crm/tree/14.0/crm_security_group >`_
+
+
+Contributors
+------------
+* Numigi (tm) and all its contributors (https://bit.ly/numigiens)
+
+More information
+----------------
+* Meet us at https://bit.ly/numigi-com
