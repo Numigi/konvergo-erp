@@ -13,6 +13,11 @@
   includes:
     - backend_theme_konvergo
 
+- url: https://github.com/muk-it/muk_web
+  branch: "16.0"
+  includes:
+    - muk_web_theme
+
 - url: https://github.com/Numigi/odoo-base-addons
   branch: "16.0"
   includes:
