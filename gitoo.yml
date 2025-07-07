@@ -3,6 +3,16 @@
   includes:
     - mis_builder
 
+- url: https://github.com/OCA/server-brand
+  branch: "16.0"
+  includes:
+    - disable_odoo_online
+
+- url: https://github.com/Numigi/odoo-theme-konvergo
+  branch: "16.0"
+  includes:
+    - backend_theme_konvergo
+
 - url: https://github.com/muk-it/muk_web
   branch: "16.0"
   includes:
@@ -12,3 +22,4 @@
   branch: "16.0"
   includes:
     - lang_fr_activated
+    - mail_notification_no_action_button
