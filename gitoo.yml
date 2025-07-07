@@ -8,10 +8,10 @@
   includes:
     - disable_odoo_online
 
-- url: https://github.com/muk-it/muk_web
+- url: https://github.com/Numigi/odoo-theme-konvergo
   branch: "16.0"
   includes:
-    - muk_web_theme
+    - backend_theme_konvergo
 
 - url: https://github.com/Numigi/odoo-base-addons
   branch: "16.0"

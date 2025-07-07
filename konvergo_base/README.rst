@@ -2,7 +2,7 @@ Konvergo Base
 =============
 Module that installs modules required for Konvergo.
 
-Konvergo is a based on `Numipack <https://github.com/Numigi/odoo-base/tree/14.0/addons/numipack>`_.
+Konvergo is a based on Konvergo Packs.
 
 Additional Features
 -------------------

@@ -22,14 +22,12 @@
         "konvergo_mail_templates",  # TA#54157
         "konvergo_web_logo",  # TA#25792
         "mail_color_konvergo",
-        # "numipack",  # TA#66879: disabled
         # Numigi/odoo-base-addons
         "mail_notification_no_action_button",
         # OCA/server-brand
         "disable_odoo_online",  # TA#45124
-        # "remove_odoo_enterprise",  # TA#45105 | TA#66879: disabled
         # theme
-        # "muk_web_theme",  # TA#66879: disabled
+        "backend_theme_konvergo",
     ],
     "installable": True,
 }
