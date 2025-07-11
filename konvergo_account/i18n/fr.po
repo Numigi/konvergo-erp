@@ -1,0 +1,27 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* konvergo_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-11 00:00+0000\n"
+"PO-Revision-Date: 2025-01-11 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: konvergo_account
+#: model:ir.ui.menu,name:konvergo_account.menu_oca_reports
+msgid "Accounting"
+msgstr "Comptabilité"
+
+#. module: konvergo_account
+#: model:ir.ui.menu,name:konvergo_account.menu_finances
+msgid "Finances"
+msgstr "Finances"
