@@ -50,7 +50,7 @@
     ],
     "excludes": ["konvergo_account_fr"],
     "data": [
-        # "views/menu.xml", TODO : this must be tested and fixed
+        "views/menu.xml",
     ],
     "installable": True,
 }
