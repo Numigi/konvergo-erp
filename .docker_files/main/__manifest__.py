@@ -12,6 +12,7 @@
     "summary": "Install all addons required for testing.",
     "depends": [
         "konvergo_account",
+        "konvergo_base",
         "konvergo_bot",
         "konvergo_cron_publisher",
         "konvergo_favicon_title",
