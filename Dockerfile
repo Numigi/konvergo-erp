@@ -21,6 +21,7 @@ COPY konvergo_favicon_title /mnt/extra-addons/konvergo_favicon_title
 COPY konvergo_icons /mnt/extra-addons/konvergo_icons
 COPY konvergo_invoicing /mnt/extra-addons/konvergo_invoicing
 COPY konvergo_invoicing_ca /mnt/extra-addons/konvergo_invoicing_ca
+COPY konvergo_invoicing_fr /mnt/extra-addons/konvergo_invoicing_fr
 COPY konvergo_login_page /mnt/extra-addons/konvergo_login_page
 COPY konvergo_mail_notification /mnt/extra-addons/konvergo_mail_notification
 COPY konvergo_mail_templates /mnt/extra-addons/konvergo_mail_templates

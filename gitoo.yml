@@ -42,6 +42,7 @@
   branch: "16.0"
   includes:
     - account_bank_menu
+    - account_invoice_constraint_chronology_forced
     - account_move_reversal_access
     - account_move_unique_reversal
     - account_negative_debit_credit
@@ -50,6 +51,11 @@
     - account_search_date_range
     - invoice_refund_not_earlier
     - old_accounts
+
+- url: https://github.com/Numigi/odoo-partner-addons
+  branch: "16.0"
+  includes:
+    - partner_firstname_before_lastname
 
 - url: https://github.com/OCA/reporting-engine
   branch: "16.0"
@@ -66,6 +72,7 @@
 - url: https://github.com/OCA/account-financial-tools
   branch: "16.0"
   includes:
+    - account_invoice_constraint_chronology
     - account_lock_date_update
     - account_move_name_sequence
 
@@ -87,3 +94,38 @@
   branch: "16.0"
   includes:
     - currency_rate_update
+
+- url: https://github.com/OCA/l10n-france
+  branch: "16.0"
+  includes:
+    - l10n_fr_account_invoice_facturx
+    - l10n_fr_department
+    - l10n_fr_oca
+    - l10n_fr_siret
+    - l10n_fr_state
+
+- url: https://github.com/OCA/partner-contact
+  branch: "16.0"
+  includes:
+    - partner_firstname
+
+- url: https://github.com/OCA/edi
+  branch: "16.0"
+  includes:
+    - account_einvoice_generate
+    - account_invoice_facturx
+    - base_facturx
+
+- url: https://github.com/OCA/bank-payment
+  branch: "16.0"
+  includes:
+  - account_payment_mode
+  - account_payment_partner
+
+- url: https://github.com/OCA/community-data-files
+  branch: "16.0"
+  includes:
+    - account_payment_unece
+    - account_tax_unece
+    - base_unece
+    - uom_unece
