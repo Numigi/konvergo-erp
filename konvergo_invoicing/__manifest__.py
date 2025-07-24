@@ -30,8 +30,6 @@
         # OCA/account-reconcile
         "account_reconcile_oca",
     ],
-    "data": [
-        "views/menu.xml",
-    ],
+    "data": [],
     "installable": True,
 }
