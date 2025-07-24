@@ -1,7 +1,7 @@
 ```
-Konvergo / Account
-==================
-Module that installs account modules required for Konvergo.
+Konvergo / Invoicing
+=====================
+Module that installs invoicing modules required for Konvergo.
 
 ## Added Modules
 

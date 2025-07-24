@@ -17,6 +17,7 @@
         "konvergo_cron_publisher",
         "konvergo_favicon_title",
         "konvergo_icons",
+        "konvergo_invoicing",
         "konvergo_login_page",
         "konvergo_login_page_website",
         "konvergo_mail_notification",

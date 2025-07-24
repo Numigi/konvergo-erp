@@ -21,42 +21,20 @@
 - url: https://github.com/Numigi/odoo-base-addons
   branch: "16.0"
   includes:
-    - base_fr_ca_labels
     - lang_fr_activated
     - mail_notification_no_action_button
-
-- url: https://github.com/Numigi/konvergo-erp
-  branch: "16.0"
-  includes:
-    - konvergo_base
-
-- url: https://github.com/Numigi/odoo-account-addons
-  branch: "16.0"
-  includes:
-    - account_bank_menu
-    - account_move_reversal_access
-    - account_move_unique_reversal
-    - account_negative_debit_credit
-    - account_payment_cancel_group
-    - account_show_full_features
-    - bank_statement_import_csv
-    - canada_account_types
-    - canada_mis_report
-    - invoice_refund_not_earlier
-    - account_search_date_range
-    - old_accounts
-
-- url: https://github.com/Numigi/aeroo_reports
-  branch: "16.0"
-  includes:
-    - account_check_printing_aeroo
-    - report_aeroo
 
 - url: https://github.com/Numigi/odoo-web-addons
   branch: "16.0"
   includes:
-    - web_custom_label
     - web_search_date_range
+
+- url: https://github.com/Numigi/odoo-account-addons
+  branch: "16.0"
+  includes:
+    - account_show_full_features
+    - account_search_date_range
+    - old_accounts
 
 - url: https://github.com/OCA/reporting-engine
   branch: "16.0"
@@ -76,22 +54,3 @@
     - account_financial_report
     - account_tax_balance
     - mis_builder_cash_flow
-    - partner_statement
-
-- url: https://github.com/OCA/account-financial-tools
-  branch: "16.0"
-  includes:
-    - account_lock_date_update
-    - account_move_name_sequence
-
-- url: https://github.com/OCA/account-reconcile
-  branch: "16.0"
-  includes:
-    - account_statement_base
-    - account_reconcile_oca
-
-- url: https://github.com/OCA/bank-statement-import
-  branch: "16.0"
-  includes:
-    - account_statement_import_base
-    - account_statement_import_file
