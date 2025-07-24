@@ -1,6 +1,6 @@
-Konvergo / Invoicing
-====================
-Module that installs invoicing modules required for Konvergo.
+Konvergo / Invoicing CA
+=======================
+Module that installs Canadian invoicing modules required for Konvergo.
 
 ## Added Modules
 

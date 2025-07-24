@@ -27,6 +27,8 @@
 - url: https://github.com/Numigi/odoo-base-addons
   branch: "16.0"
   includes:
+    - base_fr_ca_labels
+    - currency_rate_update_boc
     - lang_fr_activated
     - mail_notification_no_action_button
 
@@ -80,3 +82,8 @@
   includes:
     - account_statement_base
     - account_reconcile_oca
+
+- url: https://github.com/OCA/currency
+  branch: "16.0"
+  includes:
+    - currency_rate_update

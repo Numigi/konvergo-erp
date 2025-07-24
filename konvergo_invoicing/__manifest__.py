@@ -8,7 +8,7 @@
     "maintainer": "Numigi",
     "license": "AGPL-3",
     "category": "Other",
-    "summary": "Accounting Dependencies for Konvergo",
+    "summary": "Invoicing Dependencies for Konvergo",
     "depends": [
         # Numigi/odoo-account-addons
         "account_bank_menu",
@@ -16,7 +16,7 @@
         "account_move_unique_reversal",
         "account_negative_debit_credit",
         "account_payment_cancel_group",
-        # "account_payment_widget_link", NOT YET AVAILABLE ON V16
+        # "account_payment_widget_link", #todo NOT YET AVAILABLE ON V16
         "invoice_refund_not_earlier",
         # "account_show_full_features",
         "account_search_date_range",
