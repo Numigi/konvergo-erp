@@ -1,4 +1,3 @@
-```
 Konvergo / Account
 ==================
 Module that installs account modules required for Konvergo.
@@ -8,7 +7,7 @@ Module that installs account modules required for Konvergo.
 ### Numigi Modules
 * `Konvergo Invoicing <https://github.com/Numigi/konvergo-erp/tree/16.0/konvergo_invoicing>`_
 * `Account Show Full Features <https://github.com/Numigi/odoo-account-addons/tree/16.0/account_show_full_features>`_
-* `Account Search Date Range <https://github.com/Numigi/odoo-account-addons/tree/16.0/account_search_date_range>`_
+* `Account Search Date Range <https://github.com/Numigi/odoo-account-addons/tree/16.0/account_search_date_range>`_ (on konvergo_invoicing)
 * `Old Accounts <https://github.com/Numigi/odoo-account-addons/tree/16.0/old_accounts>`_
 
 ---
@@ -31,5 +30,3 @@ Module that installs account modules required for Konvergo.
 ---
 ## More information
 * Meet us at https://bit.ly/numigi-com
-
-```

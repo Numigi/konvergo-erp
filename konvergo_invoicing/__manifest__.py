@@ -10,25 +10,26 @@
     "category": "Other",
     "summary": "Accounting Dependencies for Konvergo",
     "depends": [
-        # Numigi/konvergo-erp
-        # "konvergo_invoicing",
         # Numigi/odoo-account-addons
-        # "account_additional_settings", WIP FOR V16-
+        "account_bank_menu",
+        "account_move_reversal_access",
+        "account_move_unique_reversal",
+        "account_negative_debit_credit",
+        "account_payment_cancel_group",
+        # "account_payment_widget_link", NOT YET AVAILABLE ON V16
+        "invoice_refund_not_earlier",
         # "account_show_full_features",
-        # "account_search_date_range",
-        # "old_accounts",
-        # # OCA/mis-builder
-        # "mis_builder",
-        # # OCA/reporting-engine
-        # "report_xlsx",
-        # # OCA/server-ux
-        # "date_range_account",
+        "account_search_date_range",
+        # Numigi/aeroo_reports
+        "account_check_printing_aeroo",
         # # OCA/account-financial-reporting
-        # "account_financial_report",
-        # "account_tax_balance",
-        # "mis_builder_cash_flow",
+        "partner_statement",
+        # OCA/account-financial-tools
+        "account_lock_date_update",
+        "account_move_name_sequence",
+        # OCA/account-reconcile
+        "account_reconcile_oca",
     ],
-    # "excludes": ["konvergo_account_fr"],
     "data": [
         "views/menu.xml",
     ],

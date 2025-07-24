@@ -11,11 +11,11 @@
     "summary": "Accounting Dependencies for Konvergo",
     "depends": [
         # Numigi/konvergo-erp
-        # "konvergo_invoicing", WIP FOR V16
+        "konvergo_invoicing",
         # Numigi/odoo-account-addons
         # "account_additional_settings", WIP FOR V16
         "account_show_full_features",
-        "account_search_date_range",
+        # "account_search_date_range", AVAILABLE ON konvergo_invoicing
         "old_accounts",
         # OCA/mis-builder
         "mis_builder",
