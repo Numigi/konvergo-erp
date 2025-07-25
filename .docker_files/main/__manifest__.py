@@ -13,8 +13,8 @@
     "depends": [
         "canada_mis_report",
         "canada_vat_label",
-        # "konvergo_account",
-        "konvergo_account_fr",
+        "konvergo_account",
+        # "konvergo_account_fr",
         "konvergo_base",
         "konvergo_bot",
         # "konvergo_contact",
