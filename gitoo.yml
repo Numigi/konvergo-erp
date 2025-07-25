@@ -24,6 +24,12 @@
   includes:
     - account_reconciliation_widget
 
+- url: https://github.com/OCA/bank-payment
+  branch: "14.0"
+  includes:
+    - account_payment_mode
+    - account_payment_partner
+
 - url: https://github.com/OCA/bank-statement-import
   branch: "14.0"
   includes:
