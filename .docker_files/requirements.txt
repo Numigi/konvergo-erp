@@ -2,3 +2,4 @@ git+https://github.com/numigi/aeroolib@master
 ddt==1.4.4
 html2text
 factur-x
+unidecode
