@@ -49,6 +49,9 @@
     - account_payment_cancel_group
     - account_show_full_features
     - account_search_date_range
+    - bank_statement_import_csv
+    - canada_account_types
+    - canada_mis_report
     - invoice_refund_not_earlier
     - old_accounts
 
@@ -129,3 +132,15 @@
     - account_tax_unece
     - base_unece
     - uom_unece
+
+- url: https://github.com/OCA/bank-statement-import
+  branch: "16.0"
+  includes:
+    - account_statement_import_base
+    - account_statement_import_file
+
+- url: https://github.com/Numigi/odoo-web-addons
+  branch: "16.0"
+  includes:
+    - web_custom_label
+

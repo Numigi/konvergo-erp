@@ -14,6 +14,7 @@ RUN gitoo install-all --conf_file /gitoo.yml --destination "${THIRD_PARTY_ADDONS
 USER odoo
 
 COPY konvergo_account /mnt/extra-addons/konvergo_account
+COPY konvergo_account_ca /mnt/extra-addons/konvergo_account_ca
 COPY konvergo_base /mnt/extra-addons/konvergo_base
 COPY konvergo_bot /mnt/extra-addons/konvergo_bot
 COPY konvergo_cron_publisher /mnt/extra-addons/konvergo_cron_publisher
