@@ -47,6 +47,7 @@
   includes:
     - account_einvoice_generate
     - account_invoice_facturx
+    - base_facturx
 
 - url: https://github.com/OCA/intrastat-extrastat
   branch: "14.0"
