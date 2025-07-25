@@ -1,0 +1,2 @@
+# for account_invoice_facturx
+factur-x<=3.1
