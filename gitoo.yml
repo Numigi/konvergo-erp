@@ -26,9 +26,9 @@
 - url: https://github.com/OCA/bank-statement-import
   branch: "14.0"
   includes:
-- account_statement_import
-- account_statement_import_base
-- bank_statement_import_csv
+    - account_statement_import
+    - account_statement_import_base
+    - bank_statement_import_csv
 
 - url: https://github.com/OCA/community-data-files
   branch: "14.0"
