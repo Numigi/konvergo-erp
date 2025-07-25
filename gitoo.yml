@@ -39,6 +39,7 @@
 - url: https://github.com/OCA/edi
   branch: "14.0"
   includes:
+    - account_einvoice_generate
     - account_invoice_facturx
 
 - url: https://github.com/OCA/intrastat-extrastat
