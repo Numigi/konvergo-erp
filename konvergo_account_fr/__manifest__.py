@@ -43,7 +43,7 @@
 
         # Numigi/odoo-base
         'konvergo_base',
-        'numipack',
+        # 'numipack',
 
         # Numigi/odoo-account-addons
         'account_invoice_constraint_chronology_forced',

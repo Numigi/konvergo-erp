@@ -20,7 +20,7 @@
         'konvergo_mail_templates',  # TA#54157
         'konvergo_web_logo',  # TA#25792
         'mail_color_konvergo',
-        'numipack',
+        # 'numipack',
 
         # Numigi/odoo-base-addons
         'mail_bot_no_pong',
