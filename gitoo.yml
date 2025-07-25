@@ -145,6 +145,7 @@
     - mail_bot_no_pong
     - mail_notification_no_action_button
     - numipack
+    - numipack_account
 
 - url: https://github.com/Numigi/odoo-partner-addons
   branch: "14.0"
