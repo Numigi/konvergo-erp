@@ -102,6 +102,8 @@
   branch: "16.0"
   includes:
     - l10n_fr_account_invoice_facturx
+    - l10n_fr_account_vat_return
+    - l10n_fr_fec_oca
     - l10n_fr_department
     - l10n_fr_oca
     - l10n_fr_siret
@@ -143,4 +145,9 @@
   branch: "16.0"
   includes:
     - web_custom_label
+
+- url: https://github.com/OCA/intrastat-extrastat
+  branch: "16.0"
+  includes:
+    - intrastat_base
 
