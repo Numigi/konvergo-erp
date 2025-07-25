@@ -18,6 +18,11 @@
   includes:
     - account_invoice_constraint_chronology
 
+- url: https://github.com/OCA/account-reconcile
+  branch: "14.0"
+  includes:
+    - account_reconciliation_widget
+
 - url: https://github.com/OCA/bank-statement-import
   branch: "14.0"
   includes:
