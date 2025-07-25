@@ -177,6 +177,7 @@
   includes:
     - resize_observer_error_catcher
     - web_custom_label
+    - web_search_date_range
     - web_search_date_range_account
 
 - url: https://{{GIT_TOKEN}}@github.com/Numigi/odoo-theme-backend-community
