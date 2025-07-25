@@ -83,6 +83,7 @@
   branch: "14.0"
   includes:
     - report_xlsx
+    - report_xlsx_helper
 
 - url: https://github.com/OCA/sale-workflow
   branch: "14.0"
