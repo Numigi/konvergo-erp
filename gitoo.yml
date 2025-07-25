@@ -156,6 +156,7 @@
   branch: "14.0"
   includes:
     - account_check_printing_aeroo
+    - report_aeroo
 
 - url: https://github.com/Numigi/odoo-base-addons
   branch: "14.0"
