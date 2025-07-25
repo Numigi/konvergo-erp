@@ -134,6 +134,7 @@
     - account_type_sane
     - bank_statement_import_csv
     - canada_account_types
+    - invoice_currency_validation
     - invoice_refund_not_earlier
     - numipack_account
     - old_accounts
