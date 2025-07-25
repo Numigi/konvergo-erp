@@ -136,7 +136,6 @@
     - canada_account_types
     - invoice_currency_validation
     - invoice_refund_not_earlier
-    - numipack_account
     - old_accounts
 
 - url: https://github.com/Numigi/aeroo_reports
@@ -151,7 +150,6 @@
     - base_xml_rename
     - mail_bot_no_pong
     - mail_notification_no_action_button
-    - numipack
     - numipack_account
 
 - url: https://github.com/Numigi/odoo-partner-addons

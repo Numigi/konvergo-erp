@@ -15,7 +15,7 @@
 
         # Numigi/odoo-base
         'konvergo_base',
-        'numipack_account',
+        # 'numipack_account',
         'canada_mis_report',
         'canada_vat_label',  # TA#60491
 
