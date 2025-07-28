@@ -13,7 +13,7 @@
     "depends": [
         "konvergo_account",
         "konvergo_account_ca",
-        "konvergo_account_fr",
+        # "konvergo_account_fr", # CONFLICT WITH konvergo_account
         "konvergo_base",
         "konvergo_bot",
         "konvergo_cron_publisher",
