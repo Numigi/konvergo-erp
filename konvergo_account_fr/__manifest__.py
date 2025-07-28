@@ -15,9 +15,10 @@
         "konvergo_invoicing_fr",
         # OCA/l10n-france
         "l10n_fr_account_vat_return",
+        "l10n_fr_oca",
         "l10n_fr_fec_oca",
         "l10n_fr_mis_reports",
     ],
-    "data": [],
+    "data": ["data/menu.xml"],
     "installable": True,
 }
