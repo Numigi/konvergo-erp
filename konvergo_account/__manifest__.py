@@ -28,7 +28,7 @@
         "account_tax_balance",
         "mis_builder_cash_flow",
     ],
-    # "excludes": ["konvergo_account_fr"],
+    "excludes": ["konvergo_account_fr"],
     "data": [
         "views/menu.xml",
     ],
