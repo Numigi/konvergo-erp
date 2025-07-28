@@ -18,45 +18,47 @@
   includes:
     - muk_web_theme
 
-- url: https://github.com/Numigi/odoo-base-addons
-  branch: "16.0"
-  includes:
-    - base_fr_ca_labels
-    - lang_fr_activated
-    - mail_notification_no_action_button
-
-- url: https://github.com/Numigi/konvergo-erp
-  branch: "16.0"
-  includes:
-    - konvergo_base
-
-- url: https://github.com/Numigi/odoo-account-addons
-  branch: "16.0"
-  includes:
-    - account_bank_menu
-    - account_move_reversal_access
-    - account_move_unique_reversal
-    - account_negative_debit_credit
-    - account_payment_cancel_group
-    - account_show_full_features
-    - bank_statement_import_csv
-    - canada_account_types
-    - canada_mis_report
-    - invoice_refund_not_earlier
-    - account_search_date_range
-    - old_accounts
-
 - url: https://github.com/Numigi/aeroo_reports
   branch: "16.0"
   includes:
     - account_check_printing_aeroo
     - report_aeroo
 
+- url: https://github.com/Numigi/odoo-base-addons
+  branch: "16.0"
+  includes:
+    - base_fr_ca_labels
+    - currency_rate_update_boc
+    - lang_fr_activated
+    - mail_notification_no_action_button
+
+
 - url: https://github.com/Numigi/odoo-web-addons
   branch: "16.0"
   includes:
-    - web_custom_label
     - web_search_date_range
+
+- url: https://github.com/Numigi/odoo-account-addons
+  branch: "16.0"
+  includes:
+    - account_bank_menu
+    - account_invoice_constraint_chronology_forced
+    - account_move_reversal_access
+    - account_move_unique_reversal
+    - account_negative_debit_credit
+    - account_payment_cancel_group
+    - account_show_full_features
+    - account_search_date_range
+    - bank_statement_import_csv
+    - canada_account_types
+    - canada_mis_report
+    - invoice_refund_not_earlier
+    - old_accounts
+
+- url: https://github.com/Numigi/odoo-partner-addons
+  branch: "16.0"
+  includes:
+    - partner_firstname_before_lastname
 
 - url: https://github.com/OCA/reporting-engine
   branch: "16.0"
@@ -70,6 +72,13 @@
     - date_range
     - date_range_account
 
+- url: https://github.com/OCA/account-financial-tools
+  branch: "16.0"
+  includes:
+    - account_invoice_constraint_chronology
+    - account_lock_date_update
+    - account_move_name_sequence
+
 - url: https://github.com/OCA/account-financial-reporting
   branch: "16.0"
   includes:
@@ -77,21 +86,69 @@
     - account_tax_balance
     - mis_builder_cash_flow
     - partner_statement
-
-- url: https://github.com/OCA/account-financial-tools
-  branch: "16.0"
-  includes:
-    - account_lock_date_update
-    - account_move_name_sequence
-
+  
 - url: https://github.com/OCA/account-reconcile
   branch: "16.0"
   includes:
     - account_statement_base
     - account_reconcile_oca
 
+- url: https://github.com/OCA/currency
+  branch: "16.0"
+  includes:
+    - currency_rate_update
+
+- url: https://github.com/OCA/l10n-france
+  branch: "16.0"
+  includes:
+    - l10n_fr_account_invoice_facturx
+    - l10n_fr_account_vat_return
+    - l10n_fr_department
+    - l10n_fr_fec_oca
+    - l10n_fr_mis_reports
+    - l10n_fr_oca
+    - l10n_fr_siret
+    - l10n_fr_state
+
+- url: https://github.com/OCA/partner-contact
+  branch: "16.0"
+  includes:
+    - partner_firstname
+
+- url: https://github.com/OCA/edi
+  branch: "16.0"
+  includes:
+    - account_einvoice_generate
+    - account_invoice_facturx
+    - base_facturx
+
+- url: https://github.com/OCA/bank-payment
+  branch: "16.0"
+  includes:
+  - account_payment_mode
+  - account_payment_partner
+
+- url: https://github.com/OCA/community-data-files
+  branch: "16.0"
+  includes:
+    - account_payment_unece
+    - account_tax_unece
+    - base_unece
+    - uom_unece
+
 - url: https://github.com/OCA/bank-statement-import
   branch: "16.0"
   includes:
     - account_statement_import_base
     - account_statement_import_file
+
+- url: https://github.com/Numigi/odoo-web-addons
+  branch: "16.0"
+  includes:
+    - web_custom_label
+
+- url: https://github.com/OCA/intrastat-extrastat
+  branch: "16.0"
+  includes:
+    - intrastat_base
+

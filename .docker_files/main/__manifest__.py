@@ -12,11 +12,14 @@
     "summary": "Install all addons required for testing.",
     "depends": [
         "konvergo_account",
+        "konvergo_account_ca",
+        # "konvergo_account_fr", # CONFLICT WITH konvergo_account
         "konvergo_base",
         "konvergo_bot",
         "konvergo_cron_publisher",
         "konvergo_favicon_title",
         "konvergo_icons",
+        "konvergo_invoicing",
         "konvergo_login_page",
         "konvergo_login_page_website",
         "konvergo_mail_notification",
