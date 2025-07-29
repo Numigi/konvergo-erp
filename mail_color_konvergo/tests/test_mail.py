@@ -11,6 +11,9 @@ class TestColorizedBody(SavepointCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        # Skip tests if CRM module is not installed
+        if "crm.lead" not in cls.env.registry:
+            cls.skipTest(cls, "CRM module not installed")
         cls.user = cls.env["res.users"].create(
             {
                 "name": "test@example.com",
@@ -49,5 +52,5 @@ class TestColorizedBody(SavepointCase):
         assert KONVERGO_FONT_COLOR in message.body
 
     def test_post_message_in_bytes(self):
-        message = self.lead.message_post(body=ODOO_FONT_COLOR.encode('utf-8'))
+        message = self.lead.message_post(body=ODOO_FONT_COLOR.encode("utf-8"))
         assert KONVERGO_FONT_COLOR in message.body

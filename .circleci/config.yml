@@ -30,9 +30,6 @@ jobs:
 
        - store_test_results:
           path: .log/junit.xml
-          
-       - store_artifacts:
-          path: .log/coverage.xml
 
   # job that find the next tag for the current branch/repo and push the tag to github.
   # it will trigger the publish of a new docker image.

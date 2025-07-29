@@ -11,10 +11,13 @@
     "category": "Other",
     "summary": "Install all addons required for testing.",
     "depends": [
+        # odoo/odoo #  For unit test
+        "crm",
+        # -
         "canada_mis_report",
         "canada_vat_label",
         "konvergo_account",
-        # "konvergo_account_fr",
+        # "konvergo_account_fr", Conflict with konvergo_account
         "konvergo_base",
         "konvergo_bot",
         # "konvergo_contact",
