@@ -11,6 +11,10 @@ class TestColorizedBody(SavepointCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        # Install CRM module for this test
+        cls.env["ir.module.module"].search(
+            [("name", "=", "crm")]
+        ).button_immediate_install()
         cls.user = cls.env["res.users"].create(
             {
                 "name": "test@example.com",
