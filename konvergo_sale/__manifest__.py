@@ -1,5 +1,4 @@
-# Copyright 2025-today Numigi (tm) and all its contributors (https://bit.ly/numigiens)
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# © Numigi (tm) and all its contributors (https://numigi.com/r/home)# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
     "name": "Konvergo / Sale",
