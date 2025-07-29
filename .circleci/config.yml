@@ -26,7 +26,12 @@ jobs:
 
        - run:
           name: Codacy Coverage
-          command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l python -r .log/coverage.xml
+          command: |
+            if [ -n "$CODACY_PROJECT_TOKEN" ]; then
+              bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l python -r .log/coverage.xml
+            else
+              echo "Skipping Codacy coverage: CODACY_PROJECT_TOKEN not set"
+            fi
 
        - store_test_results:
           path: .log/junit.xml
