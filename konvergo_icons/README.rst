@@ -10,4 +10,5 @@ With the version `1.1.0` or newer, new konvergo icons are loaded on settings pag
 
 Contributors
 ------------
-* Numigi (tm) and all its contributors (https://bit.ly/numigiens)
+
+The `Numigi <https://numigi.com/r/home>`_ team is the contributor to this project. We help Quebec companies implement Odoo and Konvergo ERP.
