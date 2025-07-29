@@ -11,6 +11,9 @@ class TestColorizedBody(SavepointCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        # Skip tests if CRM module is not installed
+        if "crm.lead" not in cls.env.registry:
+            cls.skipTest(cls, "CRM module not installed")
         cls.user = cls.env["res.users"].create(
             {
                 "name": "test@example.com",
@@ -19,17 +22,21 @@ class TestColorizedBody(SavepointCase):
             }
         )
         cls.partner = cls.user.partner_id
-        cls.lead = cls.env["crm.lead"].create({"name": "M Lead",})
+        cls.lead = cls.env["crm.lead"].create({"name": "M Lead"})
         cls.subtype = cls.env.ref("mail.mt_comment")
         cls.lead.message_subscribe([cls.partner.id], subtype_ids=[cls.subtype.id])
 
     def send_notification_email(self):
         message = self.lead.message_post(
-            body="Test", mail_auto_delete=False, send_after_commit=False, force_send=True,
+            body="Test",
+            mail_auto_delete=False,
+            send_after_commit=False,
+            force_send=True,
             subtype_id=self.subtype.id,
         )
         return self.env["mail.mail"].search(
-            [("mail_message_id", "=", message.id)], limit=1)
+            [("mail_message_id", "=", message.id)], limit=1
+        )
 
     def test_old_colours_not_in_body(self):
         email = self.send_notification_email()
@@ -45,5 +52,5 @@ class TestColorizedBody(SavepointCase):
         assert KONVERGO_FONT_COLOR in message.body
 
     def test_post_message_in_bytes(self):
-        message = self.lead.message_post(body=ODOO_FONT_COLOR.encode('utf-8'))
+        message = self.lead.message_post(body=ODOO_FONT_COLOR.encode("utf-8"))
         assert KONVERGO_FONT_COLOR in message.body

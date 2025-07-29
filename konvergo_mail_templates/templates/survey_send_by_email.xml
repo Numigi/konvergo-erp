@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <record id="survey_send_by_email_template" model="mail.template">
+    <field name="name">Survey: Send by email</field>
+    <field name="is_konvergo_template" eval="True"/>
+    <field name="odoo_template_ref">survey.email_template_survey</field>
+    <field name="auto_delete" eval="True"/>
+    <field name="subject_en">${object.title}: Survey</field>
+    <field name="subject_fr">${object.title} : Sondage</field>
+    <field name="body_html_en" type="html">
+      <div style="margin: 0px; padding: 0px; font-size: 13px;">
+        <p style="margin: 0px; padding: 0px; font-size: 13px;">
+          Hello
+          <br/>
+          <br/>
+          We are conducting a survey, and your response would be appreciated.
+        </p>
+        <div style="margin: 16px 0px 16px 0px;">
+          <a href="__URL__" style="background-color: #1a62c6; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">
+            Start Survey
+          </a>
+        </div>
+        Thanks for your participation!
+      </div>
+    </field>
+    <field name="body_html_fr" type="html">
+      <div style="margin: 0px; padding: 0px; font-size: 13px;">
+        <p style="margin: 0px; padding: 0px; font-size: 13px;">
+          Bonjour
+          <br/>
+          <br/>
+          Nous sommes en train de réaliser un sondage, votre réponse serait appréciée.
+        </p>
+        <div style="margin: 16px 0px 16px 0px;">
+          <a href="__URL__" style="background-color: #1a62c6; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">
+            Commencer le sondage
+          </a>
+        </div>
+        Merci pour votre participation!
+      </div>
+    </field>
+  </record>
+
+</odoo>

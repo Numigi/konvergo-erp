@@ -1,0 +1,14 @@
+# for account_invoice_facturx
+factur-x<=3.1
+
+# for l10n_fr_fec_oca
+unicodecsv
+unidecode
+
+# aeroo_reports
+git+https://github.com/numigi/aeroolib@master
+babel==2.5.3
+Genshi==0.7.5
+freezegun==0.3.10
+html2text==2018.1.9
+ddt==1.2.1

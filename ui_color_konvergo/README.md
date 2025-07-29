@@ -1,6 +1,8 @@
 # Red Odoo Community Interface
 
-This module changes the web ui color to red .
+This module changes the web ui color to red.
+
+The module fixes style issue in `Journal Entries` form view.
 
 ![App Switcher](static/description/apps.png?raw=true)
 

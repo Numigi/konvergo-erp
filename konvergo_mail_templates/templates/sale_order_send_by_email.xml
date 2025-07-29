@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <record id="sale_order_send_by_email_template" model="mail.template">
+    <field name="name">Sales Order: Send by email</field>
+    <field name="is_konvergo_template" eval="True"/>
+    <field name="odoo_template_ref">sale.email_template_edi_sale</field>
+    <field name="email_from">${object.user_id.email_formatted |safe}</field>
+    <field name="partner_to">${object.partner_id.id}</field>
+    <field name="lang">${object.partner_id.lang}</field>
+    <field name="auto_delete" eval="True"/>
+    <field name="subject_en">${object.company_id.name} - ${object.state in ('draft', 'sent') and 'Quotation' or 'Order'} #${object.name or 'n/a' }</field>
+    <field name="subject_fr">${object.company_id.name} - ${object.state in ('draft', 'sent') and 'Soumission' or 'Confirmation de commande'} #${object.name or 'n/a' }</field>
+    <field name="body_html_en" type="html">
+<div style="margin: 0px; padding: 0px; line-height:2.5em;">
+    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+        % set doc_name = 'quotation' if object.state in ('draft', 'sent') else 'order'
+        Dear ${object.partner_id.name}
+        % if object.partner_id.parent_id:
+            (${object.partner_id.parent_id.name})
+        % endif
+        <br/>
+        Here is
+        % if ctx.get('proforma')
+            in attachment your pro-forma invoice
+        % else
+            the ${doc_name} <strong>${object.name}</strong>
+        % endif
+        % if object.origin:
+            (with reference: ${object.origin} )
+        % endif
+        amounting in <strong>${format_amount(object.amount_total, object.pricelist_id.currency_id)}</strong>
+        from ${object.company_id.name}.
+        <br/>
+        Do not hesitate to contact us if you have any question.
+    </p><br/>
+    <p><i>The Sales Team</i>
+    </p>
+</div>
+    </field>
+    <field name="body_html_fr" type="html">
+<div style="margin: 0px; padding: 0px; line-height:2.5em;">
+    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+        % set doc_name = 'devis' if object.state in ('draft', 'sent') else 'confirmation de commande'
+        Bonjour ${object.partner_id.name}
+        % if object.partner_id.parent_id:
+            (${object.partner_id.parent_id.name})
+        % endif
+        <br/>
+        Voici
+        % if ctx.get('proforma')
+            en pièce jointe votre soumission
+        % else
+            en pièce jointe votre ${doc_name} <strong>${object.name}</strong>
+        % endif
+        % if object.origin:
+            (référence : ${object.origin} )
+        % endif
+        d'un montant de <strong>${format_amount(object.amount_total, object.pricelist_id.currency_id)}</strong>
+        de la part de ${object.company_id.name}.
+        <br/>
+        N'hésitez pas à nous contacter si vous avez la moindre question.
+    </p><br/>
+    <p><i>L'équipe des ventes</i>
+    </p>
+</div>
+    </field>
+  </record>
+
+</odoo>

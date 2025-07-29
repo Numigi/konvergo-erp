@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-  <record id="hr_recruitement_acknowledgment_template" model="mail.template">
+  <record id="project_task_acknowledgmet" model="mail.template">
     <field name="name">Applicant: Acknowledgment</field>
     <field name="is_konvergo_template" eval="True"/>
     <field name="odoo_template_ref">hr_recruitment.email_template_data_applicant_congratulations</field>

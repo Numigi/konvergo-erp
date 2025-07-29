@@ -3,7 +3,7 @@
 
 {
     "name": "Canada MIS Builder Reports",
-    "version": "1.0.3",
+    "version": "1.2.0",
     "author": "Numigi",
     "maintainer": "Numigi",
     "license": "LGPL-3",
@@ -21,6 +21,7 @@
     "data": [
         "data/mis_report_style.xml",
         "data/mis_report.xml",
+        "views/mis_report_views.xml",
     ],
     "installable": True,
 }
