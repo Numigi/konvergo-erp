@@ -30,6 +30,28 @@
     - account_payment_mode
     - account_payment_partner
 
+- url: https://github.com/OCA/pos
+  branch: "14.0"
+  includes:
+    - pos_edit_order_line
+    - pos_order_remove_line
+    - pos_order_product_search
+    - pos_product_sort
+    - pos_show_clock
+    - pos_show_config_name
+    - pos_supplierinfo_search
+    - pos_warning_exiting
+    - pos_payment_change
+    - pos_order_mgmt
+    - pos_order_return
+    - pos_receipt_hide_price
+    - pos_require_product_quantity
+    - pos_partner_birthdate
+    - pos_report_discount
+    - pos_timeout
+    - pos_empty_home
+    - pos_access_right
+
 - url: https://github.com/OCA/bank-statement-import
   branch: "14.0"
   includes:
@@ -80,6 +102,9 @@
 - url: https://github.com/OCA/partner-contact
   branch: "14.0"
   includes:
+    - partner_contact_birthdate
+    - partner_contact_personal_information_page
+    - partner_email_duplicate_warn
     - partner_firstname
     - partner_identification
 
@@ -101,9 +126,12 @@
   branch: "14.0"
   includes:
     - product_form_sale_link
+    - sale_cancel_reason
     - sale_force_invoiced
+    - sale_invoice_policy
     - sale_order_price_recalculation
     - sale_order_revision
+    # - sale_stock_cancel_restriction
 
 - url: https://github.com/OCA/server-brand
   branch: "14.0"
@@ -114,6 +142,7 @@
 - url: https://github.com/OCA/server-tools
   branch: "14.0"
   includes:
+    - base_search_fuzzy
     - onchange_helper
     - tracking_manager
 
@@ -129,58 +158,7 @@
   includes:
     - web_edit_user_filter
 
-- url: https://github.com/Numigi/odoo-account-addons
+- url: https://github.com/OCA/stock-logistics-workflow
   branch: "14.0"
   includes:
-    - account_bank_menu
-    - account_closing_journal
-    - account_closing_journal_mis_builder
-    - account_fiscalyear_end_on_company
-    - account_fr_ca_labels
-    - account_invoice_constraint_chronology_forced
-    - account_move_reversal_access
-    - account_move_unique_reversal
-    - account_negative_debit_credit
-    - account_payment_cancel_group
-    - account_payment_widget_link
-    - account_reconciliation_widget
-    - account_show_full_features
-    - account_type_sane
-    - bank_statement_import_csv
-    - canada_account_types
-    - invoice_currency_validation
-    - invoice_refund_not_earlier
-    - old_accounts
-
-- url: https://github.com/Numigi/aeroo_reports
-  branch: "14.0"
-  includes:
-    - account_check_printing_aeroo
-    - report_aeroo
-
-- url: https://github.com/Numigi/odoo-base-addons
-  branch: "14.0"
-  includes:
-    - base_extended_security
-    - base_xml_rename
-    - mail_bot_no_pong
-    - mail_notification_no_action_button
-    # - numipack_account
-
-- url: https://github.com/Numigi/odoo-partner-addons
-  branch: "14.0"
-  includes:
-    - partner_firstname_before_lastname
-
-- url: https://github.com/Numigi/odoo-web-addons
-  branch: "14.0"
-  includes:
-    - resize_observer_error_catcher
-    - web_custom_label
-    - web_search_date_range
-    - web_search_date_range_account
-
-- url: https://{{GIT_TOKEN}}@github.com/Numigi/odoo-theme-backend-community
-  branch: "14.0"
-  includes:
-    - muk_web_theme
+    - sale_line_returned_qty
