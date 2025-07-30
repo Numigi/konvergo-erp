@@ -28,7 +28,7 @@
         "konvergo_login_page_website",
         "konvergo_mail_notification",
         "konvergo_mail_templates",
-        "konvergo_mail_pos",
+        "konvergo_pos",
         "konvergo_product",
         "konvergo_sale",
         "konvergo_web_logo",
