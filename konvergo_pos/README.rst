@@ -2,7 +2,6 @@ Konvergo / Point of Sale
 ========================
 Module that installs all the dependencies for the Point of Sale module for Konvergo.
 
-
 Added Modules
 -------------
 
@@ -25,7 +24,6 @@ OCA Modules
 * `Pos timeout <https://github.com/OCA/pos/tree/14.0/pos_timeout>`_
 * `Pos empty home <https://github.com/OCA/pos/tree/14.0/pos_empty_home>`_
 * `Pos access right <https://github.com/OCA/pos/tree/14.0/pos_access_right>`_
-
 
 Contributors
 ------------
