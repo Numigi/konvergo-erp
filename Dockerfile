@@ -1,3 +1,21 @@
+# Stage 1: Install OCA repositories
+FROM quay.io/numigi/odoo-public:14.latest as oca-stage
+LABEL maintainer="contact@numigi.com"
+USER root
+ARG GIT_TOKEN
+RUN mkdir -p /mnt/oca-addons && chown -R odoo /mnt/oca-addons
+COPY ./gitoo-oca.yml /gitoo-oca.yml
+RUN gitoo install-all --conf_file /gitoo-oca.yml --destination /mnt/oca-addons
+
+# Stage 2: Install Numigi repositories  
+FROM quay.io/numigi/odoo-public:14.latest as numigi-stage
+USER root
+ARG GIT_TOKEN
+RUN mkdir -p /mnt/numigi-addons && chown -R odoo /mnt/numigi-addons
+COPY ./gitoo-numigi.yml /gitoo-numigi.yml
+RUN gitoo install-all --conf_file /gitoo-numigi.yml --destination /mnt/numigi-addons
+
+# Stage 3: Final image with all dependencies
 FROM quay.io/numigi/odoo-public:14.latest
 LABEL maintainer="contact@numigi.com"
 
@@ -14,8 +32,10 @@ ARG GIT_TOKEN
 
 ENV THIRD_PARTY_ADDONS /mnt/third-party-addons
 RUN mkdir -p "${THIRD_PARTY_ADDONS}" && chown -R odoo "${THIRD_PARTY_ADDONS}"
-COPY ./gitoo.yml /gitoo.yml
-RUN gitoo install-all --conf_file /gitoo.yml --destination "${THIRD_PARTY_ADDONS}"
+
+# Copy modules from previous stages
+COPY --from=oca-stage /mnt/oca-addons/ ${THIRD_PARTY_ADDONS}/
+COPY --from=numigi-stage /mnt/numigi-addons/ ${THIRD_PARTY_ADDONS}/
 
 USER odoo
 
@@ -25,7 +45,7 @@ COPY konvergo_account /mnt/extra-addons/konvergo_account
 COPY konvergo_account_fr /mnt/extra-addons/konvergo_account_fr
 COPY konvergo_base /mnt/extra-addons/konvergo_base
 COPY konvergo_bot /mnt/extra-addons/konvergo_bot
-# COPY konvergo_contact /mnt/extra-addons/konvergo_contact
+COPY konvergo_contact /mnt/extra-addons/konvergo_contact
 COPY konvergo_cron_publisher /mnt/extra-addons/konvergo_cron_publisher
 COPY konvergo_favicon_title /mnt/extra-addons/konvergo_favicon_title
 COPY konvergo_icons /mnt/extra-addons/konvergo_icons
@@ -33,8 +53,9 @@ COPY konvergo_login_page /mnt/extra-addons/konvergo_login_page
 COPY konvergo_login_page_website /mnt/extra-addons/konvergo_login_page_website
 COPY konvergo_mail_notification /mnt/extra-addons/konvergo_mail_notification
 COPY konvergo_mail_templates /mnt/extra-addons/konvergo_mail_templates
-# COPY konvergo_product /mnt/extra-addons/konvergo_product
-# COPY konvergo_sale /mnt/extra-addons/konvergo_sale
+COPY konvergo_pos /mnt/extra-addons/konvergo_pos
+COPY konvergo_product /mnt/extra-addons/konvergo_product
+COPY konvergo_sale /mnt/extra-addons/konvergo_sale
 COPY konvergo_web_logo /mnt/extra-addons/konvergo_web_logo
 COPY lang_fr_activated /mnt/extra-addons/lang_fr_activated
 COPY mail_color_konvergo /mnt/extra-addons/mail_color_konvergo

@@ -21,10 +21,7 @@
         "sale_invoice_policy",
         "sale_order_price_recalculation",
         "sale_order_revision",
-        "sale_stock_cancel_restriction",
-    ],
-    "data": [
-        "security/extended_security_rule.xml",
+        # "sale_stock_cancel_restriction", Not available on 14.0
     ],
     "installable": True,
 }
