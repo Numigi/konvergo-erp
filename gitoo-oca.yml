@@ -59,6 +59,13 @@
     - account_statement_import_base
     - bank_statement_import_csv
 
+- url: https://github.com/OCA/crm
+  branch: "14.0"
+  includes:
+    - crm_industry
+    - crm_lead_search_archive
+    - crm_security_group
+
 - url: https://github.com/OCA/community-data-files
   branch: "14.0"
   includes:
@@ -107,6 +114,7 @@
     - partner_email_duplicate_warn
     - partner_firstname
     - partner_identification
+    - partner_industry_secondary
 
 - url: https://github.com/OCA/product-attribute
   branch: "14.0"

@@ -46,6 +46,7 @@ COPY konvergo_account_fr /mnt/extra-addons/konvergo_account_fr
 COPY konvergo_base /mnt/extra-addons/konvergo_base
 COPY konvergo_bot /mnt/extra-addons/konvergo_bot
 COPY konvergo_contact /mnt/extra-addons/konvergo_contact
+COPY konvergo_crm /mnt/extra-addons/konvergo_crm
 COPY konvergo_cron_publisher /mnt/extra-addons/konvergo_cron_publisher
 COPY konvergo_favicon_title /mnt/extra-addons/konvergo_favicon_title
 COPY konvergo_icons /mnt/extra-addons/konvergo_icons
