@@ -21,6 +21,7 @@
         "konvergo_base",
         "konvergo_bot",
         "konvergo_contact",
+        "konvergo_crm",
         "konvergo_cron_publisher",
         "konvergo_favicon_title",
         "konvergo_icons",
