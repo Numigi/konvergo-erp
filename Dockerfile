@@ -56,6 +56,7 @@ COPY konvergo_mail_notification /mnt/extra-addons/konvergo_mail_notification
 COPY konvergo_mail_templates /mnt/extra-addons/konvergo_mail_templates
 COPY konvergo_pos /mnt/extra-addons/konvergo_pos
 COPY konvergo_product /mnt/extra-addons/konvergo_product
+COPY konvergo_purchase /mnt/extra-addons/konvergo_purchase
 COPY konvergo_sale /mnt/extra-addons/konvergo_sale
 COPY konvergo_web_logo /mnt/extra-addons/konvergo_web_logo
 COPY lang_fr_activated /mnt/extra-addons/lang_fr_activated

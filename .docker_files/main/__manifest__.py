@@ -31,6 +31,7 @@
         "konvergo_mail_templates",
         "konvergo_pos",
         "konvergo_product",
+        "konvergo_purchase",
         "konvergo_sale",
         "konvergo_web_logo",
         "lang_fr_activated",

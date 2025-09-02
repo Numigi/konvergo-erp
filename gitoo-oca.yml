@@ -130,6 +130,22 @@
     - report_xlsx
     - report_xlsx_helper
 
+- url: https://github.com/OCA/product-attribute
+  branch: "14.0"
+  includes:
+    - product_cost_security
+
+- url: https://github.com/OCA/purchase-workflow
+  branch: "14.0"
+  includes:
+    - partner_supplierinfo_smartbutton
+    - purchase_last_price_info
+    - purchase_cancel_reason
+    - purchase_order_line_price_history
+    - purchase_order_line_stock_available
+    - purchase_order_line_price_history
+    - purchase_picking_state
+
 - url: https://github.com/OCA/sale-workflow
   branch: "14.0"
   includes:
