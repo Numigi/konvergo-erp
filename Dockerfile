@@ -47,8 +47,6 @@ COPY konvergo_base /mnt/extra-addons/konvergo_base
 COPY konvergo_bot /mnt/extra-addons/konvergo_bot
 COPY konvergo_brand /mnt/extra-addons/konvergo_brand
 COPY konvergo_core /mnt/extra-addons/konvergo_core
-COPY konvergo_favicon_title /mnt/extra-addons/konvergo_favicon_title
-COPY konvergo_login_page /mnt/extra-addons/konvergo_login_page
 COPY konvergo_mail_notification /mnt/extra-addons/konvergo_mail_notification
 COPY konvergo_mail_templates /mnt/extra-addons/konvergo_mail_templates
 COPY konvergo_pack_contact /mnt/extra-addons/konvergo_pack_contact
@@ -57,7 +55,6 @@ COPY konvergo_pack_pos /mnt/extra-addons/konvergo_pack_pos
 COPY konvergo_pack_product /mnt/extra-addons/konvergo_pack_product
 COPY konvergo_pack_sale /mnt/extra-addons/konvergo_pack_sale
 COPY konvergo_ui /mnt/extra-addons/konvergo_ui
-COPY konvergo_web_logo /mnt/extra-addons/konvergo_web_logo
 COPY lang_fr_activated /mnt/extra-addons/lang_fr_activated
 COPY mail_color_konvergo /mnt/extra-addons/mail_color_konvergo
 COPY mail_template_fr_fields /mnt/extra-addons/mail_template_fr_fields
