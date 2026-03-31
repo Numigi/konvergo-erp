@@ -1,45 +1,43 @@
-# © Numigi (tm) and all its contributors (https://numigi.com/r/home)# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+# © 2025 Numigi (tm) and all its contributors (https://numigi.com)
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 {
-    'name': 'Konvergo',
-    'version': '1.0.1',
-    'author': 'Numigi',
-    'maintainer': 'Numigi',
-    'license': 'LGPL-3',
-    'category': 'Other',
-    'summary': 'Dependencies for Konvergo',
-    'depends': [
-        # Numigi/odoo-base
-        'konvergo_bot',  # TA#16528
-        'konvergo_cron_publisher',  # TA#16530
-        'konvergo_favicon_title',  # TA#16527
-        'konvergo_icons',
-        'konvergo_login_page',  # TA#18145
-        'konvergo_mail_notification',
-        'konvergo_mail_templates',  # TA#54157
-        'konvergo_web_logo',  # TA#25792
-        'mail_color_konvergo',
-        # 'numipack',
+    "name": "Konvergo",
+    "version": "18.0.1.0.0",
+    "author": "Numigi",
+    "maintainer": "Numigi",
+    "website": "https://numigi.com",
+    "license": "LGPL-3",
+    "category": "Hidden",
+    "summary": "Konvergo ERP - Main dependencies module",
+    "depends": [
+        # Konvergo core layers
+        "konvergo_core",
+        "konvergo_ui",
+        "konvergo_brand",
 
+        # Mail modules (to be migrated to konvergo_mail_core)
+        # "konvergo_bot",
+        # "konvergo_mail_notification",
+        # "mail_color_konvergo",
+
+        # Templates (to be migrated to konvergo_pack_templates)
+        # "konvergo_mail_templates",
+
+        # Legacy modules - Dépendances à activer progressivement
         # Numigi/odoo-base-addons
-        'mail_bot_no_pong',
-        'mail_notification_no_action_button',
+        # "mail_bot_no_pong",
+        # "mail_notification_no_action_button",
 
         # Numigi/odoo-web-addons
-        'resize_observer_error_catcher',  # TA#62825
+        # "resize_observer_error_catcher",
 
         # OCA/server-brand
-        'disable_odoo_online',  # TA#45124
-        'remove_odoo_enterprise',  # TA#45105
+        # "disable_odoo_online",
+        # "remove_odoo_enterprise",
 
         # OCA/server-tools
-        'tracking_manager',
-
-        # OCA/web
-        'web_edit_user_filter',  # TA#66491
-
-        # theme
-        'muk_web_theme',
+        # "tracking_manager",
     ],
-    'installable': True,
+    "installable": True,
 }
