@@ -11,28 +11,30 @@
     "category": "Other",
     "summary": "Install all addons required for testing.",
     "depends": [
-        # odoo/odoo #  For unit test
-        "crm",
-        # -
-        "canada_mis_report",
-        "canada_vat_label",
-        "konvergo_account",
-        # "konvergo_account_fr", Conflict with konvergo_account
+        # Core architecture
         "konvergo_base",
-        "konvergo_bot",
-        "konvergo_brand",
         "konvergo_core",
-        "konvergo_mail_notification",
-        "konvergo_mail_templates",
+        "konvergo_ui",
+        "konvergo_brand",
+
+        # Functional packs
         "konvergo_pack_contact",
         "konvergo_pack_crm",
         "konvergo_pack_pos",
         "konvergo_pack_product",
         "konvergo_pack_sale",
-        "konvergo_ui",
-        "lang_fr_activated",
-        "mail_color_konvergo",
-        "mail_template_fr_fields",
+
+        # Modules to be migrated later (commented out)
+        # "canada_mis_report",         # -> konvergo_l10n_ca
+        # "canada_vat_label",          # -> konvergo_l10n_ca
+        # "konvergo_account",              # TBD
+        # "konvergo_account_fr",           # -> konvergo_l10n_fr
+        # "konvergo_bot",                  # -> konvergo_mail_core
+        # "konvergo_mail_notification",    # -> konvergo_mail_core
+        # "konvergo_mail_templates",       # -> konvergo_pack_templates
+        # "lang_fr_activated",         # -> konvergo_l10n_fr
+        # "mail_color_konvergo",         # -> konvergo_mail_core
+        # "mail_template_fr_fields",   # TBD
     ],
     "installable": True,
 }
