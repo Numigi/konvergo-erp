@@ -1,17 +1,20 @@
+# Dependencies commented out for v18 migration
+# Will be re-enabled as modules are migrated
+
 # for account_invoice_facturx
-factur-x<=3.1
+# factur-x<=3.1
 
 # for l10n_fr_fec_oca
-unicodecsv
-unidecode
+# unicodecsv
+# unidecode
 
 # for base_view_inheritance_extension
-astor
+# astor
 
-# aeroo_reports
-git+https://github.com/numigi/aeroolib@master
-babel==2.5.3
-Genshi==0.7.5
-freezegun==0.3.10
-html2text==2018.1.9
-ddt==1.2.1
+# aeroo_reports (commented out for v18 migration)
+# git+https://github.com/numigi/aeroolib@master
+# babel==2.5.3  # Old version incompatible with Python 3.10+
+# Genshi==0.7.5
+# freezegun==0.3.10
+# html2text==2018.1.9
+# ddt==1.2.1
