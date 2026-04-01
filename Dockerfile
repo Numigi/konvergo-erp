@@ -1,22 +1,25 @@
-# Stage 1: Install OCA repositories
-FROM quay.io/numigi/odoo-public:14.latest as oca-stage
-LABEL maintainer="contact@numigi.com"
-USER root
-ARG GIT_TOKEN
-RUN mkdir -p /mnt/oca-addons && chown -R odoo /mnt/oca-addons
-COPY ./gitoo-oca.yml /gitoo-oca.yml
-RUN gitoo install-all --conf_file /gitoo-oca.yml --destination /mnt/oca-addons
+# Dockerfile for Konvergo ERP v18
+# OCA and Numigi stages commented out - will be re-enabled progressively during migration
 
-# Stage 2: Install Numigi repositories  
-FROM quay.io/numigi/odoo-public:14.latest as numigi-stage
-USER root
-ARG GIT_TOKEN
-RUN mkdir -p /mnt/numigi-addons && chown -R odoo /mnt/numigi-addons
-COPY ./gitoo-numigi.yml /gitoo-numigi.yml
-RUN gitoo install-all --conf_file /gitoo-numigi.yml --destination /mnt/numigi-addons
+# # Stage 1: Install OCA repositories
+# FROM quay.io/numigi/odoo-public:18.latest as oca-stage
+# LABEL maintainer="contact@numigi.com"
+# USER root
+# ARG GIT_TOKEN
+# RUN mkdir -p /mnt/oca-addons && chown -R odoo /mnt/oca-addons
+# COPY ./gitoo-oca.yml /gitoo-oca.yml
+# RUN gitoo install-all --conf_file /gitoo-oca.yml --destination /mnt/oca-addons
+
+# # Stage 2: Install Numigi repositories
+# FROM quay.io/numigi/odoo-public:18.latest as numigi-stage
+# USER root
+# ARG GIT_TOKEN
+# RUN mkdir -p /mnt/numigi-addons && chown -R odoo /mnt/numigi-addons
+# COPY ./gitoo-numigi.yml /gitoo-numigi.yml
+# RUN gitoo install-all --conf_file /gitoo-numigi.yml --destination /mnt/numigi-addons
 
 # Stage 3: Final image with all dependencies
-FROM quay.io/numigi/odoo-public:14.latest
+FROM quay.io/numigi/odoo-public:18.latest
 LABEL maintainer="contact@numigi.com"
 
 USER root
@@ -33,9 +36,9 @@ ARG GIT_TOKEN
 ENV THIRD_PARTY_ADDONS /mnt/third-party-addons
 RUN mkdir -p "${THIRD_PARTY_ADDONS}" && chown -R odoo "${THIRD_PARTY_ADDONS}"
 
-# Copy modules from previous stages
-COPY --from=oca-stage /mnt/oca-addons/ ${THIRD_PARTY_ADDONS}/
-COPY --from=numigi-stage /mnt/numigi-addons/ ${THIRD_PARTY_ADDONS}/
+# Copy modules from previous stages (commented out for now)
+# COPY --from=oca-stage /mnt/oca-addons/ ${THIRD_PARTY_ADDONS}/
+# COPY --from=numigi-stage /mnt/numigi-addons/ ${THIRD_PARTY_ADDONS}/
 
 USER odoo
 

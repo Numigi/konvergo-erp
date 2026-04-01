@@ -1,172 +1,175 @@
 # OCA addons
-- url: https://github.com/OCA/account-financial-reporting
-  branch: "14.0"
-  includes:
-    - account_financial_report
-    - account_tax_balance
-    - mis_builder_cash_flow
-    - partner_statement
+# All v14 dependencies commented out for v18 migration
+# Will be re-enabled progressively as they are migrated to v18
 
-- url: https://github.com/OCA/account-financial-tools
-  branch: "14.0"
-  includes:
-    - account_lock_date_update
-    - account_move_name_sequence
-    - account_invoice_constraint_chronology
+# - url: https://github.com/OCA/account-financial-reporting
+#   branch: "14.0"
+#   includes:
+#     - account_financial_report
+#     - account_tax_balance
+#     - mis_builder_cash_flow
+#     - partner_statement
 
-- url: https://github.com/OCA/account-invoicing
-  branch: "14.0"
-  includes:
-    - account_invoice_constraint_chronology
+# - url: https://github.com/OCA/account-financial-tools
+#   branch: "14.0"
+#   includes:
+#     - account_lock_date_update
+#     - account_move_name_sequence
+#     - account_invoice_constraint_chronology
 
-- url: https://github.com/OCA/account-reconcile
-  branch: "14.0"
-  includes:
-    - account_reconciliation_widget
+# - url: https://github.com/OCA/account-invoicing
+#   branch: "14.0"
+#   includes:
+#     - account_invoice_constraint_chronology
 
-- url: https://github.com/OCA/bank-payment
-  branch: "14.0"
-  includes:
-    - account_payment_mode
-    - account_payment_partner
+# - url: https://github.com/OCA/account-reconcile
+#   branch: "14.0"
+#   includes:
+#     - account_reconciliation_widget
 
-- url: https://github.com/OCA/pos
-  branch: "14.0"
-  includes:
-    - pos_edit_order_line
-    - pos_order_remove_line
-    - pos_order_product_search
-    - pos_product_sort
-    - pos_show_clock
-    - pos_show_config_name
-    - pos_supplierinfo_search
-    - pos_warning_exiting
-    - pos_payment_change
-    - pos_order_mgmt
-    - pos_order_return
-    - pos_receipt_hide_price
-    - pos_require_product_quantity
-    - pos_partner_birthdate
-    - pos_report_discount
-    - pos_timeout
-    - pos_empty_home
-    - pos_access_right
+# - url: https://github.com/OCA/bank-payment
+#   branch: "14.0"
+#   includes:
+#     - account_payment_mode
+#     - account_payment_partner
 
-- url: https://github.com/OCA/bank-statement-import
-  branch: "14.0"
-  includes:
-    - account_statement_import
-    - account_statement_import_base
-    - bank_statement_import_csv
+# - url: https://github.com/OCA/pos
+#   branch: "14.0"
+#   includes:
+#     - pos_edit_order_line
+#     - pos_order_remove_line
+#     - pos_order_product_search
+#     - pos_product_sort
+#     - pos_show_clock
+#     - pos_show_config_name
+#     - pos_supplierinfo_search
+#     - pos_warning_exiting
+#     - pos_payment_change
+#     - pos_order_mgmt
+#     - pos_order_return
+#     - pos_receipt_hide_price
+#     - pos_require_product_quantity
+#     - pos_partner_birthdate
+#     - pos_report_discount
+#     - pos_timeout
+#     - pos_empty_home
+#     - pos_access_right
 
-- url: https://github.com/OCA/crm
-  branch: "14.0"
-  includes:
-    - crm_industry
-    - crm_lead_search_archive
-    - crm_security_group
+# - url: https://github.com/OCA/bank-statement-import
+#   branch: "14.0"
+#   includes:
+#     - account_statement_import
+#     - account_statement_import_base
+#     - bank_statement_import_csv
 
-- url: https://github.com/OCA/community-data-files
-  branch: "14.0"
-  includes:
-    - account_payment_unece
-    - account_tax_unece
-    - base_unece
-    - uom_unece
+# - url: https://github.com/OCA/crm
+#   branch: "14.0"
+#   includes:
+#     - crm_industry
+#     - crm_lead_search_archive
+#     - crm_security_group
 
-- url: https://github.com/OCA/edi
-  branch: "14.0"
-  includes:
-    - account_einvoice_generate
-    - account_invoice_facturx
-    - base_facturx
+# - url: https://github.com/OCA/community-data-files
+#   branch: "14.0"
+#   includes:
+#     - account_payment_unece
+#     - account_tax_unece
+#     - base_unece
+#     - uom_unece
 
-- url: https://github.com/OCA/intrastat-extrastat
-  branch: "14.0"
-  includes:
-    - intrastat_base
+# - url: https://github.com/OCA/edi
+#   branch: "14.0"
+#   includes:
+#     - account_einvoice_generate
+#     - account_invoice_facturx
+#     - base_facturx
 
-- url: https://github.com/OCA/l10n-france
-  branch: "14.0"
-  includes:
-    - l10n_fr_account_invoice_facturx
-    - l10n_fr_account_tax_unece
-    - l10n_fr_account_vat_return
-    - l10n_fr_department
-    - l10n_fr_department_delivery
-    - l10n_fr_fec_oca
-    - l10n_fr_mis_reports
-    - l10n_fr_oca
-    - l10n_fr_siret
-    - l10n_fr_state
+# - url: https://github.com/OCA/intrastat-extrastat
+#   branch: "14.0"
+#   includes:
+#     - intrastat_base
 
-- url: https://github.com/OCA/mis-builder
-  branch: "14.0"
-  includes:
-    - mis_builder
-    - mis_builder_cash_flow
+# - url: https://github.com/OCA/l10n-france
+#   branch: "14.0"
+#   includes:
+#     - l10n_fr_account_invoice_facturx
+#     - l10n_fr_account_tax_unece
+#     - l10n_fr_account_vat_return
+#     - l10n_fr_department
+#     - l10n_fr_department_delivery
+#     - l10n_fr_fec_oca
+#     - l10n_fr_mis_reports
+#     - l10n_fr_oca
+#     - l10n_fr_siret
+#     - l10n_fr_state
 
-- url: https://github.com/OCA/partner-contact
-  branch: "14.0"
-  includes:
-    - partner_contact_birthdate
-    - partner_contact_personal_information_page
-    - partner_email_duplicate_warn
-    - partner_firstname
-    - partner_identification
-    - partner_industry_secondary
+# - url: https://github.com/OCA/mis-builder
+#   branch: "14.0"
+#   includes:
+#     - mis_builder
+#     - mis_builder_cash_flow
 
-- url: https://github.com/OCA/product-attribute
-  branch: "14.0"
-  includes:
-    - product_category_active
-    - product_category_type
-    - product_manufacturer
-    - product_restricted_type
+# - url: https://github.com/OCA/partner-contact
+#   branch: "14.0"
+#   includes:
+#     - partner_contact_birthdate
+#     - partner_contact_personal_information_page
+#     - partner_email_duplicate_warn
+#     - partner_firstname
+#     - partner_identification
+#     - partner_industry_secondary
 
-- url: https://github.com/OCA/reporting-engine
-  branch: "14.0"
-  includes:
-    - report_xlsx
-    - report_xlsx_helper
+# - url: https://github.com/OCA/product-attribute
+#   branch: "14.0"
+#   includes:
+#     - product_category_active
+#     - product_category_type
+#     - product_manufacturer
+#     - product_restricted_type
 
-- url: https://github.com/OCA/sale-workflow
-  branch: "14.0"
-  includes:
-    - product_form_sale_link
-    - sale_cancel_reason
-    - sale_force_invoiced
-    - sale_invoice_policy
-    - sale_order_price_recalculation
-    - sale_order_revision
-    # - sale_stock_cancel_restriction
+# - url: https://github.com/OCA/reporting-engine
+#   branch: "14.0"
+#   includes:
+#     - report_xlsx
+#     - report_xlsx_helper
 
-- url: https://github.com/OCA/server-brand
-  branch: "14.0"
-  includes:
-    - disable_odoo_online
-    - remove_odoo_enterprise
+# - url: https://github.com/OCA/sale-workflow
+#   branch: "14.0"
+#   includes:
+#     - product_form_sale_link
+#     - sale_cancel_reason
+#     - sale_force_invoiced
+#     - sale_invoice_policy
+#     - sale_order_price_recalculation
+#     - sale_order_revision
+#     # - sale_stock_cancel_restriction
 
-- url: https://github.com/OCA/server-tools
-  branch: "14.0"
-  includes:
-    - base_search_fuzzy
-    - onchange_helper
-    - tracking_manager
+# - url: https://github.com/OCA/server-brand
+#   branch: "14.0"
+#   includes:
+#     - disable_odoo_online
+#     - remove_odoo_enterprise
 
-- url: https://github.com/OCA/server-ux
-  branch: "14.0"
-  includes:
-    - base_revision
-    - date_range
-    - date_range_account
+# - url: https://github.com/OCA/server-tools
+#   branch: "14.0"
+#   includes:
+#     - base_search_fuzzy
+#     - onchange_helper
+#     - tracking_manager
 
-- url: https://github.com/OCA/web
-  branch: "14.0"
-  includes:
-    - web_edit_user_filter
+# - url: https://github.com/OCA/server-ux
+#   branch: "14.0"
+#   includes:
+#     - base_revision
+#     - date_range
+#     - date_range_account
 
-- url: https://github.com/OCA/stock-logistics-workflow
-  branch: "14.0"
-  includes:
-    - sale_line_returned_qty
+# - url: https://github.com/OCA/web
+#   branch: "14.0"
+#   includes:
+#     - web_edit_user_filter
+
+# - url: https://github.com/OCA/stock-logistics-workflow
+#   branch: "14.0"
+#   includes:
+#     - sale_line_returned_qty
