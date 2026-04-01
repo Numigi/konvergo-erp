@@ -150,6 +150,11 @@
 #     - disable_odoo_online
 #     - remove_odoo_enterprise
 
+- url: https://github.com/OCA/server-tools
+  branch: "18.0"
+  includes:
+    - module_change_auto_install
+
 # - url: https://github.com/OCA/server-tools
 #   branch: "14.0"
 #   includes:
