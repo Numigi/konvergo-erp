@@ -1,9 +1,0 @@
-.o_main_navbar > ul > li > a {
-	&:hover {
-		background-color: darken($o-brand-odoo, 16%);
-	}
-
-	&:active, &:focus {
-		background-color: darken($o-brand-odoo, 8%);
-	}
-}
