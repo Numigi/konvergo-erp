@@ -12,8 +12,8 @@
     "summary": "Technical foundations and security for Konvergo",
     "depends": [
         "base",
-        # OCA/server-tools - Dépendances techniques à activer
-        # "module_change_auto_install",
+        # OCA/server-tools
+        "module_change_auto_install",
         # "web_session_auto_close",
         # "web_disable_export_group",
         # "base_optional_quick_create",
