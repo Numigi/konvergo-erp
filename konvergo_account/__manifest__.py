@@ -20,6 +20,7 @@
         'canada_vat_label',  # TA#60491
 
         # Numigi/odoo-account-addons
+        'account_fiscalyear_end_on_company',  # TA#84736
         'account_payment_widget_link',
         # 'account_report_trial_balance',  # TA#45104
         'account_show_full_features',  # TA#16549
@@ -28,6 +29,7 @@
         'canada_account_types',  # TA#22360
         'invoice_refund_not_earlier',
         'old_accounts',
+        
 
         # OCA/mis-builder
         'mis_builder',  # TA#16549
