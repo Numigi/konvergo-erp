@@ -22,6 +22,7 @@
         # Numigi/odoo-account-addons
         'account_fiscalyear_end_on_company',  # TA#84736
         'account_move_secure',  # TA#84710
+        'account_move_unique_reversal', # TA#81787
         'account_payment_widget_link',
         # 'account_report_trial_balance',  # TA#45104
         'account_show_full_features',  # TA#16549
