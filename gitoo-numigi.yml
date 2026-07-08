@@ -43,9 +43,9 @@
 #     - partner_phone_no_envelope
 #     - partner_firstname_before_lastname
 
-  - url: https://github.com/Numigi/odoo-web-addons
-    branch: "18.0"
-    includes:
+ - url: https://github.com/Numigi/odoo-web-addons
+   branch: "18.0"
+   includes:
       - web_custom_label
 
 # - url: https://github.com/Numigi/odoo-product-addons
