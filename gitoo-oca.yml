@@ -2,6 +2,11 @@
 # All v14 dependencies commented out for v18 migration
 # Will be re-enabled progressively as they are migrated to v18
 
+- url: https://github.com/OCA/account-closing
+  branch: "18.0"
+  includes:
+    - account_fiscal_year_closing
+
 - url: https://github.com/OCA/account-financial-reporting
   branch: "18.0"
   includes:
@@ -18,7 +23,6 @@
 - url: https://github.com/oca/account-financial-tools
   branch: "18.0"
   includes:
-    - account_internal_transfer
     - account_lock_date_update
     - account_move_name_sequence
     - account_invoice_constraint_chronology
