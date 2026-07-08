@@ -43,13 +43,10 @@
 #     - partner_phone_no_envelope
 #     - partner_firstname_before_lastname
 
-# - url: https://github.com/Numigi/odoo-web-addons
-#   branch: "14.0"
-#   includes:
-#     - resize_observer_error_catcher
-#     - web_custom_label
-#     - web_search_date_range
-#     - web_search_date_range_account
+  - url: https://github.com/Numigi/odoo-web-addons
+    branch: "18.0"
+    includes:
+      - web_custom_label
 
 # - url: https://github.com/Numigi/odoo-product-addons
 #   branch: "14.0"
