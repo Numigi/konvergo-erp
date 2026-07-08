@@ -21,6 +21,7 @@
 
         # Numigi/odoo-account-addons
         'account_fiscalyear_end_on_company',  # TA#84736
+        'account_internal_transfer_multi_currency' , # TA#84241
         'account_move_secure',  # TA#84710
         'account_move_unique_reversal', # TA#81787
         'account_payment_widget_link',
