@@ -13,6 +13,7 @@
     "depends": [
         # Core architecture
         "konvergo_base",
+        "Konvergo_account",
         "konvergo_core",
         "konvergo_ui",
         "konvergo_brand",
