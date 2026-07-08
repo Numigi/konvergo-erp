@@ -23,7 +23,7 @@
  - url: https://github.com/Numigi/odoo-base-addons
    branch: "18.0"
    includes:
-    - lang_fr_activated5
+    - lang_fr_activated
 
 # - url: https://github.com/Numigi/odoo-sale-addons
 #   branch: "14.0"
