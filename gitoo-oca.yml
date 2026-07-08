@@ -141,6 +141,7 @@
   branch: "18.0"
   includes:
     - report_xlsx
+    - report_xlsx_helper
 
 
 # - url: https://github.com/OCA/sale-workflow
