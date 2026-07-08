@@ -37,7 +37,7 @@ RUN mkdir -p "${THIRD_PARTY_ADDONS}" && chown -R odoo "${THIRD_PARTY_ADDONS}"
 
 # Copy modules from previous stages
 COPY --from=oca-stage /mnt/oca-addons/ ${THIRD_PARTY_ADDONS}/
-# COPY --from=numigi-stage /mnt/numigi-addons/ ${THIRD_PARTY_ADDONS}/
+COPY --from=numigi-stage /mnt/numigi-addons/ ${THIRD_PARTY_ADDONS}/
 
 USER odoo
 
