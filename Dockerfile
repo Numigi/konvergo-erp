@@ -43,6 +43,7 @@ USER odoo
 
 # Core architecture modules
 COPY konvergo_base /mnt/extra-addons/konvergo_base
+COPY konvergo_account /mnt/extra-addons/konvergo_account
 COPY konvergo_core /mnt/extra-addons/konvergo_core
 COPY konvergo_ui /mnt/extra-addons/konvergo_ui
 COPY konvergo_brand /mnt/extra-addons/konvergo_brand
