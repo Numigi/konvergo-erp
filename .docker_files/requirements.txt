@@ -1,20 +1,7 @@
-# Dependencies commented out for v18 migration
-# Will be re-enabled as modules are migrated
-
-# for account_invoice_facturx
-# factur-x<=3.1
-
-# for l10n_fr_fec_oca
-# unicodecsv
-# unidecode
-
-# for base_view_inheritance_extension
-# astor
-
-# aeroo_reports (commented out for v18 migration)
-# git+https://github.com/numigi/aeroolib@master
-# babel==2.5.3  # Old version incompatible with Python 3.10+
-# Genshi==0.7.5
-# freezegun==0.3.10
-# html2text==2018.1.9
-# ddt==1.2.1
+unidecode==1.0.23
+odoo_test_helper
+stripe==4.1.0
+freezegun==0.3.4
+ddt==1.4.2
+# Openupgrade lib 2.0.0 (latest version on pypi)
+git+https://github.com/OCA/openupgradelib@master
