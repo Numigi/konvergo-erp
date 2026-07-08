@@ -10,12 +10,12 @@ COPY ./gitoo-oca.yml /gitoo-oca.yml
 RUN gitoo install-all --conf_file /gitoo-oca.yml --destination /mnt/oca-addons
 
 # Stage 2: Install Numigi repositories (commented out for now)
-# FROM quay.io/numigi/odoo-public:18.latest as numigi-stage
-# USER root
-# ARG GIT_TOKEN
-# RUN mkdir -p /mnt/numigi-addons && chown -R odoo /mnt/numigi-addons
-# COPY ./gitoo-numigi.yml /gitoo-numigi.yml
-# RUN gitoo install-all --conf_file /gitoo-numigi.yml --destination /mnt/numigi-addons
+FROM quay.io/numigi/odoo-public:18.latest as numigi-stage
+USER root
+ARG GIT_TOKEN
+RUN mkdir -p /mnt/numigi-addons && chown -R odoo /mnt/numigi-addons
+COPY ./gitoo-numigi.yml /gitoo-numigi.yml
+RUN gitoo install-all --conf_file /gitoo-numigi.yml --destination /mnt/numigi-addons
 
 # Stage 3: Final image with all dependencies
 FROM quay.io/numigi/odoo-public:18.latest
@@ -37,12 +37,13 @@ RUN mkdir -p "${THIRD_PARTY_ADDONS}" && chown -R odoo "${THIRD_PARTY_ADDONS}"
 
 # Copy modules from previous stages
 COPY --from=oca-stage /mnt/oca-addons/ ${THIRD_PARTY_ADDONS}/
-# COPY --from=numigi-stage /mnt/numigi-addons/ ${THIRD_PARTY_ADDONS}/
+COPY --from=numigi-stage /mnt/numigi-addons/ ${THIRD_PARTY_ADDONS}/
 
 USER odoo
 
 # Core architecture modules
 COPY konvergo_base /mnt/extra-addons/konvergo_base
+COPY konvergo_account /mnt/extra-addons/konvergo_account
 COPY konvergo_core /mnt/extra-addons/konvergo_core
 COPY konvergo_ui /mnt/extra-addons/konvergo_ui
 COPY konvergo_brand /mnt/extra-addons/konvergo_brand

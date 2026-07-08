@@ -16,21 +16,22 @@
         # Numigi/odoo-base
         'konvergo_base',
         # 'numipack_account',
-        'canada_mis_report',
-        'canada_vat_label',  # TA#60491
+        #'canada_mis_report',
+        #'canada_vat_label',  # TA#60491
 
         # Numigi/odoo-account-addons
         'account_fiscalyear_end_on_company',  # TA#84736
+        'account_internal_transfer_multi_currency' , # TA#84241
         'account_move_secure',  # TA#84710
         'account_move_unique_reversal', # TA#81787
-        'account_payment_widget_link',
+        #'account_payment_widget_link',
         # 'account_report_trial_balance',  # TA#45104
-        'account_show_full_features',  # TA#16549
-        'bank_statement_import_csv',  # TA#55969
+        #'account_show_full_features',  # TA#16549
+        #'bank_statement_import_csv',  # TA#55969
         # 'account_unaffected_earnings_disabled',  # TA#45104
         'canada_account_types',  # TA#22360
         'invoice_refund_not_earlier',
-        'old_accounts',
+        #'old_accounts',
         
 
         # OCA/mis-builder
@@ -54,7 +55,7 @@
         'account_move_name_sequence',  # TA#45258
 
         # OCA/account-reconcile
-        'account_reconciliation_widget'  # TA#45105
+        'account_reconcile_oca'
 
         # OCA/bank-statement-import
         # 'account_bank_statement_import_txt_xlsx',  # TA#20564
