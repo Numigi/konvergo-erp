@@ -10,12 +10,10 @@
 #     - mis_builder_cash_flow
 #     - partner_statement
 
-# - url: https://github.com/OCA/account-financial-tools
-#   branch: "14.0"
-#   includes:
-#     - account_lock_date_update
-#     - account_move_name_sequence
-#     - account_invoice_constraint_chronology
+- url: https://github.com/ingadhoc/account-financial-tools
+  branch: "18.0"
+  includes:
+    - account_internal_transfer
 
 # - url: https://github.com/OCA/account-invoicing
 #   branch: "14.0"
