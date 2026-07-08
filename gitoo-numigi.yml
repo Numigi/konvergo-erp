@@ -2,28 +2,17 @@
 # All v14 dependencies commented out for v18 migration
 # Will be re-enabled progressively as they are migrated to v18
 
-# - url: https://github.com/Numigi/odoo-account-addons
-#   branch: "14.0"
-#   includes:
-#     - account_bank_menu
-#     - account_closing_journal
-#     - account_closing_journal_mis_builder
-#     - account_fiscalyear_end_on_company
-#     - account_fr_ca_labels
-#     - account_invoice_constraint_chronology_forced
-#     - account_move_reversal_access
-#     - account_move_unique_reversal
-#     - account_negative_debit_credit
-#     - account_payment_cancel_group
-#     - account_payment_widget_link
-#     - account_reconciliation_widget
-#     - account_show_full_features
-#     - account_type_sane
-#     - bank_statement_import_csv
-#     - canada_account_types
-#     - invoice_currency_validation
-#     - invoice_refund_not_earlier
-#     - old_accounts
+ - url: https://github.com/Numigi/odoo-account-addons
+   branch: "18.0"
+   includes:
+     - account_fiscalyear_end_on_company
+     - account_internal_transfer_multi_currency
+     - account_move_secure
+     - account_move_unique_reversal
+     - canada_mis_report
+     - canada_account_types
+     - invoice_refund_not_earlier
+
 
 # - url: https://github.com/Numigi/aeroo_reports
 #   branch: "14.0"

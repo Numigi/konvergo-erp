@@ -2,28 +2,32 @@
 # All v14 dependencies commented out for v18 migration
 # Will be re-enabled progressively as they are migrated to v18
 
-# - url: https://github.com/OCA/account-financial-reporting
-#   branch: "14.0"
-#   includes:
-#     - account_financial_report
-#     - account_tax_balance
-#     - mis_builder_cash_flow
-#     - partner_statement
+- url: https://github.com/OCA/account-financial-reporting
+  branch: "18.0"
+  includes:
+    - account_financial_report
+    - account_tax_balance
+    - mis_builder_cash_flow
+    - partner_statement
 
 - url: https://github.com/ingadhoc/account-financial-tools
   branch: "18.0"
   includes:
     - account_internal_transfer
+    - account_lock_date_update
+    - account_move_name_sequence
+    - account_invoice_constraint_chronology
 
 # - url: https://github.com/OCA/account-invoicing
 #   branch: "14.0"
 #   includes:
 #     - account_invoice_constraint_chronology
 
-# - url: https://github.com/OCA/account-reconcile
-#   branch: "14.0"
-#   includes:
-#     - account_reconciliation_widget
+- url: https://github.com/OCA/account-reconcile
+  branch: "18.0"
+  includes:
+    - account_reconcile_oca
+
 
 # - url: https://github.com/OCA/bank-payment
 #   branch: "14.0"
@@ -101,11 +105,10 @@
 #     - l10n_fr_siret
 #     - l10n_fr_state
 
-# - url: https://github.com/OCA/mis-builder
-#   branch: "14.0"
-#   includes:
-#     - mis_builder
-#     - mis_builder_cash_flow
+- url: https://github.com/OCA/mis-builder
+  branch: "18.0"
+  includes:
+    - mis_builder
 
 # - url: https://github.com/OCA/partner-contact
 #   branch: "14.0"
@@ -125,11 +128,11 @@
 #     - product_manufacturer
 #     - product_restricted_type
 
-# - url: https://github.com/OCA/reporting-engine
-#   branch: "14.0"
-#   includes:
-#     - report_xlsx
-#     - report_xlsx_helper
+- url: https://github.com/OCA/reporting-engine
+  branch: "18.0"
+  includes:
+    - report_xlsx
+
 
 # - url: https://github.com/OCA/sale-workflow
 #   branch: "14.0"
@@ -160,12 +163,11 @@
 #     - onchange_helper
 #     - tracking_manager
 
-# - url: https://github.com/OCA/server-ux
-#   branch: "14.0"
-#   includes:
-#     - base_revision
-#     - date_range
-#     - date_range_account
+- url: https://github.com/OCA/server-ux
+  branch: "18.0"
+  includes:
+    - date_range
+    - date_range_account
 
 # - url: https://github.com/OCA/web
 #   branch: "14.0"
