@@ -10,12 +10,12 @@ COPY ./gitoo-oca.yml /gitoo-oca.yml
 RUN gitoo install-all --conf_file /gitoo-oca.yml --destination /mnt/oca-addons
 
 # Stage 2: Install Numigi repositories (commented out for now)
-# FROM quay.io/numigi/odoo-public:18.latest as numigi-stage
-# USER root
-# ARG GIT_TOKEN
-# RUN mkdir -p /mnt/numigi-addons && chown -R odoo /mnt/numigi-addons
-# COPY ./gitoo-numigi.yml /gitoo-numigi.yml
-# RUN gitoo install-all --conf_file /gitoo-numigi.yml --destination /mnt/numigi-addons
+FROM quay.io/numigi/odoo-public:18.latest as numigi-stage
+USER root
+ARG GIT_TOKEN
+RUN mkdir -p /mnt/numigi-addons && chown -R odoo /mnt/numigi-addons
+COPY ./gitoo-numigi.yml /gitoo-numigi.yml
+RUN gitoo install-all --conf_file /gitoo-numigi.yml --destination /mnt/numigi-addons
 
 # Stage 3: Final image with all dependencies
 FROM quay.io/numigi/odoo-public:18.latest
