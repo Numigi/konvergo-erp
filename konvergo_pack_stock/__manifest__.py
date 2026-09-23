@@ -2,8 +2,8 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 {
-    'name': 'Konvergo / Inventory',
-    'version': '1.1.2',
+    'name': 'Konvergo Pack - Inventory',
+    'version': '18.0.1.0.0',
     'author': 'Numigi',
     'maintainer': 'Numigi',
     'license': 'LGPL-3',
