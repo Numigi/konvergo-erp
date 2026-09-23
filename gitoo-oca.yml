@@ -18,14 +18,16 @@
 - url: https://github.com/ingadhoc/account-financial-tools
   branch: "18.0"
   includes:
-    - account_internal_transfer
+
 
 - url: https://github.com/oca/account-financial-tools
   branch: "18.0"
   includes:
+    - account_internal_transfer
     - account_lock_date_update
     - account_move_name_sequence
     - account_invoice_constraint_chronology
+    - account_usability
 
 # - url: https://github.com/OCA/account-invoicing
 #   branch: "14.0"

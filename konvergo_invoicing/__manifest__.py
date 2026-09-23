@@ -18,15 +18,16 @@
         "account_payment_cancel_group",
         # "account_payment_widget_link",  #todo NOT AVAILABLE ON V18
         "invoice_refund_not_earlier",
-        # "account_show_full_features",
-        "account_search_date_range",  #todo NOT AVAILA ON V18BLE
+        #"account_search_date_range",  #todo NOT AVAILA ON V18BLE
         # Numigi/aeroo_reports
         "account_check_printing_aeroo",
         # # OCA/account-financial-reporting
         "partner_statement",
+
         # OCA/account-financial-tools
         "account_lock_date_update",
         "account_move_name_sequence",
+        "account_usability",
         # OCA/account-reconcile
         "account_reconcile_oca",
     ],
