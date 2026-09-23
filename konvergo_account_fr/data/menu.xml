@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Hide the original FEC menu -->
+    <record id="l10n_fr_fec.account_fr_fec_menu" model="ir.ui.menu">
+        <field name="active" eval="False"/>
+    </record>
+
+    <!-- Rename FEC (OCA) menu to just "FEC" -->
+    <record id="l10n_fr_fec_oca.account_fr_fec_oca_menu" model="ir.ui.menu">
+        <field name="name">FEC</field>
+    </record>
+
+    <record id="l10n_fr_fec_oca.account_fr_fec_oca_action" model="ir.actions.act_window">
+        <field name="name">FEC</field>
+    </record>
+
+</odoo>
