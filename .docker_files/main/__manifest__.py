@@ -24,6 +24,7 @@
         "konvergo_pack_pos",
         "konvergo_pack_product",
         "konvergo_pack_sale",
+        "konvergo_pack_stock",
 
         # Modules to be migrated later (commented out)
         # "canada_mis_report",         # -> konvergo_l10n_ca
