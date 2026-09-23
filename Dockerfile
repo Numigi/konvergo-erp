@@ -54,6 +54,7 @@ COPY konvergo_pack_crm /mnt/extra-addons/konvergo_pack_crm
 COPY konvergo_pack_pos /mnt/extra-addons/konvergo_pack_pos
 COPY konvergo_pack_product /mnt/extra-addons/konvergo_pack_product
 COPY konvergo_pack_sale /mnt/extra-addons/konvergo_pack_sale
+COPY konvergo_pack_stock /mnt/extra-addons/konvergo_pack_stock
 
 # Modules to be migrated later (commented out)
 # COPY canada_mis_report /mnt/extra-addons/canada_mis_report  # -> konvergo_l10n_ca

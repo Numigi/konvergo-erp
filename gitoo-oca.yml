@@ -186,7 +186,8 @@
 #   includes:
 #     - web_edit_user_filter
 
-# - url: https://github.com/OCA/stock-logistics-workflow
-#   branch: "14.0"
-#   includes:
-#     - sale_line_returned_qty
+- url: https://github.com/OCA/stock-logistics-workflow
+  branch: "18.0"
+  includes:
+    - sale_line_returned_qty
+    - stock_account_show_automatic_valuation
