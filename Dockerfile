@@ -49,6 +49,8 @@ COPY konvergo_ui /mnt/extra-addons/konvergo_ui
 COPY konvergo_brand /mnt/extra-addons/konvergo_brand
 
 # Functional packs
+COPY konvergo_invoicing /mnt/extra-addons/konvergo_invoicing_ca
+COPY konvergo_invoicing_ca /mnt/extra-addons/konvergo_invoicing
 COPY konvergo_pack_contact /mnt/extra-addons/konvergo_pack_contact
 COPY konvergo_pack_crm /mnt/extra-addons/konvergo_pack_crm
 COPY konvergo_pack_pos /mnt/extra-addons/konvergo_pack_pos
